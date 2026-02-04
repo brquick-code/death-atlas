@@ -1,0 +1,16 @@
+# Node / Expo
+node_modules/
+.expo/
+.expo-shared/
+
+# Env files (secrets)
+.env
+.env.local
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
