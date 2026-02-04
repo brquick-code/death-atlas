@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Death Atlas",
+    "slug": "death-atlas-mobile",
+    "scheme": "deathatlas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "plugins": ["expo-router"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#111827"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
