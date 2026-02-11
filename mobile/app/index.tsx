@@ -1,3 +1,4 @@
+// app/index.tsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   ActivityIndicator,
@@ -12,13 +13,17 @@ import {
   Text,
   TextInput,
   View,
-  InteractionManager, // ✅ added
+  InteractionManager,
+  Keyboard,
 } from "react-native";
 import MapView, { Marker, Region } from "react-native-maps";
 import LocationPreviewCard from "../components/LocationPreviewCard";
 import { getOrFetch } from "../lib/deathLocationsPrefetch";
 
-type CoordMode = "death" | "burial";
+type CoordMode = "death" | "burial" | "missing";
+
+type CanonCategory = "Murder" | "Accident" | "Natural" | "Suicide";
+type CategoryKey = "All" | CanonCategory;
 
 type DeathLocation = {
   id: string;
@@ -27,7 +32,7 @@ type DeathLocation = {
   longitude: number;
 
   place_name?: string;
-  category?: string;
+  category?: CanonCategory;
   death_date?: string;
 
   wikipedia_url?: string;
@@ -37,6 +42,10 @@ type DeathLocation = {
   burial_latitude?: number;
   burial_longitude?: number;
   burial_place_name?: string;
+
+  // missing extras (optional; LocationPreviewCard can ignore)
+  missing_date?: string;
+  missing_status?: string;
 
   // cluster helpers
   is_cluster?: boolean;
@@ -59,6 +68,13 @@ type SearchResult = {
   burial_longitude: number | null;
   burial_place_name?: string | null;
 
+  // missing (if your search API returns them)
+  missing_latitude?: number | null;
+  missing_longitude?: number | null;
+  missing_place_name?: string | null;
+  missing_date?: string | null;
+  missing_status?: string | null;
+
   wikipedia_url?: string | null;
   source_url?: string | null;
   source_urls?: string[] | null;
@@ -66,15 +82,15 @@ type SearchResult = {
   // some APIs return this shape
   lat?: number | null;
   lng?: number | null;
-  coord_kind?: "death" | "burial" | null;
+  coord_kind?: "death" | "burial" | "missing" | null;
 };
 
 const CATEGORY_CHIPS = [
-  { key: "all", label: "All" },
-  { key: "murder", label: "Murder" },
-  { key: "accident", label: "Accident" },
-  { key: "natural", label: "Natural" },
-  { key: "suicide", label: "Suicide" },
+  { key: "All", label: "All" },
+  { key: "Murder", label: "Murder" },
+  { key: "Accident", label: "Accident" },
+  { key: "Natural", label: "Natural" },
+  { key: "Suicide", label: "Suicide" },
 ] as const;
 
 function safeNum(v: any): number | null {
@@ -95,29 +111,43 @@ function norm(s?: string) {
   return (s ?? "").toLowerCase().trim();
 }
 
-function categoryMatches(loc: DeathLocation, selected: string) {
-  if (selected === "all") return true;
-  const cat = norm(loc.category);
+function normalizeCategory(raw?: any): CanonCategory | null {
+  const s = norm(typeof raw === "string" ? raw : raw?.toString?.());
+  if (!s) return null;
 
-  if (selected === "murder")
-    return cat.includes("murder") || cat.includes("assassination");
+  if (s === "murder") return "Murder";
+  if (s === "accident") return "Accident";
+  if (s === "natural") return "Natural";
+  if (s === "suicide") return "Suicide";
 
-  if (selected === "accident") return cat.includes("accident");
+  if (s.includes("murder") || s.includes("homicide") || s.includes("assassination") || s.includes("execution"))
+    return "Murder";
+  if (s.includes("suicide") || s.includes("self-harm") || s.includes("self harm")) return "Suicide";
+  if (
+    s.includes("accident") ||
+    s.includes("accidental") ||
+    s.includes("crash") ||
+    s.includes("wreck") ||
+    s.includes("drown") ||
+    s.includes("overdose")
+  )
+    return "Accident";
+  if (
+    s.includes("natural") ||
+    s.includes("illness") ||
+    s.includes("disease") ||
+    s.includes("heart") ||
+    s.includes("stroke") ||
+    s.includes("cancer")
+  )
+    return "Natural";
 
-  if (selected === "suicide") return cat.includes("suicide");
+  return null;
+}
 
-  if (selected === "natural")
-    return (
-      cat.includes("natural") ||
-      cat.includes("natural causes") ||
-      cat.includes("illness") ||
-      cat.includes("disease") ||
-      cat.includes("heart") ||
-      cat.includes("stroke") ||
-      cat.includes("cancer")
-    );
-
-  return true;
+function categoryMatches(loc: DeathLocation, selected: CategoryKey) {
+  if (selected === "All") return true;
+  return loc.category === selected;
 }
 
 function regionToBbox(region: Region) {
@@ -130,17 +160,14 @@ function regionToBbox(region: Region) {
   return { minLat, maxLat, minLng, maxLng };
 }
 
-// Force high zoom so backend returns raw points (no grid clustering)
 function requestZoomFromRegion(_region: Region) {
   return 20;
 }
 
-// Round coords so “same coordinate” matching is stable (handles float noise).
 function coordKey(lat: number, lng: number) {
   return `${lat.toFixed(6)},${lng.toFixed(6)}`;
 }
 
-// Only cluster when multiple entries share the SAME coords.
 function clusterSameCoords(items: DeathLocation[]): DeathLocation[] {
   const buckets = new Map<string, DeathLocation[]>();
 
@@ -161,9 +188,7 @@ function clusterSameCoords(items: DeathLocation[]): DeathLocation[] {
 
     const first = arr[0];
     const clusterId = `cluster-${k}`;
-    const members = [...arr].sort((a, b) =>
-      (a.name || "").localeCompare(b.name || "")
-    );
+    const members = [...arr].sort((a, b) => (a.name || "").localeCompare(b.name || ""));
 
     out.push({
       id: clusterId,
@@ -181,27 +206,27 @@ function clusterSameCoords(items: DeathLocation[]): DeathLocation[] {
 
 /**
  * Supports BOTH API shapes:
- * - old: death_latitude/death_longitude + burial_latitude/burial_longitude
+ * - old: death_latitude/death_longitude + burial_latitude/burial_longitude (+ missing_* once added)
  * - new: lat/lng + coord_kind
  */
-function extractCoordsForMode(
-  row: any,
-  mode: CoordMode
-): { lat: number; lng: number } | null {
+function extractCoordsForMode(row: any, mode: CoordMode): { lat: number; lng: number } | null {
   const apiLat = safeNum(row.lat) ?? safeNum(row.latitude);
   const apiLng = safeNum(row.lng) ?? safeNum(row.longitude);
-  const kind = (row.coord_kind ?? row.coordKind ?? row.coord_kind) as
-    | "death"
-    | "burial"
-    | undefined;
+  const kind = (row.coord_kind ?? row.coordKind ?? row.coord_kind) as "death" | "burial" | "missing" | undefined;
 
   // If API gave coord_kind, trust it and filter strictly by current mode
-  if (apiLat != null && apiLng != null && (kind === "death" || kind === "burial")) {
+  if (apiLat != null && apiLng != null && (kind === "death" || kind === "burial" || kind === "missing")) {
     if (mode === kind) return { lat: apiLat, lng: apiLng };
     return null;
   }
 
-  // Otherwise fall back to schema columns
+  if (mode === "missing") {
+    const lat = safeNum(row.missing_latitude);
+    const lng = safeNum(row.missing_longitude);
+    if (lat === null || lng === null) return null;
+    return { lat, lng };
+  }
+
   if (mode === "burial") {
     const lat = safeNum(row.burial_latitude);
     const lng = safeNum(row.burial_longitude);
@@ -210,29 +235,18 @@ function extractCoordsForMode(
   }
 
   const lat = safeNum(row.death_latitude) ?? safeNum(row.latitude) ?? safeNum(row.lat);
-  const lng =
-    safeNum(row.death_longitude) ??
-    safeNum(row.longitude) ??
-    safeNum(row.lng) ??
-    safeNum(row.lon);
+  const lng = safeNum(row.death_longitude) ?? safeNum(row.longitude) ?? safeNum(row.lng) ?? safeNum(row.lon);
 
   if (lat === null || lng === null) return null;
   return { lat, lng };
 }
 
-/**
- * ✅ Directions helper (Apple Maps on iOS, Google Maps on Android; falls back to web)
- */
 async function openDirections(lat: number, lng: number, label?: string) {
   const qLabel = (label || "Destination").trim();
 
-  const apple = `http://maps.apple.com/?daddr=${encodeURIComponent(
-    `${lat},${lng}`
-  )}&q=${encodeURIComponent(qLabel)}`;
+  const apple = `http://maps.apple.com/?daddr=${encodeURIComponent(`${lat},${lng}`)}&q=${encodeURIComponent(qLabel)}`;
 
-  const googleWeb = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    `${lat},${lng}`
-  )}&travelmode=driving`;
+  const googleWeb = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${lat},${lng}`)}&travelmode=driving`;
 
   const androidIntent = `google.navigation:q=${encodeURIComponent(`${lat},${lng}`)}`;
 
@@ -261,7 +275,7 @@ export default function IndexMapScreen() {
   });
 
   const [coordMode, setCoordMode] = useState<CoordMode>("death");
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedCategory, setSelectedCategory] = useState<CategoryKey>("All");
 
   const [query, setQuery] = useState<string>("");
   const [searchOpen, setSearchOpen] = useState<boolean>(false);
@@ -281,18 +295,29 @@ export default function IndexMapScreen() {
   const [clusterItems, setClusterItems] = useState<DeathLocation[]>([]);
   const [clusterError, setClusterError] = useState<string | null>(null);
 
-  const [renderMarkers, setRenderMarkers] = useState(false); // ✅ new
+  const [renderMarkers, setRenderMarkers] = useState(false);
+
+  // ✅ ANDROID MARKER FIX:
+  const [trackMarkers, setTrackMarkers] = useState<boolean>(Platform.OS === "android");
+
+  // ✅ NEW: opening screen (first fetch only)
+  const [firstLoadSplash, setFirstLoadSplash] = useState(true);
 
   const apiBase = (process.env.EXPO_PUBLIC_API_BASE_URL || "").replace(/\/$/, "");
 
-  // ✅ Pin colors (Death = red, Burial = blue)
   const isBurial = coordMode === "burial";
-  const pinColor = isBurial ? "#2563eb" : "#dc2626";
-  const pinColorSelected = isBurial ? "#1e3a8a" : "#991b1b";
+  const isMissing = coordMode === "missing";
 
-  // ✅ HARDENING:
-  // - Clear selection AND points immediately on mode switch
-  // - This prevents react-native-maps “selected marker” + big re-render crash
+  // colors: Death red, Burial blue, Missing green
+  const pinColor = isMissing ? "#16a34a" : isBurial ? "#2563eb" : "#dc2626";
+  const pinColorSelected = isMissing ? "#166534" : isBurial ? "#1e3a8a" : "#991b1b";
+
+  // If user switches into Missing, force categories to All
+  useEffect(() => {
+    if (coordMode === "missing") setSelectedCategory("All");
+  }, [coordMode]);
+
+  // HARDENING on mode switch
   useEffect(() => {
     setPreviewOpen(false);
     setSelected(null);
@@ -301,7 +326,7 @@ export default function IndexMapScreen() {
     setClusterItems([]);
     setClusterError(null);
 
-    setPoints([]); // important: don’t keep old set around during mode flip
+    setPoints([]);
     setLoading(true);
     setError(null);
   }, [coordMode]);
@@ -323,8 +348,6 @@ export default function IndexMapScreen() {
     );
   }, [apiBase, region, coordMode]);
 
-  // ✅ Pre-warm UX: render the map first, then markers after interactions settle.
-  // Prevents first-frame stutter when opening or after a new fetchUrl.
   useEffect(() => {
     setRenderMarkers(false);
 
@@ -347,37 +370,13 @@ export default function IndexMapScreen() {
 
         const placeStr =
           mode === "burial"
-            ? firstNonEmpty(
-                r.burial_place_name,
-                r.place_name,
-                r.location_name,
-                r.place,
-                r.death_place,
-                r.city_state,
-                r.city,
-                r.state
-              )
-            : firstNonEmpty(
-                r.place_name,
-                r.location_name,
-                r.place,
-                r.death_place,
-                r.city_state,
-                r.city,
-                r.state
-              );
+            ? firstNonEmpty(r.burial_place_name, r.place_name, r.location_name, r.place, r.death_place, r.city_state, r.city, r.state)
+            : mode === "missing"
+            ? firstNonEmpty(r.missing_place_name, r.place_name, r.location_name, r.place, r.city_state, r.city, r.state)
+            : firstNonEmpty(r.place_name, r.location_name, r.place, r.death_place, r.city_state, r.city, r.state);
 
         const nameStr =
-          firstNonEmpty(
-            r.name,
-            r.title,
-            r.full_name,
-            r.person_name,
-            r.label,
-            r.display_name,
-            r.subject_name,
-            r.primary_name
-          ) ??
+          firstNonEmpty(r.name, r.title, r.full_name, r.person_name, r.label, r.display_name, r.subject_name, r.primary_name) ??
           placeStr ??
           "";
 
@@ -385,16 +384,10 @@ export default function IndexMapScreen() {
         if (String(nameStr).toLowerCase().includes("sample person")) return null;
 
         const idStr =
-          firstNonEmpty(
-            r.id,
-            r.anyId,
-            r.wikidata_id,
-            r.wikidataId,
-            r.wd_id,
-            r.slug,
-            r.person_id,
-            r.location_id
-          ) ?? `${nameStr}-${coords.lat}-${coords.lng}`;
+          firstNonEmpty(r.id, r.anyId, r.wikidata_id, r.wikidataId, r.wd_id, r.slug, r.person_id, r.location_id) ??
+          `${nameStr}-${coords.lat}-${coords.lng}`;
+
+        const normalizedCat = normalizeCategory(r.category) ?? normalizeCategory(r.death_type) ?? normalizeCategory(r.type) ?? null;
 
         return {
           id: String(idStr),
@@ -402,20 +395,30 @@ export default function IndexMapScreen() {
           latitude: coords.lat,
           longitude: coords.lng,
           place_name: placeStr,
-          category: firstNonEmpty(r.category, r.death_type, r.type),
+          category: normalizedCat ?? undefined,
           death_date: firstNonEmpty(r.death_date, r.date, r.died_on, r.date_end),
           wikipedia_url: firstNonEmpty(r.wikipedia_url, r.wikipedia),
           source_url: firstNonEmpty(r.source_url, r.source),
-          source_urls: Array.isArray(r.source_urls)
-            ? r.source_urls.filter(Boolean).map((x: any) => String(x))
-            : undefined,
+          source_urls: Array.isArray(r.source_urls) ? r.source_urls.filter(Boolean).map((x: any) => String(x)) : undefined,
           burial_latitude: safeNum(r.burial_latitude) ?? undefined,
           burial_longitude: safeNum(r.burial_longitude) ?? undefined,
           burial_place_name: firstNonEmpty(r.burial_place_name),
+
+          missing_date: firstNonEmpty(r.missing_date),
+          missing_status: firstNonEmpty(r.missing_status),
         } as DeathLocation;
       })
       .filter(Boolean) as DeathLocation[];
   }
+
+  // ✅ ANDROID MARKER FIX:
+  useEffect(() => {
+    if (Platform.OS !== "android") return;
+
+    setTrackMarkers(true);
+    const t = setTimeout(() => setTrackMarkers(false), 650);
+    return () => clearTimeout(t);
+  }, [points.length, coordMode, selectedCategory]);
 
   // Map fetch
   useEffect(() => {
@@ -431,6 +434,7 @@ export default function IndexMapScreen() {
           setPoints([]);
           setLoading(false);
           setError("Missing EXPO_PUBLIC_API_BASE_URL in mobile/.env");
+          setFirstLoadSplash(false);
           return;
         }
 
@@ -443,17 +447,18 @@ export default function IndexMapScreen() {
           return res.json();
         });
 
-        const rows: any[] = Array.isArray(data)
-          ? data
-          : Array.isArray((data as any)?.points)
-          ? (data as any).points
-          : [];
+        const rows: any[] = Array.isArray(data) ? data : Array.isArray((data as any)?.points) ? (data as any).points : [];
 
         const parsed = parseRows(rows, coordMode);
         const q = norm(query);
 
         const filtered = parsed.filter((p) => {
-          if (!categoryMatches(p, selectedCategory)) return false;
+          // category chips only apply to death/burial
+          if (coordMode !== "missing") {
+            if (!categoryMatches(p, selectedCategory)) return false;
+            if (selectedCategory !== "All" && !p.category) return false;
+          }
+
           if (!q) return true;
           const n = norm(p.name);
           const pl = norm(p.place_name);
@@ -466,11 +471,13 @@ export default function IndexMapScreen() {
         if (!cancelled) {
           setPoints(clustered);
           setLoading(false);
+          setFirstLoadSplash(false);
         }
       } catch (e: any) {
         if (!cancelled) {
           setLoading(false);
           setError(e?.message || "Fetch failed.");
+          setFirstLoadSplash(false);
         }
       }
     }
@@ -505,9 +512,7 @@ export default function IndexMapScreen() {
         setSearchLoading(true);
         setSearchError(null);
 
-        const url = `${apiBase}/api/search?q=${encodeURIComponent(q)}&limit=12&coord=${encodeURIComponent(
-          coordMode
-        )}`;
+        const url = `${apiBase}/api/search?q=${encodeURIComponent(q)}&limit=12&coord=${encodeURIComponent(coordMode)}`;
         const res = await fetch(url);
         if (!res.ok) {
           const txt = await res.text().catch(() => "");
@@ -551,7 +556,6 @@ export default function IndexMapScreen() {
     if (item.is_cluster) {
       const members = item.members ?? [];
 
-      // close any selection state first (prevents “selected marker” weirdness)
       setPreviewOpen(false);
       setSelected(null);
 
@@ -591,7 +595,15 @@ export default function IndexMapScreen() {
     let lng: number | null = safeNum((r as any).lng);
 
     if (lat == null || lng == null) {
-      if (coordMode === "burial") {
+      if (coordMode === "missing") {
+        lat = safeNum((r as any).missing_latitude);
+        lng = safeNum((r as any).missing_longitude);
+        if (lat == null || lng == null) {
+          // fallback
+          lat = safeNum(r.death_latitude) ?? safeNum(r.burial_latitude);
+          lng = safeNum(r.death_longitude) ?? safeNum(r.burial_longitude);
+        }
+      } else if (coordMode === "burial") {
         lat = safeNum(r.burial_latitude);
         lng = safeNum(r.burial_longitude);
         if (lat == null || lng == null) {
@@ -610,34 +622,51 @@ export default function IndexMapScreen() {
 
     if (lat == null || lng == null) return;
 
+    // ✅ NEW: ensure bbox updates + pins refresh around the result
+    const nextRegion: Region = {
+      latitude: lat,
+      longitude: lng,
+      latitudeDelta: 0.35,
+      longitudeDelta: 0.35,
+    };
+    setRegion(nextRegion);
+
     setSearchOpen(false);
+    Keyboard.dismiss();
 
     const asPoint: DeathLocation = {
       id: String(r.id),
       name,
       latitude: lat,
       longitude: lng,
-      place_name: undefined,
-      category: undefined,
-      death_date: undefined,
+      place_name: coordMode === "missing" ? (r.missing_place_name ?? undefined) : undefined,
+      category: normalizeCategory(r.category ?? undefined) ?? undefined,
+      death_date: r.death_date ?? undefined,
       wikipedia_url: r.wikipedia_url ?? undefined,
       source_url: r.source_url ?? undefined,
       source_urls: Array.isArray(r.source_urls) ? r.source_urls.filter(Boolean) : undefined,
       burial_latitude: safeNum(r.burial_latitude) ?? undefined,
       burial_longitude: safeNum(r.burial_longitude) ?? undefined,
-      burial_place_name: undefined,
+      burial_place_name: r.burial_place_name ?? undefined,
+      missing_date: (r.missing_date as any) ?? undefined,
+      missing_status: (r.missing_status as any) ?? undefined,
     };
 
     setSelected(asPoint);
     setPreviewOpen(true);
 
-    mapRef.current?.animateToRegion(
-      { latitude: lat, longitude: lng, latitudeDelta: 0.35, longitudeDelta: 0.35 },
-      350
-    );
+    mapRef.current?.animateToRegion(nextRegion, 350);
   }
 
-
+  // Directions target: burial uses burial coords when present; else uses current coords
+  function resolveDirectionsTarget(it: DeathLocation) {
+    if (coordMode === "burial") {
+      const bl = safeNum(it.burial_latitude);
+      const bo = safeNum(it.burial_longitude);
+      if (bl != null && bo != null) return { lat: bl, lng: bo };
+    }
+    return { lat: it.latitude, lng: it.longitude };
+  }
 
   return (
     <SafeAreaView style={styles.safe}>
@@ -666,77 +695,105 @@ export default function IndexMapScreen() {
           }}
         >
           {renderMarkers ? (
-  <>
-    {points.map((p) => {
-      const isSelectedPin =
-        !!selected &&
-        !selected.is_cluster &&
-        !p.is_cluster &&
-        (p.id === selected.id ||
-          (p.latitude === selected.latitude && p.longitude === selected.longitude));
+            <>
+              {points.map((p) => {
+                const isSelectedPin =
+                  !!selected &&
+                  !selected.is_cluster &&
+                  !p.is_cluster &&
+                  (p.id === selected.id || (p.latitude === selected.latitude && p.longitude === selected.longitude));
 
-      const color = isSelectedPin ? pinColorSelected : pinColor;
+                const color = isSelectedPin ? pinColorSelected : pinColor;
 
-      return (
-        <Marker
-          key={`${p.id}-${p.latitude}-${p.longitude}`}
-          coordinate={{ latitude: p.latitude, longitude: p.longitude }}
-          onPress={(e) => {
-            (e as any)?.stopPropagation?.();
-            onPressMarker(p);
-          }}
-          tracksViewChanges={false}
-          anchor={{ x: 0.5, y: 1 }}
-        >
-          {p.is_cluster ? (
-            <View style={styles.pinWrap}>
-              <View style={styles.pinShadow} />
-              <View style={[styles.pinBody, { backgroundColor: pinColor }]}>
-                <View style={styles.pinInnerCircle}>
-                  <Text style={styles.clusterCountText}>{p.count ?? ""}</Text>
-                </View>
-              </View>
-              <View style={[styles.pinTip, { borderTopColor: pinColor }]} />
-            </View>
-          ) : (
-            <View style={styles.pinWrap}>
-              <View style={styles.pinShadow} />
-              <View style={[styles.pinBody, { backgroundColor: color }]}>
-                <View style={styles.pinInnerCircle} />
-              </View>
-              <View style={[styles.pinTip, { borderTopColor: color }]} />
-            </View>
-          )}
-        </Marker>
-      );
-    })}
-  </>
-) : null}
-
+                return (
+                  <Marker
+                    key={`${p.id}-${p.latitude}-${p.longitude}`}
+                    coordinate={{ latitude: p.latitude, longitude: p.longitude }}
+                    onPress={(e) => {
+                      (e as any)?.stopPropagation?.();
+                      onPressMarker(p);
+                    }}
+                    tracksViewChanges={Platform.OS === "android" ? trackMarkers : false}
+                    anchor={{ x: 0.5, y: 1 }}
+                  >
+                    {p.is_cluster ? (
+                      <View style={styles.pinWrap}>
+                        <View style={styles.pinShadow} />
+                        <View style={[styles.pinBody, { backgroundColor: pinColor }]}>
+                          <View style={styles.pinInnerCircle}>
+                            <Text style={styles.clusterCountText}>{p.count ?? ""}</Text>
+                          </View>
+                        </View>
+                        <View style={[styles.pinTip, { borderTopColor: pinColor }]} />
+                      </View>
+                    ) : (
+                      <View style={styles.pinWrap}>
+                        <View style={styles.pinShadow} />
+                        <View style={[styles.pinBody, { backgroundColor: color }]}>
+                          <View style={styles.pinInnerCircle} />
+                        </View>
+                        <View style={[styles.pinTip, { borderTopColor: color }]} />
+                      </View>
+                    )}
+                  </Marker>
+                );
+              })}
+            </>
+          ) : null}
         </MapView>
 
-        {/* Top overlay */}
+        {/* ✅ NEW: Opening screen (first load only) */}
+        <Modal visible={firstLoadSplash} transparent animationType="fade">
+          <View style={styles.splashBackdrop}>
+            <View style={styles.splashCard}>
+              <Text style={styles.splashTitle}>Death Atlas</Text>
+              <Text style={styles.splashSub}>A guide to final locations</Text>
+              <View style={{ height: 16 }} />
+              <ActivityIndicator />
+              <View style={{ height: 10 }} />
+              <Text style={styles.splashHint}>Loading pins…</Text>
+            </View>
+          </View>
+        </Modal>
+
         <View style={styles.topOverlay}>
           <Text style={styles.appTitle}>Death Atlas</Text>
 
           <View style={styles.searchRow}>
             <View style={{ flex: 1 }}>
-              <TextInput
-                value={query}
-                onChangeText={(t) => {
-                  setQuery(t);
-                  setSearchOpen(true);
-                }}
-                placeholder="Search"
-                placeholderTextColor="rgba(255,255,255,0.55)"
-                style={styles.searchInput}
-                autoCorrect={false}
-                autoCapitalize="none"
-                returnKeyType="search"
-                onFocus={() => setSearchOpen(true)}
-              />
+              <View style={styles.searchWrap}>
+                <TextInput
+                  value={query}
+                  onChangeText={(t) => {
+                    setQuery(t);
+                    setSearchOpen(true);
+                  }}
+                  placeholder="Search"
+                  placeholderTextColor="rgba(255,255,255,0.55)"
+                  style={styles.searchInput}
+                  autoCorrect={false}
+                  autoCapitalize="none"
+                  returnKeyType="search"
+                  onFocus={() => setSearchOpen(true)}
+                  onSubmitEditing={() => setSearchOpen(true)}
+                />
 
-              {/* dropdown */}
+                {query.length > 0 && (
+                  <Pressable
+                    onPress={() => {
+                      setQuery("");
+                      setSearchResults([]);
+                      setSearchError(null);
+                      setSearchOpen(false);
+                    }}
+                    style={({ pressed }) => [styles.clearBtn, pressed && { opacity: 0.7 }]}
+                    hitSlop={12}
+                  >
+                    <Text style={styles.clearBtnText}>✕</Text>
+                  </Pressable>
+                )}
+              </View>
+
               {searchOpen && (query.trim().length >= 2 || searchLoading || !!searchError) ? (
                 <View style={styles.dropdown}>
                   {searchLoading ? (
@@ -765,6 +822,7 @@ export default function IndexMapScreen() {
               ) : null}
             </View>
 
+            {/* Mode pills (Death | Burial | Missing) */}
             <View style={styles.modePillWrap}>
               <Pressable
                 onPress={() => setCoordMode("death")}
@@ -787,23 +845,33 @@ export default function IndexMapScreen() {
               >
                 <Text style={[styles.modePillText, coordMode === "burial" && styles.modePillTextActive]}>Burial</Text>
               </Pressable>
+
+              <Pressable
+                onPress={() => setCoordMode("missing")}
+                style={[
+                  styles.modePill,
+                  coordMode === "missing" && styles.modePillActive,
+                  coordMode === "missing" && { backgroundColor: "rgba(22, 163, 74, 0.75)" },
+                ]}
+              >
+                <Text style={[styles.modePillText, coordMode === "missing" && styles.modePillTextActive]}>Missing</Text>
+              </Pressable>
             </View>
           </View>
 
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.chipsRow}>
-            {CATEGORY_CHIPS.map((c) => {
-              const active = selectedCategory === c.key;
-              return (
-                <Pressable
-                  key={c.key}
-                  onPress={() => setSelectedCategory(c.key)}
-                  style={[styles.chip, active && styles.chipActive]}
-                >
-                  <Text style={[styles.chipText, active && styles.chipTextActive]}>{c.label}</Text>
-                </Pressable>
-              );
-            })}
-          </ScrollView>
+          {/* Category chips only for death/burial */}
+          {coordMode !== "missing" ? (
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.chipsRow}>
+              {CATEGORY_CHIPS.map((c) => {
+                const active = selectedCategory === c.key;
+                return (
+                  <Pressable key={c.key} onPress={() => setSelectedCategory(c.key)} style={[styles.chip, active && styles.chipActive]}>
+                    <Text style={[styles.chipText, active && styles.chipTextActive]}>{c.label}</Text>
+                  </Pressable>
+                );
+              })}
+            </ScrollView>
+          ) : null}
 
           <View style={styles.statusRow}>
             {loading ? (
@@ -813,7 +881,7 @@ export default function IndexMapScreen() {
               </View>
             ) : (
               <Text style={styles.statusText}>
-                {points.length} pins • {coordMode === "burial" ? "Burial" : "Death"} mode
+                {points.length} pins • {coordMode === "burial" ? "Burial" : coordMode === "missing" ? "Missing" : "Death"} mode
               </Text>
             )}
           </View>
@@ -828,10 +896,12 @@ export default function IndexMapScreen() {
             setPreviewOpen(false);
             setSelected(null);
           }}
-          onDirections={(it) => openDirections(it.latitude, it.longitude, it.name)}
+          onDirections={(it) => {
+            const t = resolveDirectionsTarget(it);
+            openDirections(t.lat, t.lng, it.name);
+          }}
         />
 
-        {/* Cluster chooser modal */}
         <Modal visible={clusterOpen} transparent animationType="fade" onRequestClose={() => setClusterOpen(false)}>
           <Pressable style={styles.backdrop} onPress={() => setClusterOpen(false)} />
           <View style={styles.clusterWrap}>
@@ -902,6 +972,7 @@ const styles = StyleSheet.create({
   searchInput: {
     height: 40,
     paddingHorizontal: 12,
+    paddingRight: 44,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.08)",
     color: "rgba(255,255,255,0.92)",
@@ -966,7 +1037,6 @@ const styles = StyleSheet.create({
     fontWeight: "900",
   },
 
-  // teardrop pins
   pinWrap: { alignItems: "center", justifyContent: "center" },
   pinShadow: {
     position: "absolute",
@@ -1009,7 +1079,6 @@ const styles = StyleSheet.create({
     marginLeft: 1,
   },
 
-  // cluster modal
   backdrop: { flex: 1, backgroundColor: "rgba(0,0,0,0.45)" },
   clusterWrap: {
     position: "absolute",
@@ -1054,4 +1123,43 @@ const styles = StyleSheet.create({
   nameRowTitle: { color: "white", fontWeight: "900" },
   nameRowSub: { marginTop: 4, color: "rgba(255,255,255,0.65)", fontWeight: "800", fontSize: 12 },
   pressed: { opacity: 0.85 },
+
+  searchWrap: { position: "relative" },
+  clearBtn: {
+    position: "absolute",
+    right: 10,
+    top: 8,
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.15)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  clearBtnText: {
+    color: "rgba(255,255,255,0.85)",
+    fontWeight: "900",
+    fontSize: 14,
+  },
+
+  // ✅ NEW opening screen styles
+  splashBackdrop: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.92)",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 24,
+  },
+  splashCard: {
+    width: "100%",
+    maxWidth: 420,
+    borderRadius: 18,
+    padding: 18,
+    backgroundColor: "rgba(12, 14, 18, 0.96)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.12)",
+  },
+  splashTitle: { color: "white", fontWeight: "900", fontSize: 26 },
+  splashSub: { color: "rgba(255,255,255,0.72)", fontWeight: "900", marginTop: 6 },
+  splashHint: { color: "rgba(255,255,255,0.65)", fontWeight: "800", fontSize: 12 },
 });

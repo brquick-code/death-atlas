@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Linking, Modal, Platform, Pressable, StyleSheet, Text, View } from "react-native";
 
 type DeathLocation = {
@@ -18,6 +18,17 @@ type DeathLocation = {
   confidence?: string;
   coord_source?: string;
 };
+
+function formatDate(d?: string | null) {
+  if (!d) return null;
+  const dt = new Date(d);
+  if (isNaN(dt.getTime())) return d;
+  return dt.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
 
 function sourceLabelFromUrl(url?: string) {
   if (!url) return "Source";
@@ -45,6 +56,28 @@ function firstNonEmpty(...vals: any[]): string | undefined {
   return undefined;
 }
 
+function isWikipedia(url?: string) {
+  return !!url && url.toLowerCase().includes("wikipedia.org");
+}
+
+function isOddStops(url?: string) {
+  return !!url && url.toLowerCase().includes("oddstops.com");
+}
+
+/**
+ * Normalize URLs for dedupe:
+ * - trim
+ * - remove trailing slashes
+ * - keep query/fragment
+ */
+function normUrl(url?: string) {
+  if (!url) return "";
+  let s = String(url).trim();
+  if (!s) return "";
+  while (s.length > 1 && s.endsWith("/")) s = s.slice(0, -1);
+  return s;
+}
+
 export default function LocationPreviewCard({
   visible,
   item,
@@ -58,33 +91,91 @@ export default function LocationPreviewCard({
 }) {
   if (!visible) return null;
 
-  // ✅ title should be the person's name (don't fall back to place_name)
   const title = firstNonEmpty(item?.name) ?? "Unknown Location";
 
-  // ✅ only show a meaningful place (never show "person"/"unknown")
   const place = firstNonEmpty(item?.place_name);
   const safePlace =
-    place && ["person", "unknown", "unknown place"].includes(place.trim().toLowerCase()) ? undefined : place;
+    place && ["person", "unknown", "unknown place"].includes(place.trim().toLowerCase())
+      ? undefined
+      : place;
 
-  const deathDate = firstNonEmpty(item?.death_date);
+  const rawDate = firstNonEmpty(item?.death_date);
+  const prettyDate = formatDate(rawDate);
 
-  // ✅ remove category entirely (this was showing "person")
-  const subtitleParts = [safePlace, deathDate].filter(Boolean) as string[];
+  // ✅ Label the date based on missing vs death
+  const isMissing =
+    (item?.category ?? "").toLowerCase() === "missing" ||
+    (item?.coord_source ?? "").toLowerCase() === "last_seen";
 
-  const wiki = firstNonEmpty(item?.wikipedia_url);
-  const source = firstNonEmpty(item?.source_url);
-  const more = (item?.source_urls ?? []).filter(Boolean).slice(0, 10);
+  const dateLabel = isMissing ? "Last seen" : "Died";
+  const datePart = prettyDate ? `${dateLabel} • ${prettyDate}` : undefined;
+
+  const subtitleParts = [safePlace, datePart].filter(Boolean) as string[];
 
   async function openUrl(url?: string) {
-    if (!url) return;
+    const u = normUrl(url);
+    if (!u) return;
     try {
-      await Linking.openURL(url);
+      await Linking.openURL(u);
     } catch {
       // ignore
     }
   }
 
-  const sourceLabel = sourceLabelFromUrl(source);
+  const { wikiBtn, sourceBtn, sourceLabel, moreLinks } = useMemo(() => {
+    const wiki = normUrl(firstNonEmpty(item?.wikipedia_url));
+    const source = normUrl(firstNonEmpty(item?.source_url));
+    const moreRaw = (item?.source_urls ?? []).filter(Boolean).map(normUrl).filter(Boolean);
+
+    const uniq = (arr: string[]) => {
+      const seen = new Set<string>();
+      const out: string[] = [];
+      for (const x of arr) {
+        const k = normUrl(x);
+        if (!k) continue;
+        if (seen.has(k)) continue;
+        seen.add(k);
+        out.push(k);
+      }
+      return out;
+    };
+
+    const moreUniq = uniq(moreRaw);
+
+    let chosenSource = source;
+
+    if (isWikipedia(chosenSource)) {
+      const odd = moreUniq.find((u) => isOddStops(u));
+      if (odd) chosenSource = odd;
+    }
+
+    if (!chosenSource) {
+      chosenSource = moreUniq[0] || "";
+    }
+
+    const label = sourceLabelFromUrl(chosenSource);
+
+    const exclude = new Set<string>();
+    if (wiki) exclude.add(normUrl(wiki));
+    if (chosenSource) exclude.add(normUrl(chosenSource));
+
+    const moreCombined: string[] = [];
+
+    if (source && !exclude.has(normUrl(source))) moreCombined.push(source);
+
+    for (const u of moreUniq) {
+      if (!exclude.has(normUrl(u))) moreCombined.push(u);
+    }
+
+    const moreFinal = uniq(moreCombined).slice(0, 10);
+
+    return {
+      wikiBtn: wiki || undefined,
+      sourceBtn: chosenSource || undefined,
+      sourceLabel: label,
+      moreLinks: moreFinal,
+    };
+  }, [item]);
 
   return (
     <Modal visible={visible} animationType="fade" transparent onRequestClose={onClose}>
@@ -98,8 +189,8 @@ export default function LocationPreviewCard({
                 {title}
               </Text>
               {subtitleParts.length ? (
-                <Text style={styles.subtitle} numberOfLines={2}>
-                  {subtitleParts.join(" • ")}
+                <Text style={styles.subtitle} numberOfLines={3}>
+                  {subtitleParts.join("\n")}
                 </Text>
               ) : null}
             </View>
@@ -109,7 +200,6 @@ export default function LocationPreviewCard({
             </Pressable>
           </View>
 
-          {/* ✅ Directions button */}
           {onDirections && item ? (
             <Pressable
               onPress={() => onDirections(item)}
@@ -121,27 +211,27 @@ export default function LocationPreviewCard({
 
           <View style={styles.btnRow}>
             <Pressable
-              disabled={!wiki}
-              onPress={() => openUrl(wiki)}
-              style={({ pressed }) => [styles.bigBtn, !wiki && styles.disabledBtn, pressed && styles.pressed]}
+              disabled={!wikiBtn}
+              onPress={() => openUrl(wikiBtn)}
+              style={({ pressed }) => [styles.bigBtn, !wikiBtn && styles.disabledBtn, pressed && styles.pressed]}
             >
               <Text style={styles.bigBtnText}>Wikipedia</Text>
             </Pressable>
 
             <Pressable
-              disabled={!source}
-              onPress={() => openUrl(source)}
-              style={({ pressed }) => [styles.bigBtn, !source && styles.disabledBtn, pressed && styles.pressed]}
+              disabled={!sourceBtn}
+              onPress={() => openUrl(sourceBtn)}
+              style={({ pressed }) => [styles.bigBtn, !sourceBtn && styles.disabledBtn, pressed && styles.pressed]}
             >
               <Text style={styles.bigBtnText}>{sourceLabel}</Text>
             </Pressable>
           </View>
 
-          {more.length ? (
+          {moreLinks.length ? (
             <View style={styles.moreWrap}>
               <Text style={styles.moreTitle}>More links</Text>
 
-              {more.map((u, i) => (
+              {moreLinks.map((u, i) => (
                 <Pressable
                   key={`${u}-${i}`}
                   onPress={() => openUrl(u)}
@@ -178,7 +268,7 @@ const styles = StyleSheet.create({
   },
   headerRow: { flexDirection: "row", alignItems: "flex-start", gap: 10 },
   title: { color: "white", fontWeight: "900", fontSize: 18 },
-  subtitle: { color: "rgba(255,255,255,0.72)", marginTop: 6, fontWeight: "700" },
+  subtitle: { color: "rgba(255,255,255,0.72)", marginTop: 6, fontWeight: "700", lineHeight: 18 },
 
   xBtn: {
     width: 36,
@@ -192,7 +282,6 @@ const styles = StyleSheet.create({
   },
   xText: { color: "white", fontWeight: "900", fontSize: 14 },
 
-  // ✅ Directions button (subtle, matches your style)
   dirBtn: {
     marginTop: 12,
     height: 44,

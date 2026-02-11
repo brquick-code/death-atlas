@@ -1,0 +1,257 @@
+import { NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
+
+/**
+ * GET /api/death-locations?minLat=&minLng=&maxLat=&maxLng=&zoom=&coord=death|burial|missing
+ *
+ * zoom < 10  => [{ lat, lng, count }]
+ * zoom >= 10 => raw points [{ id, title, lat, lng, coord_kind, ... }]
+ */
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || "",
+  process.env.SUPABASE_SERVICE_ROLE_KEY || "",
+  { auth: { persistSession: false } }
+);
+
+function toNumber(v: string | null): number | null {
+  if (v == null) return null;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : null;
+}
+
+function clamp(n: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, n));
+}
+
+type CoordMode = "death" | "burial" | "missing";
+
+type Row = {
+  id: string;
+  title: string | null;
+  type: string;
+  confidence: string;
+  coord_source: string | null;
+
+  category: string | null;
+
+  death_date: string | null;
+  wikipedia_url: string | null;
+
+  is_celebrity: boolean | null;
+  pageviews_365d: number | null;
+
+  source_name: string | null;
+  source_url: string | null;
+  source_urls: string[] | null;
+
+  death_latitude: number | null;
+  death_longitude: number | null;
+
+  burial_latitude: number | null;
+  burial_longitude: number | null;
+  burial_place_name?: string | null;
+
+  // ✅ Missing fields (new columns)
+  missing_latitude: number | null;
+  missing_longitude: number | null;
+  missing_place_name?: string | null;
+  missing_date?: string | null;
+  missing_status?: string | null;
+  missing_source_url?: string | null;
+  missing_source_urls?: string[] | null;
+};
+
+function pickDisplayCoordForMode(
+  r: Row,
+  mode: CoordMode
+): { lat: number; lng: number; coord_kind: CoordMode } | null {
+  if (mode === "burial") {
+    if (r.burial_latitude != null && r.burial_longitude != null) {
+      return { lat: r.burial_latitude, lng: r.burial_longitude, coord_kind: "burial" };
+    }
+    return null;
+  }
+
+  if (mode === "missing") {
+    if (r.missing_latitude != null && r.missing_longitude != null) {
+      return { lat: r.missing_latitude, lng: r.missing_longitude, coord_kind: "missing" };
+    }
+    return null;
+  }
+
+  // death mode
+  if (r.death_latitude != null && r.death_longitude != null) {
+    return { lat: r.death_latitude, lng: r.death_longitude, coord_kind: "death" };
+  }
+  return null;
+}
+
+function clusterPoints(pts: Array<{ lat: number; lng: number }>, zoom: number) {
+  const z = clamp(zoom, 0, 20);
+  const cell = 10 / Math.pow(2, Math.max(0, z));
+  const map = new Map<string, { sumLat: number; sumLng: number; count: number }>();
+
+  for (const p of pts) {
+    const x = Math.floor((p.lng + 180) / cell);
+    const y = Math.floor((p.lat + 90) / cell);
+    const key = `${x}:${y}`;
+    const cur = map.get(key);
+    if (cur) {
+      cur.sumLat += p.lat;
+      cur.sumLng += p.lng;
+      cur.count += 1;
+    } else {
+      map.set(key, { sumLat: p.lat, sumLng: p.lng, count: 1 });
+    }
+  }
+
+  return Array.from(map.values()).map((v) => ({
+    lat: v.sumLat / v.count,
+    lng: v.sumLng / v.count,
+    count: v.count,
+  }));
+}
+
+export async function GET(req: Request) {
+  try {
+    const { searchParams } = new URL(req.url);
+
+    const minLat = toNumber(searchParams.get("minLat"));
+    const minLng = toNumber(searchParams.get("minLng"));
+    const maxLat = toNumber(searchParams.get("maxLat"));
+    const maxLng = toNumber(searchParams.get("maxLng"));
+    const zoomRaw = toNumber(searchParams.get("zoom"));
+
+    const coordRaw = (searchParams.get("coord") || "death").toLowerCase();
+    const coordMode: CoordMode =
+      coordRaw === "burial" ? "burial" : coordRaw === "missing" ? "missing" : "death";
+
+    if (minLat == null || minLng == null || maxLat == null || maxLng == null || zoomRaw == null) {
+      return NextResponse.json({ error: "Missing minLat/minLng/maxLat/maxLng/zoom" }, { status: 400 });
+    }
+
+    const zoom = clamp(Math.round(zoomRaw), 0, 20);
+    const south = Math.min(minLat, maxLat);
+    const north = Math.max(minLat, maxLat);
+    const west = Math.min(minLng, maxLng);
+    const east = Math.max(minLng, maxLng);
+
+    const boundsDeath = `and(death_latitude.gte.${south},death_latitude.lte.${north},death_longitude.gte.${west},death_longitude.lte.${east})`;
+    const boundsBurial = `and(burial_latitude.gte.${south},burial_latitude.lte.${north},burial_longitude.gte.${west},burial_longitude.lte.${east})`;
+    const boundsMissing = `and(missing_latitude.gte.${south},missing_latitude.lte.${north},missing_longitude.gte.${west},missing_longitude.lte.${east})`;
+
+    const limit = zoom < 10 ? 20000 : 8000;
+
+    const bounds =
+      coordMode === "burial" ? boundsBurial : coordMode === "missing" ? boundsMissing : boundsDeath;
+
+    const latCol =
+      coordMode === "burial" ? "burial_latitude" : coordMode === "missing" ? "missing_latitude" : "death_latitude";
+    const lngCol =
+      coordMode === "burial" ? "burial_longitude" : coordMode === "missing" ? "missing_longitude" : "death_longitude";
+
+    const { data, error } = await supabase
+      .from("death_locations")
+      .select(
+        [
+          "id",
+          "title",
+          "type",
+          "confidence",
+          "coord_source",
+          "category",
+          "death_date",
+          "wikipedia_url",
+          "is_celebrity",
+          "pageviews_365d",
+          "source_name",
+          "source_url",
+          "source_urls",
+
+          "death_latitude",
+          "death_longitude",
+          "burial_latitude",
+          "burial_longitude",
+          "burial_place_name",
+
+          // ✅ Missing fields
+          "missing_latitude",
+          "missing_longitude",
+          "missing_place_name",
+          "missing_date",
+          "missing_status",
+          "missing_source_url",
+          "missing_source_urls",
+        ].join(",")
+      )
+      .eq("is_published", true)
+      .not("is_hidden", "is", true) // allow false OR NULL
+      .not(latCol, "is", null)
+      .not(lngCol, "is", null)
+      .or(bounds)
+      .limit(limit);
+
+    if (error) {
+      return NextResponse.json({ error: error.message, details: error.details ?? null }, { status: 500 });
+    }
+
+    const rows = (data ?? []) as Row[];
+
+    const withCoords = rows
+      .map((r) => {
+        const c = pickDisplayCoordForMode(r, coordMode);
+        if (!c) return null;
+        return { r, ...c };
+      })
+      .filter(Boolean) as Array<{ r: Row; lat: number; lng: number; coord_kind: CoordMode }>;
+
+    if (zoom < 10) {
+      const clusters = clusterPoints(
+        withCoords.map((x) => ({ lat: x.lat, lng: x.lng })),
+        zoom
+      );
+      return NextResponse.json(clusters, { headers: { "Cache-Control": "public, max-age=120" } });
+    }
+
+    const points = withCoords.map(({ r, lat, lng, coord_kind }) => ({
+      id: r.id,
+      title: r.title,
+      type: r.type,
+      confidence: r.confidence,
+      coord_source: r.coord_source,
+
+      category: r.category,
+
+      lat,
+      lng,
+      coord_kind,
+
+      death_date: r.death_date,
+      wikipedia_url: r.wikipedia_url,
+
+      is_celebrity: r.is_celebrity,
+      pageviews_365d: r.pageviews_365d,
+
+      source_name: r.source_name,
+      source_url: r.source_url,
+      source_urls: r.source_urls,
+
+      burial_place_name: r.burial_place_name ?? null,
+
+      // ✅ Missing extras (only meaningful in missing mode, but harmless otherwise)
+      missing_place_name: r.missing_place_name ?? null,
+      missing_date: r.missing_date ?? null,
+      missing_status: r.missing_status ?? null,
+      missing_source_url: r.missing_source_url ?? null,
+      missing_source_urls: r.missing_source_urls ?? null,
+    }));
+
+    return NextResponse.json(points, { headers: { "Cache-Control": "public, max-age=60" } });
+  } catch (err: any) {
+    return NextResponse.json(
+      { error: "Unhandled error in death-locations route", message: err?.message ?? String(err) },
+      { status: 500 }
+    );
+  }
+}

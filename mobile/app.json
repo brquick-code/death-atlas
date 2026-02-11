@@ -5,17 +5,61 @@
     "scheme": "deathatlas",
     "version": "1.0.0",
     "orientation": "portrait",
-    "plugins": ["expo-router"],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#111827"
+    "icon": "./assets/icon.png",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#000000",
+          "resizeMode": "cover",
+          "ios": {
+            "image": "./assets/splash-ios-1242x2688.png"
+          },
+          "android": {
+            "image": "./assets/splash-android-1080x1920.png"
+          }
+        }
+      ]
+    ],
+    "splash": {
+      "resizeMode": "cover",
+      "backgroundColor": "#000000",
+      "ios": {
+        "image": "./assets/splash-ios-1242x2688.png"
+      },
+      "android": {
+        "image": "./assets/splash-android-1080x1920.png"
       }
     },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.brquick.deathatlasmobile",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+  "package": "com.brquick.deathatlasmobile",
+  "config": {
+    "googleMaps": {
+      "apiKey": "AIzaSyAZsDDyD8s80rOc-sW9lw_r22apA59nLnM"
+    }
+  },
+  "adaptiveIcon": {
+    "foregroundImage": "./assets/icon.png",
+    "backgroundColor": "#111827"
+  }
+},
+
     "web": {
       "bundler": "metro"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8753f626-1112-45c3-9e71-75c1e524a092"
+      }
     }
   }
 }

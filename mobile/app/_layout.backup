@@ -1,0 +1,66 @@
+// C:\death-atlas\mobile\app\(tabs)\_layout.tsx
+import React from "react";
+import { Platform } from "react-native";
+import { Tabs } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
+
+export default function TabsLayout() {
+  return (
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: "#0b0f15",
+          borderTopColor: "rgba(255,255,255,0.10)",
+        },
+        tabBarActiveTintColor: "#dc2626",
+        tabBarInactiveTintColor: "rgba(255,255,255,0.65)",
+      }}
+    >
+      {/* Map */}
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Map",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name={Platform.OS === "ios" ? "map" : "map-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+
+      {/* Search */}
+      <Tabs.Screen
+        name="search"
+        options={{
+          title: "Search",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name={Platform.OS === "ios" ? "search" : "search-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+
+      {/* Profile */}
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name={Platform.OS === "ios" ? "person" : "person-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+    </Tabs>
+  );
+}
