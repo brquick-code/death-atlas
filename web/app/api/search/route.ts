@@ -4,9 +4,13 @@ import { createClient } from "@supabase/supabase-js";
 
 export const runtime = "nodejs";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+function getSupabase() {
+  // Server-only env vars (set these in Vercel)
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY; // server-only, bypasses RLS safely
+  if (!url || !key) throw new Error("Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
+  return createClient(url, key, { auth: { persistSession: false } });
+}
 
 type CoordMode = "death" | "burial" | "missing" | "either";
 
@@ -55,131 +59,138 @@ function pickLatLng(
 
   // either: prefer death, else burial, else missing
   if (dLat != null && dLng != null) return { lat: dLat, lng: dLng, coord_kind: "death" };
-  if (bLat !=null && bLng != null) return { lat: bLat, lng: bLng, coord_kind: "burial" };
+  if (bLat != null && bLng != null) return { lat: bLat, lng: bLng, coord_kind: "burial" };
   if (mLat != null && mLng != null) return { lat: mLat, lng: mLng, coord_kind: "missing" };
 
   return { lat: null, lng: null, coord_kind: null };
 }
 
 export async function GET(req: Request) {
-  const { searchParams } = new URL(req.url);
+  try {
+    const { searchParams } = new URL(req.url);
 
-  const q = (searchParams.get("q") ?? "").trim();
-  const limit = Math.min(Math.max(Number(searchParams.get("limit") ?? "30"), 1), 50);
+    const q = (searchParams.get("q") ?? "").trim();
+    const limit = Math.min(Math.max(Number(searchParams.get("limit") ?? "30"), 1), 50);
 
-  const coordParam = (searchParams.get("coord") ?? "either").toLowerCase();
-  const coord: CoordMode =
-    coordParam === "death"
-      ? "death"
-      : coordParam === "burial"
-      ? "burial"
-      : coordParam === "missing"
-      ? "missing"
-      : "either";
+    const coordParam = (searchParams.get("coord") ?? "either").toLowerCase();
+    const coord: CoordMode =
+      coordParam === "death"
+        ? "death"
+        : coordParam === "burial"
+          ? "burial"
+          : coordParam === "missing"
+            ? "missing"
+            : "either";
 
-  if (q.length < 2) return NextResponse.json({ data: [] });
+    if (q.length < 2) return NextResponse.json({ data: [] });
 
-  // ✅ ONLY select columns that actually exist
-  let query = supabase
-    .from("death_locations")
-    .select(
-      [
-        "id",
-        "title",
-        "type",
-        "category",
-        "wikipedia_url",
-        "source_url",
-        "source_urls",
-        "death_date",
-        "date_start",
-        "date_end",
-        "confidence",
-        "coord_source",
-        "death_latitude",
-        "death_longitude",
-        "burial_latitude",
-        "burial_longitude",
-        "burial_place_name",
+    const supabase = getSupabase();
 
-        // ✅ missing fields
-        "missing_latitude",
-        "missing_longitude",
-        "missing_place_name",
-        "missing_date",
-        "missing_status",
+    // ✅ ONLY select columns that actually exist
+    let query = supabase
+      .from("death_locations")
+      .select(
+        [
+          "id",
+          "title",
+          "type",
+          "category",
+          "wikipedia_url",
+          "source_url",
+          "source_urls",
+          "death_date",
+          "date_start",
+          "date_end",
+          "confidence",
+          "coord_source",
+          "death_latitude",
+          "death_longitude",
+          "burial_latitude",
+          "burial_longitude",
+          "burial_place_name",
 
-        "is_published",
-        "is_hidden",
-        "pageviews_365d",
-      ].join(",")
-    )
-    .eq("is_published", true)
-    .not("is_hidden", "is", true)
-    .ilike("title", `%${q}%`)
-    .order("pageviews_365d", { ascending: false, nullsFirst: false })
-    .limit(limit);
+          // ✅ missing fields
+          "missing_latitude",
+          "missing_longitude",
+          "missing_place_name",
+          "missing_date",
+          "missing_status",
 
-  // Optional coord filtering (keeps results relevant to the mode)
-  if (coord === "death") {
-    query = query.not("death_latitude", "is", null).not("death_longitude", "is", null);
-  } else if (coord === "burial") {
-    query = query.not("burial_latitude", "is", null).not("burial_longitude", "is", null);
-  } else if (coord === "missing") {
-    query = query.not("missing_latitude", "is", null).not("missing_longitude", "is", null);
-  } else {
-    // either: no extra filter
+          "is_published",
+          "is_hidden",
+          "pageviews_365d",
+        ].join(",")
+      )
+      .eq("is_published", true)
+      .not("is_hidden", "is", true)
+      .ilike("title", `%${q}%`)
+      .order("pageviews_365d", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    // Optional coord filtering
+    if (coord === "death") {
+      query = query.not("death_latitude", "is", null).not("death_longitude", "is", null);
+    } else if (coord === "burial") {
+      query = query.not("burial_latitude", "is", null).not("burial_longitude", "is", null);
+    } else if (coord === "missing") {
+      query = query.not("missing_latitude", "is", null).not("missing_longitude", "is", null);
+    }
+
+    const { data, error } = await query;
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+
+    const out =
+      (data ?? [])
+        .map((row: any) => {
+          const picked = pickLatLng(row, coord);
+          if (picked.lat == null || picked.lng == null) return null;
+
+          return {
+            id: row.id,
+            title: row.title ?? null,
+            name: row.title ?? null,
+
+            type: row.type ?? null,
+            category: row.category ?? row.type ?? null,
+
+            wikipedia_url: row.wikipedia_url ?? null,
+            source_url: row.source_url ?? null,
+            source_urls: normalizeSourceUrls(row),
+
+            death_date: row.death_date ?? null,
+            date_start: row.date_start ?? null,
+            date_end: row.date_end ?? null,
+            confidence: row.confidence ?? null,
+            coord_source: row.coord_source ?? null,
+
+            // ✅ what mobile needs to jump to it
+            lat: picked.lat,
+            lng: picked.lng,
+            coord_kind: picked.coord_kind,
+
+            // keep raw coord fields too (mobile expects them)
+            death_latitude: typeof row.death_latitude === "number" ? row.death_latitude : null,
+            death_longitude: typeof row.death_longitude === "number" ? row.death_longitude : null,
+            burial_latitude: typeof row.burial_latitude === "number" ? row.burial_latitude : null,
+            burial_longitude: typeof row.burial_longitude === "number" ? row.burial_longitude : null,
+            burial_place_name:
+              typeof row.burial_place_name === "string" ? row.burial_place_name : null,
+
+            // ✅ missing raw fields for mobile
+            missing_latitude: typeof row.missing_latitude === "number" ? row.missing_latitude : null,
+            missing_longitude:
+              typeof row.missing_longitude === "number" ? row.missing_longitude : null,
+            missing_place_name:
+              typeof row.missing_place_name === "string" ? row.missing_place_name : null,
+            missing_date: row.missing_date ?? null,
+            missing_status: typeof row.missing_status === "string" ? row.missing_status : null,
+          };
+        })
+        .filter(Boolean) ?? [];
+
+    return NextResponse.json({ data: out });
+  } catch (e: any) {
+    console.error("[/api/search] crash:", e);
+    return NextResponse.json({ error: e?.message || "Unknown error" }, { status: 500 });
   }
-
-  const { data, error } = await query;
-
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-
-  const out =
-    (data ?? [])
-      .map((row: any) => {
-        const picked = pickLatLng(row, coord);
-        if (picked.lat == null || picked.lng == null) return null;
-
-        return {
-          id: row.id,
-          title: row.title ?? null,
-          name: row.title ?? null,
-
-          type: row.type ?? null,
-          category: row.category ?? row.type ?? null,
-
-          wikipedia_url: row.wikipedia_url ?? null,
-          source_url: row.source_url ?? null,
-          source_urls: normalizeSourceUrls(row),
-
-          death_date: row.death_date ?? null,
-          date_start: row.date_start ?? null,
-          date_end: row.date_end ?? null,
-          confidence: row.confidence ?? null,
-          coord_source: row.coord_source ?? null,
-
-          // ✅ what mobile needs to jump to it
-          lat: picked.lat,
-          lng: picked.lng,
-          coord_kind: picked.coord_kind,
-
-          // keep raw coord fields too (mobile expects them)
-          death_latitude: typeof row.death_latitude === "number" ? row.death_latitude : null,
-          death_longitude: typeof row.death_longitude === "number" ? row.death_longitude : null,
-          burial_latitude: typeof row.burial_latitude === "number" ? row.burial_latitude : null,
-          burial_longitude: typeof row.burial_longitude === "number" ? row.burial_longitude : null,
-          burial_place_name: typeof row.burial_place_name === "string" ? row.burial_place_name : null,
-
-          // ✅ missing raw fields for mobile
-          missing_latitude: typeof row.missing_latitude === "number" ? row.missing_latitude : null,
-          missing_longitude: typeof row.missing_longitude === "number" ? row.missing_longitude : null,
-          missing_place_name: typeof row.missing_place_name === "string" ? row.missing_place_name : null,
-          missing_date: row.missing_date ?? null,
-          missing_status: typeof row.missing_status === "string" ? row.missing_status : null,
-        };
-      })
-      .filter(Boolean) ?? [];
-
-  return NextResponse.json({ data: out });
 }
