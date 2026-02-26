@@ -187,7 +187,6 @@ function makePinIcon(withBadge: boolean, badgeText: string) {
   });
 }
 
-// Attach handler to window so popup HTML links can call into the map.
 declare global {
   interface Window {
     __deathAtlasFocusPerson?: (id: string) => void;
@@ -454,22 +453,17 @@ export default function MapClient({
         m.on("click", async () => {
           const currentZoom = map.getZoom();
 
-          // Cluster behavior: zoom in until details
           if (isCluster && currentZoom < DETAIL_ZOOM) {
             const nextZoom = clamp(currentZoom + 2, currentZoom + 1, DETAIL_ZOOM);
             map.setView([p.lat, p.lng], nextZoom, { animate: true });
             return;
           }
 
-          // SINGLE point with id:
-          // If multiple people share the same exact spot, show list.
-          // Otherwise show the single entry.
           if (!isCluster && p.id) {
             try {
               const list = await fetchSameSpot(p.id);
 
               if (list.length >= 2) {
-                // use the returned list (exact spot), NOT radius-based nearby
                 const lat = (list[0]?.lat ?? p.lat) as number;
                 const lng = (list[0]?.lng ?? p.lng) as number;
                 openListPopupAt(lat, lng, list);
@@ -480,13 +474,11 @@ export default function MapClient({
               openPersonPopup(one);
             } catch (err: any) {
               if (err?.name === "AbortError") return;
-              // fallback to radius-based list
               openNearbyPopup(p.lat, p.lng);
             }
             return;
           }
 
-          // Otherwise: nearby list popup (clusters at detail zoom, or legacy points)
           openNearbyPopup(p.lat, p.lng);
         });
 
@@ -524,9 +516,11 @@ export default function MapClient({
 
       tileCacheRef.current.set(key, points);
 
+      // ✅ Type-safe LRU-ish eviction
       if (tileCacheRef.current.size > 400) {
-        const firstKey = tileCacheRef.current.keys().next().value;
-        tileCacheRef.current.delete(firstKey);
+        const it = tileCacheRef.current.keys().next();
+        const firstKey = it.value;
+        if (firstKey) tileCacheRef.current.delete(firstKey);
       }
 
       return points;
