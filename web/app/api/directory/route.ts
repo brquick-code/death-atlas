@@ -13,9 +13,7 @@ function getSupabase() {
     );
   }
 
-  return createClient(url, key, {
-    auth: { persistSession: false },
-  });
+  return createClient(url, key, { auth: { persistSession: false } });
 }
 
 function safeInt(v: string | null, fallback: number) {
@@ -24,12 +22,26 @@ function safeInt(v: string | null, fallback: number) {
   return Math.floor(n);
 }
 
+function cleanType(v: string | null): string | null {
+  if (!v) return null;
+  const t = v.trim().toLowerCase();
+  if (!t || t === "all") return null;
+  // Only allow known values so nobody can probe weird values.
+  if (!["unknown", "natural", "murder", "accident", "suicide"].includes(t)) return null;
+  return t;
+}
+
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
 
     const limit = Math.min(safeInt(searchParams.get("limit"), 500), 2000);
     const sort = (searchParams.get("sort") || "alpha").toLowerCase();
+
+    // NEW:
+    const type = cleanType(searchParams.get("type"));
+    const qRaw = searchParams.get("q");
+    const q = qRaw ? qRaw.trim() : "";
 
     const supabase = getSupabase();
 
@@ -51,16 +63,27 @@ export async function GET(req: Request) {
           "created_at",
         ].join(",")
       )
-      // Keep these filters even with RLS (defense-in-depth + predictable behavior)
       .eq("is_published", true)
-      .neq("is_hidden", true)
-      .limit(limit);
+      .neq("is_hidden", true);
+
+    // NEW: death_type filter for chips (Suicide, Murder, etc.)
+    if (type) {
+      query = query.eq("death_type", type);
+    }
+
+    // NEW: optional title search
+    // (Uses ILIKE; add a pg_trgm index later if you want this super fast.)
+    if (q.length > 0) {
+      query = query.ilike("title", `%${q}%`);
+    }
 
     if (sort === "newest") {
       query = query.order("created_at", { ascending: false, nullsFirst: false });
     } else {
       query = query.order("title", { ascending: true, nullsFirst: false });
     }
+
+    query = query.limit(limit);
 
     const { data, error } = await query;
 
