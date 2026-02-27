@@ -1,0 +1,426 @@
+// mobile/components/PremiumPaywallModal.tsx
+import React, { useMemo, useState } from "react";
+import {
+  ActivityIndicator,
+  Alert,
+  Linking,
+  Modal,
+  Platform,
+  Pressable,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+
+type Props = {
+  visible: boolean;
+  onClose: () => void;
+
+  // Parent should perform the actual purchase flow.
+  // Can be sync or async; we handle both.
+  onStartTrial?: () => void | Promise<void>;
+  onRestorePurchases?: () => void | Promise<void>;
+
+  trialLine?: string;
+  priceLine?: string;
+
+  backLabel?: string;
+  onBack?: () => void;
+
+  title?: string;
+  subtitle?: string;
+
+  primaryLabel?: string;
+
+  // Optional: set real URLs when ready
+  termsUrl?: string;
+  privacyUrl?: string;
+
+  // Optional: used for Apple-required disclosure text
+  renewalPeriodLabel?: string; // e.g. "annually", "monthly"
+};
+
+const DEFAULT_TERMS_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/";
+const DEFAULT_PRIVACY_URL = "https://deathatlas.com/privacy-policy";
+
+function openUrl(url: string) {
+  if (!url) return;
+  Linking.openURL(url).catch(() => {});
+}
+
+function Bullet({ text }: { text: string }) {
+  return (
+    <View style={styles.bulletRow}>
+      <Text style={styles.bulletDot}>•</Text>
+      <Text style={styles.bulletText}>{text}</Text>
+    </View>
+  );
+}
+
+export default function PremiumPaywallModal({
+  visible,
+  onClose,
+  onStartTrial,
+  onRestorePurchases,
+  trialLine = "Start 7-Day Free Trial",
+  priceLine = "$9.99/year after trial",
+  backLabel,
+  onBack,
+  title = "Death Atlas Premium",
+  subtitle = "Unlock burial & missing locations, advanced filtering, and premium navigation tools.",
+  primaryLabel = "Go Premium",
+  termsUrl = DEFAULT_TERMS_URL,
+  privacyUrl = DEFAULT_PRIVACY_URL,
+  renewalPeriodLabel = "annually",
+}: Props) {
+  // ✅ Critical fix: if not visible, render nothing.
+  if (!visible) return null;
+
+  const [busy, setBusy] = useState<"start" | "restore" | null>(null);
+
+  const primaryEnabled = typeof onStartTrial === "function";
+  const restoreEnabled = typeof onRestorePurchases === "function";
+
+  const showLegalLinks = useMemo(() => !!termsUrl && !!privacyUrl, [termsUrl, privacyUrl]);
+
+  const close = () => {
+    if (busy) return;
+    onClose?.();
+  };
+
+  async function runAction(kind: "start" | "restore") {
+    try {
+      if (busy) return;
+
+      if (kind === "start" && !primaryEnabled) {
+        Alert.alert(
+          "Not configured yet",
+          "Purchases aren’t wired in this build. Once the subscription product + purchase flow is connected, this button will open Apple’s purchase prompt."
+        );
+        return;
+      }
+
+      if (kind === "restore" && !restoreEnabled) {
+        Alert.alert("Restore unavailable", "Restore Purchases hasn’t been wired yet.");
+        return;
+      }
+
+      setBusy(kind);
+
+      if (kind === "start") {
+        await Promise.resolve(onStartTrial?.());
+      } else {
+        await Promise.resolve(onRestorePurchases?.());
+      }
+    } catch (e: any) {
+      const message =
+        typeof e?.message === "string"
+          ? e.message
+          : "Something went wrong starting the purchase. If this is a TestFlight build, make sure you’re signed into a Sandbox account and the subscription product exists in App Store Connect.";
+      Alert.alert("Premium purchase failed", message);
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  const primaryLabelLine = busy === "start" ? "Starting…" : primaryLabel;
+  const restoreLabelLine = busy === "restore" ? "Restoring…" : "Restore Purchases";
+
+  const disclosure =
+    `Payment will be charged to your Apple ID at confirmation of purchase. ` +
+    `Subscription auto-renews ${renewalPeriodLabel} unless canceled at least 24 hours before the end of the trial or current period. ` +
+    `Manage or cancel in Settings > Apple ID > Subscriptions.`;
+
+  return (
+    <Modal
+      animationType="fade"
+      transparent
+      visible={visible}
+      onRequestClose={close}
+      statusBarTranslucent
+      presentationStyle="overFullScreen"
+    >
+      <SafeAreaView style={styles.overlay} pointerEvents="box-none">
+        {/* Backdrop */}
+        <Pressable style={styles.backdrop} onPress={close} />
+
+        {/* ✅ Pressable sheet "eats" taps so backdrop can't steal them */}
+        <Pressable style={styles.sheet} onPress={() => {}}>
+          <View style={styles.headerRow}>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.kicker}>SUBSCRIPTION</Text>
+              <Text style={styles.title}>{title}</Text>
+              <Text style={styles.subtitle}>{subtitle}</Text>
+            </View>
+
+            <Pressable
+              onPress={close}
+              hitSlop={12}
+              disabled={!!busy}
+              style={({ pressed }) => [styles.xBtn, pressed && styles.pressed, !!busy && styles.disabled]}
+            >
+              <Text style={styles.xText}>✕</Text>
+            </Pressable>
+          </View>
+
+          <View style={styles.planCard}>
+            <View style={styles.planTopRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.planName}>Annual</Text>
+                <Text style={styles.planMeta}>{trialLine}</Text>
+              </View>
+
+              <View style={styles.pricePill}>
+                <Text style={styles.pricePillText}>{priceLine}</Text>
+              </View>
+            </View>
+
+            <View style={styles.divider} />
+
+            <View style={styles.bullets}>
+              <Bullet text="Burial & Missing locations (map + directory)" />
+              <Bullet text="Premium categories & advanced filters" />
+              <Bullet text="Directions for burial/missing pins" />
+              <Bullet text="Future: curated exhibits + weekly updates" />
+            </View>
+          </View>
+
+          <Pressable
+            onPress={() => runAction("start")}
+            disabled={!!busy}
+            style={({ pressed }) => [
+              styles.primaryBtn,
+              pressed && styles.pressed,
+              !!busy && styles.disabled,
+              !primaryEnabled && { opacity: 0.92 },
+            ]}
+          >
+            <View style={styles.primaryBtnInner}>
+              {busy === "start" ? <ActivityIndicator /> : null}
+              <View style={{ alignItems: "center" }}>
+                <Text style={styles.primaryBtnText}>{primaryLabelLine}</Text>
+                <Text style={styles.primaryBtnSubText}>{trialLine}</Text>
+              </View>
+            </View>
+          </Pressable>
+
+          <View style={styles.secondaryRow}>
+            {restoreEnabled ? (
+              <Pressable
+                onPress={() => runAction("restore")}
+                disabled={!!busy}
+                style={({ pressed }) => [styles.secondaryBtn, pressed && styles.pressed, !!busy && styles.disabled]}
+              >
+                <View style={styles.secondaryBtnInner}>
+                  {busy === "restore" ? <ActivityIndicator /> : null}
+                  <Text style={styles.secondaryBtnText}>{restoreLabelLine}</Text>
+                </View>
+              </Pressable>
+            ) : null}
+
+            <Pressable
+              onPress={close}
+              disabled={!!busy}
+              style={({ pressed }) => [
+                styles.secondaryBtn,
+                pressed && styles.pressed,
+                !!busy && styles.disabled,
+                !restoreEnabled && { flex: 1 },
+              ]}
+            >
+              <Text style={styles.secondaryBtnText}>Not now</Text>
+            </Pressable>
+          </View>
+
+          {onBack && backLabel ? (
+            <Pressable
+              onPress={onBack}
+              disabled={!!busy}
+              style={({ pressed }) => [styles.backBtn, pressed && styles.pressed, !!busy && styles.disabled]}
+            >
+              <Text style={styles.backBtnText}>{backLabel}</Text>
+            </Pressable>
+          ) : null}
+
+          <View style={styles.legalBlock}>
+            <Text style={styles.legalFine}>{disclosure}</Text>
+
+            {showLegalLinks ? (
+              <View style={styles.footerRow}>
+                <Pressable onPress={() => openUrl(termsUrl)} disabled={!!busy} style={({ pressed }) => [pressed && styles.pressed]}>
+                  <Text style={styles.footerLink}>Terms of Use</Text>
+                </Pressable>
+                <Text style={styles.footerDot}>•</Text>
+                <Pressable onPress={() => openUrl(privacyUrl)} disabled={!!busy} style={({ pressed }) => [pressed && styles.pressed]}>
+                  <Text style={styles.footerLink}>Privacy Policy</Text>
+                </Pressable>
+                <Text style={styles.footerDot}>•</Text>
+                <Text style={styles.footerFine}>Cancel anytime in subscriptions</Text>
+              </View>
+            ) : (
+              <View style={styles.footerRow}>
+                <Text style={styles.footerFine}>Cancel anytime in subscriptions</Text>
+              </View>
+            )}
+          </View>
+        </Pressable>
+      </SafeAreaView>
+    </Modal>
+  );
+}
+
+const styles = StyleSheet.create({
+  overlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.72)",
+    justifyContent: "flex-end",
+  },
+
+  // ✅ Backdrop stays behind the sheet
+  backdrop: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 1,
+  },
+
+  // ✅ These two are the big “unresponsive on some screens” fixes for Android
+  // zIndex + elevation ensure the sheet is always above backdrop
+  sheet: {
+    zIndex: 10,
+    elevation: 10,
+
+    padding: 16,
+    paddingBottom: Platform.OS === "ios" ? 18 : 16,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    backgroundColor: "#0f1116",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.10)",
+  },
+
+  headerRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 10,
+    marginBottom: 12,
+  },
+  kicker: {
+    color: "rgba(255,255,255,0.55)",
+    fontWeight: "900",
+    fontSize: 11,
+    letterSpacing: 1.2,
+  },
+  title: { color: "white", fontSize: 22, fontWeight: "900", marginTop: 4 },
+  subtitle: {
+    color: "rgba(255,255,255,0.72)",
+    marginTop: 6,
+    fontSize: 13,
+    fontWeight: "700",
+    lineHeight: 18,
+  },
+
+  xBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.12)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  xText: { color: "white", fontWeight: "900", fontSize: 14 },
+
+  planCard: {
+    borderRadius: 16,
+    padding: 14,
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.10)",
+    marginBottom: 12,
+  },
+  planTopRow: { flexDirection: "row", alignItems: "center", gap: 10 },
+  planName: { color: "white", fontWeight: "900", fontSize: 16 },
+  planMeta: { marginTop: 6, color: "rgba(255,255,255,0.75)", fontWeight: "800", fontSize: 13 },
+
+  pricePill: {
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.06)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.12)",
+    maxWidth: 170,
+  },
+  pricePillText: { color: "rgba(255,255,255,0.90)", fontWeight: "900", fontSize: 12 },
+
+  divider: { marginTop: 12, marginBottom: 12, height: 1, backgroundColor: "rgba(255,255,255,0.10)" },
+
+  bullets: { gap: 8 },
+  bulletRow: { flexDirection: "row", gap: 8, alignItems: "flex-start" },
+  bulletDot: { color: "rgba(255,255,255,0.70)", fontWeight: "900", marginTop: 1 },
+  bulletText: { color: "rgba(255,255,255,0.82)", fontWeight: "800", fontSize: 13, flex: 1, lineHeight: 18 },
+
+  primaryBtn: {
+    height: 54,
+    borderRadius: 14,
+    backgroundColor: "#dc2626",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  primaryBtnInner: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  primaryBtnText: { color: "white", fontWeight: "900", fontSize: 15 },
+  primaryBtnSubText: { marginTop: 2, color: "rgba(255,255,255,0.88)", fontWeight: "800", fontSize: 12 },
+
+  secondaryRow: { flexDirection: "row", gap: 10, marginTop: 10 },
+  secondaryBtn: {
+    flex: 1,
+    height: 42,
+    borderRadius: 14,
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.12)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  secondaryBtnInner: { flexDirection: "row", alignItems: "center", gap: 10 },
+  secondaryBtnText: { color: "rgba(255,255,255,0.90)", fontWeight: "900", fontSize: 13 },
+
+  backBtn: {
+    marginTop: 10,
+    height: 42,
+    borderRadius: 14,
+    backgroundColor: "rgba(255,255,255,0.06)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.10)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  backBtnText: { color: "rgba(255,255,255,0.80)", fontWeight: "900", fontSize: 13 },
+
+  legalBlock: { marginTop: 10 },
+  legalFine: {
+    color: "rgba(255,255,255,0.50)",
+    fontWeight: "700",
+    fontSize: 11,
+    lineHeight: 15,
+  },
+
+  footerRow: {
+    marginTop: 8,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "center",
+    gap: 6,
+  },
+  footerLink: { color: "rgba(255,255,255,0.80)", fontWeight: "900", fontSize: 12 },
+  footerDot: { color: "rgba(255,255,255,0.35)", fontWeight: "900" },
+  footerFine: { color: "rgba(255,255,255,0.45)", fontWeight: "800", fontSize: 12 },
+
+  pressed: { opacity: 0.85 },
+  disabled: { opacity: 0.65 },
+});

@@ -6,54 +6,27 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#0b0c0f"
+    },
     "plugins": [
       "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "backgroundColor": "#000000",
-          "resizeMode": "cover",
-          "ios": {
-            "image": "./assets/splash-ios-1242x2688.png"
-          },
-          "android": {
-            "image": "./assets/splash-android-1080x1920.png"
-          }
-        }
-      ]
+      "expo-font"
     ],
-    "splash": {
-      "resizeMode": "cover",
-      "backgroundColor": "#000000",
-      "ios": {
-        "image": "./assets/splash-ios-1242x2688.png"
-      },
-      "android": {
-        "image": "./assets/splash-android-1080x1920.png"
-      }
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.brquick.deathatlasmobile",
+      "buildNumber": "1",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationWhenInUseUsageDescription": "Death Atlas uses your location to show you on the map."
       }
     },
     "android": {
-  "package": "com.brquick.deathatlasmobile",
-  "config": {
-    "googleMaps": {
-      "apiKey": "AIzaSyAZsDDyD8s80rOc-sW9lw_r22apA59nLnM"
-    }
-  },
-  "adaptiveIcon": {
-    "foregroundImage": "./assets/icon.png",
-    "backgroundColor": "#111827"
-  }
-},
-
-    "web": {
-      "bundler": "metro"
+      "package": "com.brquick.deathatlasmobile",
+      "versionCode": 1
     },
     "extra": {
       "router": {},

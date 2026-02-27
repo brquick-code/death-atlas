@@ -516,10 +516,10 @@ export default function MapClient({
 
       tileCacheRef.current.set(key, points);
 
-      // ✅ Type-safe LRU-ish eviction
+      // ✅ FIX: key could be undefined if map is empty for a split-second
       if (tileCacheRef.current.size > 400) {
         const it = tileCacheRef.current.keys().next();
-        const firstKey = it.value;
+        const firstKey: string | undefined = it && !it.done ? (it.value as string) : undefined;
         if (firstKey) tileCacheRef.current.delete(firstKey);
       }
 
@@ -559,8 +559,7 @@ export default function MapClient({
       abortRef.current = ac;
 
       const z = map.getZoom();
-      const ring = 1;
-      const tiles = tilesCoveringViewport(z, ring);
+      const tiles = tilesCoveringViewport(z, 1);
 
       try {
         const all = await Promise.all(tiles.map((t) => fetchTile(z, t.x, t.y, ac.signal)));

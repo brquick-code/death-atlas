@@ -40,7 +40,6 @@ function sourceLabelFromUrl(url?: string) {
   if (u.includes("findagrave.com")) return "Find A Grave";
   if (u.includes("wikipedia.org")) return "Wikipedia";
 
-  // optional extras
   if (u.includes("imdb.com")) return "IMDb";
   if (u.includes("newspapers.com")) return "Newspapers.com";
 
@@ -64,12 +63,6 @@ function isOddStops(url?: string) {
   return !!url && url.toLowerCase().includes("oddstops.com");
 }
 
-/**
- * Normalize URLs for dedupe:
- * - trim
- * - remove trailing slashes
- * - keep query/fragment
- */
 function normUrl(url?: string) {
   if (!url) return "";
   let s = String(url).trim();
@@ -83,13 +76,22 @@ export default function LocationPreviewCard({
   item,
   onClose,
   onDirections,
+
+  // premium wiring
+  isPremium = true,
+  onRequirePremium,
 }: {
   visible: boolean;
   item: DeathLocation | null;
   onClose: () => void;
   onDirections?: (item: DeathLocation) => void;
+
+  isPremium?: boolean;
+  onRequirePremium?: () => void;
 }) {
   if (!visible) return null;
+
+  const lockSuffix = " 🔒";
 
   const title = firstNonEmpty(item?.name) ?? "Unknown Location";
 
@@ -102,7 +104,6 @@ export default function LocationPreviewCard({
   const rawDate = firstNonEmpty(item?.death_date);
   const prettyDate = formatDate(rawDate);
 
-  // ✅ Label the date based on missing vs death
   const isMissing =
     (item?.category ?? "").toLowerCase() === "missing" ||
     (item?.coord_source ?? "").toLowerCase() === "last_seen";
@@ -112,14 +113,70 @@ export default function LocationPreviewCard({
 
   const subtitleParts = [safePlace, datePart].filter(Boolean) as string[];
 
+  const locked = !isPremium;
+
+  /**
+   * 🔒 IMPORTANT:
+   * When locked, give the Pressable a brief moment to show pressed state,
+   * then close this Modal, then open paywall.
+   * This preserves the "button press" feel AND avoids modal stacking/freezes.
+   */
+  function openPaywallAfterClose() {
+    // Let the pressed state show briefly
+    setTimeout(() => {
+      // Close preview first (prevents modal stacking issues)
+      try {
+        onClose();
+      } catch {}
+
+      // Then open paywall after the close starts
+      setTimeout(() => {
+        try {
+          onRequirePremium?.();
+        } catch {
+          // ignore
+        }
+      }, 120);
+    }, 90);
+  }
+
   async function openUrl(url?: string) {
     const u = normUrl(url);
     if (!u) return;
+
+    if (locked) {
+      openPaywallAfterClose();
+      return;
+    }
+
+    // Close preview first, then open link (prevents MapView weirdness)
     try {
-      await Linking.openURL(u);
+      onClose();
+      setTimeout(async () => {
+        try {
+          await Linking.openURL(u);
+        } catch {
+          // ignore
+        }
+      }, 180);
     } catch {
       // ignore
     }
+  }
+
+  function onDirectionsPress() {
+    if (!item || !onDirections) return;
+
+    if (locked) {
+      openPaywallAfterClose();
+      return;
+    }
+
+    // Close preview first, then run directions (prevents MapView freeze on return)
+    onClose();
+    setTimeout(() => {
+      onDirections(item);
+    }, 120);
   }
 
   const { wikiBtn, sourceBtn, sourceLabel, moreLinks } = useMemo(() => {
@@ -144,6 +201,7 @@ export default function LocationPreviewCard({
 
     let chosenSource = source;
 
+    // If "source" is wikipedia, prefer OddStops from source_urls
     if (isWikipedia(chosenSource)) {
       const odd = moreUniq.find((u) => isOddStops(u));
       if (odd) chosenSource = odd;
@@ -202,10 +260,14 @@ export default function LocationPreviewCard({
 
           {onDirections && item ? (
             <Pressable
-              onPress={() => onDirections(item)}
-              style={({ pressed }) => [styles.dirBtn, pressed && styles.pressed]}
+              onPress={onDirectionsPress}
+              style={({ pressed }) => [
+                styles.dirBtn,
+                locked && styles.lockedBtn,
+                pressed && styles.pressed,
+              ]}
             >
-              <Text style={styles.dirBtnText}>Directions</Text>
+              <Text style={styles.dirBtnText}>Directions{locked ? lockSuffix : ""}</Text>
             </Pressable>
           ) : null}
 
@@ -213,17 +275,30 @@ export default function LocationPreviewCard({
             <Pressable
               disabled={!wikiBtn}
               onPress={() => openUrl(wikiBtn)}
-              style={({ pressed }) => [styles.bigBtn, !wikiBtn && styles.disabledBtn, pressed && styles.pressed]}
+              style={({ pressed }) => [
+                styles.bigBtn,
+                !wikiBtn && styles.disabledBtn,
+                locked && styles.lockedBtn,
+                pressed && styles.pressed,
+              ]}
             >
-              <Text style={styles.bigBtnText}>Wikipedia</Text>
+              <Text style={styles.bigBtnText}>Wikipedia{locked ? lockSuffix : ""}</Text>
             </Pressable>
 
             <Pressable
               disabled={!sourceBtn}
               onPress={() => openUrl(sourceBtn)}
-              style={({ pressed }) => [styles.bigBtn, !sourceBtn && styles.disabledBtn, pressed && styles.pressed]}
+              style={({ pressed }) => [
+                styles.bigBtn,
+                !sourceBtn && styles.disabledBtn,
+                locked && styles.lockedBtn,
+                pressed && styles.pressed,
+              ]}
             >
-              <Text style={styles.bigBtnText}>{sourceLabel}</Text>
+              <Text style={styles.bigBtnText}>
+                {sourceLabel}
+                {locked ? lockSuffix : ""}
+              </Text>
             </Pressable>
           </View>
 
@@ -235,10 +310,15 @@ export default function LocationPreviewCard({
                 <Pressable
                   key={`${u}-${i}`}
                   onPress={() => openUrl(u)}
-                  style={({ pressed }) => [styles.smallLink, pressed && styles.pressed]}
+                  style={({ pressed }) => [
+                    styles.smallLink,
+                    locked && styles.lockedBtn,
+                    pressed && styles.pressed,
+                  ]}
                 >
                   <Text style={styles.smallLinkText} numberOfLines={1}>
                     {sourceLabelFromUrl(u)}
+                    {locked ? lockSuffix : ""}
                   </Text>
                 </Pressable>
               ))}
@@ -317,5 +397,6 @@ const styles = StyleSheet.create({
   },
   smallLinkText: { color: "#e5e7eb", fontSize: 12 },
 
+  lockedBtn: { opacity: 0.55 },
   pressed: { opacity: 0.85 },
 });

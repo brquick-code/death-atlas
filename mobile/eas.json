@@ -6,13 +6,35 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_BASE_URL": "http://192.168.50.143:3000",
+        "EXPO_PUBLIC_REVENUECAT_API_KEY_IOS": "appl_QqVPkSaDIXfhPWckeXeXhGGFIWe",
+        "EXPO_PUBLIC_REVENUECAT_API_KEY_ANDROID": "goog_XXXXXXXXXXXXXXXX"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_BASE_URL": "https://death-atlas-web.vercel.app",
+        "EXPO_PUBLIC_REVENUECAT_API_KEY_IOS": "appl_QqVPkSaDIXfhPWckeXeXhGGFIWe",
+        "EXPO_PUBLIC_REVENUECAT_API_KEY_ANDROID": "goog_XXXXXXXXXXXXXXXX"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "distribution": "store",
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_API_BASE_URL": "https://death-atlas-web.vercel.app",
+        "EXPO_PUBLIC_REVENUECAT_API_KEY_IOS": "appl_QqVPkSaDIXfhPWckeXeXhGGFIWe",
+        "EXPO_PUBLIC_REVENUECAT_API_KEY_ANDROID": "goog_XXXXXXXXXXXXXXXX"
+      }
     }
+  },
+  "submit": {
+    "production": {}
   }
 }

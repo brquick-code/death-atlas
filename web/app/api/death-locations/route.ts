@@ -31,18 +31,28 @@ function parseBool(v: string | null | undefined): boolean | undefined {
   return undefined;
 }
 
+function safeStr(v: any): string | null {
+  if (v == null) return null;
+  const s = String(v).trim();
+  return s.length ? s : null;
+}
+
+function safeNum(v: any): number | null {
+  const x = Number(v);
+  return Number.isFinite(x) ? x : null;
+}
+
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
 
     const modeRaw = (searchParams.get("mode") || searchParams.get("coord") || "death").toLowerCase();
-    const mode = (["death", "burial", "missing"].includes(modeRaw)
-      ? (modeRaw as Mode)
-      : "death") as Mode;
+    const mode = (["death", "burial", "missing"].includes(modeRaw) ? (modeRaw as Mode) : "death") as Mode;
 
     const sort = (searchParams.get("sort") || "").toLowerCase();
     const limit = clamp(Number(searchParams.get("limit")) || 2000, 1, 5000);
 
+    // support both param styles
     const west = n(searchParams, "west", n(searchParams, "minLng", -180));
     const east = n(searchParams, "east", n(searchParams, "maxLng", 180));
     const south = n(searchParams, "south", n(searchParams, "minLat", -90));
@@ -93,16 +103,13 @@ export async function GET(req: Request) {
       `
       );
 
-    if (published === false) {
-      query = query.eq("is_published", false);
-    } else {
-      query = query.eq("is_published", true);
-    }
+    // default: published only
+    if (published === false) query = query.eq("is_published", false);
+    else query = query.eq("is_published", true);
 
-    if (!includeHidden) {
-      query = query.neq("is_hidden", true);
-    }
+    if (!includeHidden) query = query.neq("is_hidden", true);
 
+    // bbox filter depends on mode
     if (mode === "burial") {
       query = query
         .not("burial_latitude", "is", null)
@@ -129,56 +136,64 @@ export async function GET(req: Request) {
         .lte("death_longitude", east);
     }
 
-    if (sort === "newest") {
-      query = query.order("created_at", { ascending: false });
-    }
+    if (sort === "newest") query = query.order("created_at", { ascending: false });
 
     query = query.limit(limit);
 
     const { data, error } = await query;
 
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
-    // ✅ Type-safe guard so Vercel build passes
     const rows = Array.isArray(data) ? data : [];
 
+    // 🔥 IMPORTANT:
+    // Always return lat/lng + coord_kind so mobile can never “guess” wrong.
     const normalized = rows.map((row: any) => {
-      let latitude: number | null = null;
-      let longitude: number | null = null;
+      let lat: number | null = null;
+      let lng: number | null = null;
       let place_name: string | null = null;
 
       if (mode === "burial") {
-        latitude = row.burial_latitude ?? null;
-        longitude = row.burial_longitude ?? null;
-        place_name = row.burial_place_name ?? row.cemetery_name ?? null;
+        lat = safeNum(row.burial_latitude);
+        lng = safeNum(row.burial_longitude);
+        place_name = safeStr(row.burial_place_name) ?? safeStr(row.cemetery_name) ?? null;
       } else if (mode === "missing") {
-        latitude = row.missing_latitude ?? null;
-        longitude = row.missing_longitude ?? null;
-        place_name = row.missing_place_name ?? null;
+        lat = safeNum(row.missing_latitude);
+        lng = safeNum(row.missing_longitude);
+        place_name = safeStr(row.missing_place_name) ?? null;
       } else {
-        latitude = row.death_latitude ?? null;
-        longitude = row.death_longitude ?? null;
-        place_name = row.address_label ?? null;
+        lat = safeNum(row.death_latitude);
+        lng = safeNum(row.death_longitude);
+        place_name = safeStr(row.address_label) ?? null;
       }
 
-      const title = row.title ?? null;
+      const title = safeStr(row.title);
 
       return {
         id: row.id,
         title,
-        name: title,
+        name: title, // legacy for clients expecting "name"
 
-        latitude,
-        longitude,
+        // ✅ canonical coordinates for the requested mode
+        lat,
+        lng,
+        coord_kind: mode,
+
+        // ✅ legacy fields some clients still use
+        latitude: lat,
+        longitude: lng,
         place_name,
 
         category: row.category ?? row.death_type ?? null,
+
+        // NOTE: if this is timestamptz, the client may shift a day when parsing.
+        // We'll fix /api/search next if needed to ensure YYYY-MM-DD only.
         death_date: row.death_date ?? null,
+
         coord_source: row.coord_source ?? null,
 
         wikipedia_url: row.wikipedia_url ?? null,
+        source_name: row.source_name ?? null,
         source_url: row.source_url ?? null,
         source_urls: row.source_urls ?? null,
 
@@ -187,12 +202,20 @@ export async function GET(req: Request) {
 
         burial_latitude: row.burial_latitude ?? null,
         burial_longitude: row.burial_longitude ?? null,
-        burial_place_name: row.burial_place_name ?? row.cemetery_name ?? null,
+        burial_place_name: safeStr(row.burial_place_name) ?? safeStr(row.cemetery_name) ?? null,
+
+        cemetery_name: row.cemetery_name ?? null,
+        cemetery_latitude: row.cemetery_latitude ?? null,
+        cemetery_longitude: row.cemetery_longitude ?? null,
 
         missing_latitude: row.missing_latitude ?? null,
         missing_longitude: row.missing_longitude ?? null,
         missing_place_name: row.missing_place_name ?? null,
+        missing_date: row.missing_date ?? null,
+        missing_status: row.missing_status ?? null,
 
+        is_published: row.is_published ?? null,
+        is_hidden: row.is_hidden ?? null,
         created_at: row.created_at ?? null,
         updated_at: row.updated_at ?? null,
       };
@@ -201,9 +224,6 @@ export async function GET(req: Request) {
     return NextResponse.json(normalized, { status: 200 });
   } catch (e: any) {
     console.error("[/api/death-locations] crash:", e);
-    return NextResponse.json(
-      { error: e?.message || "Unknown error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: e?.message || "Unknown error" }, { status: 500 });
   }
 }
