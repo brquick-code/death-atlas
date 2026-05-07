@@ -1,0 +1,5347 @@
+[
+  {
+    "name": "Aaron Spelling",
+    "url": "https://findadeath.com/aaron-spelling/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Adriana Caselotti",
+    "url": "https://findadeath.com/adriana-caselotti/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Adrienne Shelly",
+    "url": "https://findadeath.com/adrienne-shelly/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Agatha Christie",
+    "url": "https://findadeath.com/agatha-christie/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Agnes Moorehead",
+    "url": "https://findadeath.com/elizabeth-montgomery/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Alan Hale Jr.",
+    "url": "https://findadeath.com/alan-hale-jr/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Alan Sues",
+    "url": "https://findadeath.com/alan-sues/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Albert Dekker",
+    "url": "https://findadeath.com/albert-dekker/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Alexander Godunov",
+    "url": "https://findadeath.com/alexander-godunov/",
+    "isPerson": false,
+    "score": -5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Alexander McQueen",
+    "url": "https://findadeath.com/alexander-mcqueen/",
+    "isPerson": true,
+    "score": 80,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Alfred Hitchcock",
+    "url": "https://findadeath.com/alfred-hitchcock/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Alice Ghostley",
+    "url": "https://findadeath.com/alice-ghostley-2/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Alice Nunn",
+    "url": "https://findadeath.com/alice-nunn/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Alice Pearce",
+    "url": "https://findadeath.com/alice-pearce/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Allan Melvin",
+    "url": "https://findadeath.com/allan-Melvin",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Amy Winehouse",
+    "url": "https://findadeath.com/amy-winehouse/",
+    "isPerson": false,
+    "score": -40,
+    "reasons": [
+      "-25: name heuristic: name contains non-person token: house",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Andre The Giant",
+    "url": "https://findadeath.com/andre-the-giant/",
+    "isPerson": true,
+    "score": 80,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Andrews Sisters, The",
+    "url": "https://findadeath.com/andrews-sisters-the/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "-25: name heuristic: name looks like a group/page title (The ...)",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Andy Gibb",
+    "url": "https://findadeath.com/andy-gibb/",
+    "isPerson": true,
+    "score": 120,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Andy Kaufman",
+    "url": "https://findadeath.com/andy-kaufman/",
+    "isPerson": true,
+    "score": 120,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Andy Warhol",
+    "url": "https://findadeath.com/andy-warhol/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Anissa Jones",
+    "url": "https://findadeath.com/anissa-jones/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Anita Ekberg",
+    "url": "https://findadeath.com/anita-ekberg/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Ann Miller",
+    "url": "https://findadeath.com/ann-miller/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Ann Savage",
+    "url": "https://findadeath.com/ann-savage/",
+    "isPerson": true,
+    "score": 40,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-10: looks like an archive/index page",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Ann Sheridan",
+    "url": "https://findadeath.com/ann-sheridan/",
+    "isPerson": true,
+    "score": 60,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Anna Lee",
+    "url": "https://findadeath.com/anna-lee/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Anna Nicole Smith",
+    "url": "https://findadeath.com/anna-nicole-smith/",
+    "isPerson": true,
+    "score": 60,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Anne Kirkbride",
+    "url": "https://findadeath.com/anne-kirkbride/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Annette Funicello",
+    "url": "https://findadeath.com/annette-funicello/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Anthony Dwain Lee",
+    "url": "https://findadeath.com/anthony-dwain-lee/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Anthony Perkins",
+    "url": "https://findadeath.com/anthony-perkins/",
+    "isPerson": true,
+    "score": 120,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Anton Yelchin",
+    "url": "https://findadeath.com/anton-yelchin/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Ava Gardner",
+    "url": "https://findadeath.com/ava-gardner/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Barbara Cartland",
+    "url": "https://findadeath.com/Barbara-Cartland/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Barbara Colby",
+    "url": "https://findadeath.com/barbara-colby/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Barbara Stanwyck",
+    "url": "https://findadeath.com/barbara-stanwyck/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Bea Arthur",
+    "url": "https://findadeath.com/bea-arthur/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Bea Benaderet",
+    "url": "https://findadeath.com/bea-benaderet/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Bela Lugosi",
+    "url": "https://findadeath.com/Bela-Lugosi/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Ben Franklin",
+    "url": "https://findadeath.com/Ben-Franklin/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Ben Woolf",
+    "url": "https://findadeath.com/ben-woolf/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Benny Hill",
+    "url": "https://findadeath.com/benny-hill/",
+    "isPerson": true,
+    "score": 120,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Bernard Fox",
+    "url": "https://findadeath.com/bernard-fox/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Bernie Mac",
+    "url": "https://findadeath.com/bernie-mac/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Bert Convy",
+    "url": "https://findadeath.com/bert-convy/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language"
+    ]
+  },
+  {
+    "name": "Bette Davis",
+    "url": "https://findadeath.com/bette-davis/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Bettie Page",
+    "url": "https://findadeath.com/bettie-page/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Bill Bixby",
+    "url": "https://findadeath.com/bill-bixby/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Billy Barty",
+    "url": "https://findadeath.com/billy-barty/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Bing Crosby",
+    "url": "https://findadeath.com/bing-crosby/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Blossom Rock",
+    "url": "https://findadeath.com/blossom-rock-the-addams-family/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Bob Crane",
+    "url": "https://findadeath.com/bob-crane/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Bob Denver",
+    "url": "https://findadeath.com/bob-denver/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Bob Hope",
+    "url": "https://findadeath.com/bob-hope/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Bobby Driscoll",
+    "url": "https://findadeath.com/bobby-driscoll/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Bobby Fuller",
+    "url": "https://findadeath.com/bobby-fuller/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Bobby Hatfield",
+    "url": "https://findadeath.com/bobby-hatfield/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-10: looks like an archive/index page"
+    ]
+  },
+  {
+    "name": "Bonnie Lee Bakley",
+    "url": "https://findadeath.com/bonnie-lee-bakley/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Brad Barron Renfro",
+    "url": "https://findadeath.com/brad-barron-renfro/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Brandon Lee",
+    "url": "https://findadeath.com/brandon-lee/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Brian Jones",
+    "url": "https://findadeath.com/brian-jones/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Brian Keith",
+    "url": "https://findadeath.com/brian-keith/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Brittany Murphy",
+    "url": "https://findadeath.com/brittany-murphy/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Bruce Lee",
+    "url": "https://findadeath.com/bruce-lee/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Buddy Ebsen",
+    "url": "https://findadeath.com/buddy-ebsen/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Buddy Hackett",
+    "url": "https://findadeath.com/buddy-hackett/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Buddy Holly",
+    "url": "https://findadeath.com/buddy-holly/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Buddy Rich",
+    "url": "https://findadeath.com/buddy-rich/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Bugsy Siegel",
+    "url": "https://findadeath.com/bugsy-siegel/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-10: looks like an archive/index page"
+    ]
+  },
+  {
+    "name": "Buster Keaton",
+    "url": "https://findadeath.com/buster-keaton/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Carol Channing",
+    "url": "https://findadeath.com/carol-channing/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Carol Wayne",
+    "url": "https://findadeath.com/carol-wayne/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Carolyn Jones",
+    "url": "https://findadeath.com/carolyn-jones/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Cary Grant",
+    "url": "https://findadeath.com/cary-grant/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Caryll Ann Ekelund",
+    "url": "https://findadeath.com/caryll-ann-ekelund/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Cass Elliot, “Mama”",
+    "url": "https://findadeath.com/mama-cass-elliot/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Charles Laughton",
+    "url": "https://findadeath.com/charles-laughton/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Charles Nelson Reilly",
+    "url": "https://findadeath.com/charles-nelson-reilly/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Charles Pierce",
+    "url": "https://findadeath.com/charles-pierce/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Chris Farley",
+    "url": "https://findadeath.com/chris-farley/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Chris Penn",
+    "url": "https://findadeath.com/chris-penn/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Chyna",
+    "url": "https://findadeath.com/chyna/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Clara Bow",
+    "url": "https://findadeath.com/clara-bow/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Clara Peller",
+    "url": "https://findadeath.com/clara-peller/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Clark Gable",
+    "url": "https://findadeath.com/clark-gable/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Claude Francois",
+    "url": "https://findadeath.com/claude-francois/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Cleavon Little",
+    "url": "https://findadeath.com/cleavon-little/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Corey Haim",
+    "url": "https://findadeath.com/corey-haim/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Curtis Lee",
+    "url": "https://findadeath.com/curtis-lee/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Dale Earnhardt",
+    "url": "https://findadeath.com/dale-earnhardt/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Dan & Linda Broderick",
+    "url": "https://findadeath.com/dan-and-linda-broderick/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Dan Blocker",
+    "url": "https://findadeath.com/dan-blocker/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Danny Lockin",
+    "url": "https://findadeath.com/danny-lockin/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Darby Crash",
+    "url": "https://findadeath.com/darby-crash/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Darrell “Dimebag” Abbott",
+    "url": "https://findadeath.com/darrell-dimebag-darrell-abbott/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Darrell Winfield",
+    "url": "https://findadeath.com/darrell-winfield/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Darren McGavin",
+    "url": "https://findadeath.com/darren-mcgavin/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Darren Shahlavi",
+    "url": "https://findadeath.com/darren-shahlavi/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "David Cassidy",
+    "url": "https://findadeath.com/david-cassidy/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "David Janssen",
+    "url": "https://findadeath.com/david-janssen/",
+    "isPerson": false,
+    "score": -20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-10: looks like an archive/index page",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "David Rappaport",
+    "url": "https://findadeath.com/david-rappaport/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "David Strickland",
+    "url": "https://findadeath.com/david-strickland/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Davy Jones",
+    "url": "https://findadeath.com/davy-jones/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Dean Martin",
+    "url": "https://findadeath.com/dean-dino-martin/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Debralee Scott",
+    "url": "https://findadeath.com/debralee-scott/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Dee Dee Ramone",
+    "url": "https://findadeath.com/dee-dee-ramone/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "DeForest Kelley",
+    "url": "https://findadeath.com/deforest-kelley/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Del Rubio Triplets, The",
+    "url": "https://findadeath.com/del-rubio-triplets/",
+    "isPerson": false,
+    "score": -25,
+    "reasons": [
+      "-25: name heuristic: name looks like a group/page title (The ...)",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Del Shannon",
+    "url": "https://findadeath.com/del-shannon/",
+    "isPerson": true,
+    "score": 55,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-10: looks like an archive/index page",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Dennis C. Stewart",
+    "url": "https://findadeath.com/dennis-c-crater-face-stewart/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Dennis Wilson",
+    "url": "https://findadeath.com/dennis-wilson/",
+    "isPerson": false,
+    "score": -5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "DeShaun “Proof” Holton",
+    "url": "https://findadeath.com/deshaun-dupree-holton-aka-proof/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Desi Arnaz",
+    "url": "https://findadeath.com/desi-arnaz/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Diana Dors",
+    "url": "https://findadeath.com/diana-dors/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Diane Linkletter",
+    "url": "https://findadeath.com/diane-linkletter/",
+    "isPerson": true,
+    "score": 60,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Dick Clark",
+    "url": "https://findadeath.com/dick-clark/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Dick Sargent",
+    "url": "https://findadeath.com/dick-sargent/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Dick York",
+    "url": "https://findadeath.com/dick-york/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Dinah Shore",
+    "url": "https://findadeath.com/dinah-shore/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Dirk Bogarde",
+    "url": "https://findadeath.com/dirk-bogarde/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Divine",
+    "url": "https://findadeath.com/divine/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Dodo Denney",
+    "url": "https://findadeath.com/dodo-denney/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Doll Family Midgets, The",
+    "url": "https://findadeath.com/doll-family-midgets/",
+    "isPerson": true,
+    "score": 60,
+    "reasons": [
+      "-25: name heuristic: name looks like a group/page title (The ...)",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Dominique Dunne",
+    "url": "https://findadeath.com/dominique-dunne/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Don Adams",
+    "url": "https://findadeath.com/don-adams/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Don Cornelius",
+    "url": "https://findadeath.com/don-cornelius/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Don Knotts",
+    "url": "https://findadeath.com/don-knotts/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Don Simpson",
+    "url": "https://findadeath.com/don-simpson/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Donald Turnupseed",
+    "url": "https://findadeath.com/donald-turnupseed/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Donna Douglas",
+    "url": "https://findadeath.com/donna-douglas/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Donna Reed",
+    "url": "https://findadeath.com/donna-reed/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Dorothy Dandridge",
+    "url": "https://findadeath.com/dorothy-dandridge/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Dorothy Parker",
+    "url": "https://findadeath.com/dorothy-parker/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Dorothy Stratten",
+    "url": "https://findadeath.com/dorothy-stratten/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Dottie West",
+    "url": "https://findadeath.com/doddie-west/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Dr. Ralph Greenson",
+    "url": "https://findadeath.com/dr-ralph-greenson/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Dudley Moore",
+    "url": "https://findadeath.com/dudley-moore/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Dusty Springfield",
+    "url": "https://findadeath.com/dusty-springfield/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Ed Wood",
+    "url": "https://findadeath.com/ed-wood/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Eddie Albert",
+    "url": "https://findadeath.com/eddie-albert/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Eddie Cochran",
+    "url": "https://findadeath.com/eddie-cochran/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Elizabeth Taylor",
+    "url": "https://findadeath.com/elizabeth-taylor/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Ella Fitzgerald",
+    "url": "https://findadeath.com/ella-fitzgerald/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Elliott Smith",
+    "url": "https://findadeath.com/elliott-smith/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Elvis Presley",
+    "url": "https://findadeath.com/elvis-presley/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Ennis Cosby",
+    "url": "https://findadeath.com/ennis-cosby/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Errol Flynn",
+    "url": "https://findadeath.com/errol-flynn/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Eugene Patton",
+    "url": "https://findadeath.com/eugene-patton/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Eva Gabor",
+    "url": "https://findadeath.com/eva-gabor/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Eve Arden",
+    "url": "https://findadeath.com/eve-arden/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "F. Scott Fitzgerald",
+    "url": "https://findadeath.com/f-scott-fitzgerald/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Farrah Fawcett",
+    "url": "https://findadeath.com/farrah-fawcett/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Florence Ballard",
+    "url": "https://findadeath.com/florence-ballard/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Florence Henderson",
+    "url": "https://findadeath.com/florence-henderson/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Frances Bavier",
+    "url": "https://findadeath.com/frances-bavier/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Frances Farmer",
+    "url": "https://findadeath.com/frances-farmer/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language"
+    ]
+  },
+  {
+    "name": "Francesca Hilton",
+    "url": "https://findadeath.com/francesca-hilton/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Frank De Vol",
+    "url": "https://findadeath.com/frank-de-vol/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Frank Gorshin",
+    "url": "https://findadeath.com/frank-gorshin/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Frank Sinatra",
+    "url": "https://findadeath.com/frank-sinatra/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Fred “ReRun” Berry",
+    "url": "https://findadeath.com/fred-berry/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Fred Astaire",
+    "url": "https://findadeath.com/fred-astaire/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Fred Gwynn & The Munsters",
+    "url": "https://findadeath.com/fred-gwynne/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Fred MacMurray",
+    "url": "https://findadeath.com/fred-macmurray/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Freddie Mercury",
+    "url": "https://findadeath.com/freddie-mercury/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Freddie Prinze",
+    "url": "https://findadeath.com/freddie-prinze/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Gail Russell",
+    "url": "https://findadeath.com/gail-russell/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Gale Gordon",
+    "url": "https://findadeath.com/gale-gordon/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Garry Marshall",
+    "url": "https://findadeath.com/penny-marshall-and-garry-marshall/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Gary Coleman",
+    "url": "https://findadeath.com/gary-coleman/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Gary Cooper",
+    "url": "https://findadeath.com/gary-cooper/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Gene Kelly",
+    "url": "https://findadeath.com/gene-kelly/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "George Burns",
+    "url": "https://findadeath.com/george-burns/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "George Harrison",
+    "url": "https://findadeath.com/george-harrison/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "George Michael",
+    "url": "https://findadeath.com/george-michael/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "George Reeves",
+    "url": "https://findadeath.com/george-reeves/",
+    "isPerson": true,
+    "score": 120,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "George Spahn",
+    "url": "https://findadeath.com/george-spahn/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "GG Allin",
+    "url": "https://findadeath.com/gg-allin/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Gianni Versace",
+    "url": "https://findadeath.com/gianni-versace/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Gilda Radner",
+    "url": "https://findadeath.com/gilda-radner/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Ginger Rogers",
+    "url": "https://findadeath.com/ginger-rogers/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Glenn Quinn",
+    "url": "https://findadeath.com/glenn-quinn/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Gloria Swanson",
+    "url": "https://findadeath.com/gloria-swanson/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Grace Kelly",
+    "url": "https://findadeath.com/grace-patricia-kelly/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Grady “Lobster Boy” Stiles",
+    "url": "https://findadeath.com/grady-lobster-boy-stiles/",
+    "isPerson": true,
+    "score": 60,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Greg Plitt",
+    "url": "https://findadeath.com/greg-plitt/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Gregory Peck",
+    "url": "https://findadeath.com/gregory-peck/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Groucho Marx",
+    "url": "https://findadeath.com/groucho-marx/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Harry Houdini",
+    "url": "https://findadeath.com/harry-houdini/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Heather O’Rourke",
+    "url": "https://findadeath.com/heather-orourke/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Heaven’s Gate",
+    "url": "https://findadeath.com/heavens-gate/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Henry Fonda",
+    "url": "https://findadeath.com/henry-fonda/",
+    "isPerson": false,
+    "score": -35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Herve Villechaize",
+    "url": "https://findadeath.com/herve-villechaize/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Hilton Sisters",
+    "url": "https://findadeath.com/hilton-sisters/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "-25: name heuristic: name contains group word: sisters",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Hubert Eaton",
+    "url": "https://findadeath.com/hubert-eaton/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Humphrey Bogart",
+    "url": "https://findadeath.com/humphrey-bogart/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Ike Turner",
+    "url": "https://findadeath.com/ike-turner/",
+    "isPerson": true,
+    "score": 80,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Ingrid Bergman",
+    "url": "https://findadeath.com/ingrid-bergman/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Irene Gibbons",
+    "url": "https://findadeath.com/irene-gibbons/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Irene Ryan",
+    "url": "https://findadeath.com/irene-ryan/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Isabel Sanford",
+    "url": "https://findadeath.com/isabel-sanford/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Jack Albertson",
+    "url": "https://findadeath.com/jack-albertson/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Jack Cassidy",
+    "url": "https://findadeath.com/jack-cassidy/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Jack Lemmon",
+    "url": "https://findadeath.com/jack-lemmon/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Jack Nance",
+    "url": "https://findadeath.com/jack-nance/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Jack Webb",
+    "url": "https://findadeath.com/jack-webb/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Jack Wild",
+    "url": "https://findadeath.com/jack-wild/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Jackie Coogan",
+    "url": "https://findadeath.com/jackie-coogan/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Jackie Gleason",
+    "url": "https://findadeath.com/jackie-gleason/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "James Brown",
+    "url": "https://findadeath.com/james-brown/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "James Coburn",
+    "url": "https://findadeath.com/james-coburn/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "James Dean",
+    "url": "https://findadeath.com/james-dean/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "James Garner",
+    "url": "https://findadeath.com/james-garner/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "James Whale",
+    "url": "https://findadeath.com/james-whale/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Jane Russell",
+    "url": "https://findadeath.com/jane-russell/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Janet Leigh",
+    "url": "https://findadeath.com/janet-leigh/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Janis Joplin",
+    "url": "https://findadeath.com/janis-joplin/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Jay Stewart",
+    "url": "https://findadeath.com/jay-stewart/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Jayne Mansfield",
+    "url": "https://findadeath.com/jayne-mansfield/",
+    "isPerson": true,
+    "score": 95,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Jeanine “The Singing Nun” Deckers",
+    "url": "https://findadeath.com/jeanine-the-singing-nun-deckers/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Jeffrey Dahmer",
+    "url": "https://findadeath.com/jeffrey-dahmer/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Jennifer Paterson",
+    "url": "https://findadeath.com/jennifer-paterson-aka-one-fat-lady/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Jennifer Syme",
+    "url": "https://findadeath.com/jennifer-syme/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Jerome Curly Howard",
+    "url": "https://findadeath.com/the-three-stooges/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Jeron Charles Criswell King",
+    "url": "https://findadeath.com/criswell/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Jessica Savitch",
+    "url": "https://findadeath.com/jessica-savitch/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Jill Dando",
+    "url": "https://findadeath.com/jill-dando/",
+    "isPerson": false,
+    "score": -35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Jim Backus",
+    "url": "https://findadeath.com/jim-backus/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Jim Morrison",
+    "url": "https://findadeath.com/jim-morrison/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Jimi Hendrix",
+    "url": "https://findadeath.com/jimi-hendrix/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Jimmy Durante",
+    "url": "https://findadeath.com/jimmy-durante/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Jimmy Stewart",
+    "url": "https://findadeath.com/jimmy-stewart/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Joan Crawford",
+    "url": "https://findadeath.com/joan-crawford/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Joe DiMaggio",
+    "url": "https://findadeath.com/joe-dimaggio/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Joe Orton",
+    "url": "https://findadeath.com/joe-orton/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "John “The Elephant Man” Merrick",
+    "url": "https://findadeath.com/john-the-elephant-man-merrick/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "John Belushi",
+    "url": "https://findadeath.com/john-belushi/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "John Candy",
+    "url": "https://findadeath.com/john-candy/",
+    "isPerson": false,
+    "score": -35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "John Cazale",
+    "url": "https://findadeath.com/john-cazale/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "John DeLorean",
+    "url": "https://findadeath.com/john-delorean/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "John Denver",
+    "url": "https://findadeath.com/john-denver/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "John Holmes",
+    "url": "https://findadeath.com/john-holmes/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "John Kennedy Jr.",
+    "url": "https://findadeath.com/john-kennedy-jr/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-10: looks like an archive/index page"
+    ]
+  },
+  {
+    "name": "John Lennon",
+    "url": "https://findadeath.com/john-lennon/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "John Phillips",
+    "url": "https://findadeath.com/john-phillips/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "John Ritter",
+    "url": "https://findadeath.com/john-ritter/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "John Wayne",
+    "url": "https://findadeath.com/john-wayne/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Johnny Arthur",
+    "url": "https://findadeath.com/johnny-arthur/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Johnny Carson",
+    "url": "https://findadeath.com/johnny-carson/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Johnny Grant",
+    "url": "https://findadeath.com/johnny-grant/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Johnny Ramone",
+    "url": "https://findadeath.com/johnny-ramone/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Johnny Stompanato",
+    "url": "https://findadeath.com/johnny-stompanato/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Jon-Erik Hexum",
+    "url": "https://findadeath.com/jon-erik-hexum/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Jonathan Brandis",
+    "url": "https://findadeath.com/jonathan-brandis/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Jose & Kitty Menendez",
+    "url": "https://findadeath.com/jose-kitty-menendez/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Judith Barsi",
+    "url": "https://findadeath.com/judith-barsi/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Judy Garland",
+    "url": "https://findadeath.com/judy-garland/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Judy Mallet",
+    "url": "https://findadeath.com/judy-mallet/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Judy Tyler",
+    "url": "https://findadeath.com/judy-tyler/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Jules Roth",
+    "url": "https://findadeath.com/jules-roth/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Karen Carpenter",
+    "url": "https://findadeath.com/karen-carpenter/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Karen Silkwood",
+    "url": "https://findadeath.com/karen-silkwood/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Karyn “Cookie” Kupcinet",
+    "url": "https://findadeath.com/karyn-cookie-kupcinet/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Kathleen Freeman",
+    "url": "https://findadeath.com/kathleen-freeman/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Kay Kent",
+    "url": "https://findadeath.com/kay-kent/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Keith Moon",
+    "url": "https://findadeath.com/keith-moon/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Ken Atison Seiuli",
+    "url": "https://findadeath.com/ken-atison-seiuli/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language"
+    ]
+  },
+  {
+    "name": "Kenneth Handler",
+    "url": "https://findadeath.com/kenneth-handler/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Kenneth Williams",
+    "url": "https://findadeath.com/kenneth-williams/",
+    "isPerson": true,
+    "score": 60,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Kent Warner",
+    "url": "https://findadeath.com/kent-warner/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Kim Walker",
+    "url": "https://findadeath.com/kim-walker/",
+    "isPerson": true,
+    "score": 135,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Kurt Cobain",
+    "url": "https://findadeath.com/kurt-cobain/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "LaBiancas, The",
+    "url": "https://findadeath.com/the-labiancas/",
+    "isPerson": false,
+    "score": -25,
+    "reasons": [
+      "-25: name heuristic: name looks like a group/page title (The ...)"
+    ]
+  },
+  {
+    "name": "Lana Clarkson",
+    "url": "https://findadeath.com/lana-clarkson/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Lana Turner",
+    "url": "https://findadeath.com/lana-turner/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Lance Loud",
+    "url": "https://findadeath.com/lance-loud/",
+    "isPerson": true,
+    "score": 80,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-10: looks like an archive/index page"
+    ]
+  },
+  {
+    "name": "Lani O’Grady",
+    "url": "https://findadeath.com/lani-ogrady/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Larry “Laer” Barrett",
+    "url": "https://findadeath.com/laer/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Laurence Austin",
+    "url": "https://findadeath.com/laurence-austin/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "LaWanda Page",
+    "url": "https://findadeath.com/lawanda-page/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language"
+    ]
+  },
+  {
+    "name": "Lawrence Welk",
+    "url": "https://findadeath.com/lawrence-welk/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Lawson J. Deming",
+    "url": "https://findadeath.com/lawson-j-deming/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Lee Remick",
+    "url": "https://findadeath.com/lee-remick/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Lenny Bruce",
+    "url": "https://findadeath.com/lenny-bruce/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Leroy Scholtz aka Santa Claus",
+    "url": "https://findadeath.com/leroy-scholtz-aka-santa-claus/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Liberace",
+    "url": "https://findadeath.com/liberace/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Lili St. Cyr",
+    "url": "https://findadeath.com/lili-st-cyr/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Linda Darnell",
+    "url": "https://findadeath.com/linda-darnell/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Lisa “Left Eye” Lopes",
+    "url": "https://findadeath.com/lisa-left-eye-lopes/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Lizzie Borden",
+    "url": "https://findadeath.com/lizzie-borden/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Lou Rawls",
+    "url": "https://findadeath.com/lou-rawls/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Lucille Ball",
+    "url": "https://findadeath.com/lucille-ball/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Mabel King",
+    "url": "https://findadeath.com/mabel-king/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-10: looks like an archive/index page"
+    ]
+  },
+  {
+    "name": "Madeline Kahn",
+    "url": "https://findadeath.com/madeline-kahn/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Madge Blake",
+    "url": "https://findadeath.com/madge-blake/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Mae Murray",
+    "url": "https://findadeath.com/mae-murray/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Mae West",
+    "url": "https://findadeath.com/mae-west/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Maila Nurmi",
+    "url": "https://findadeath.com/maila-nurmi/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Marc Bolan",
+    "url": "https://findadeath.com/marc-bolan/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Margaret Mitchell",
+    "url": "https://findadeath.com/margaret-mitchell/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Margaux Hemingway",
+    "url": "https://findadeath.com/margaux-margot-hemingway/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Margot Kidder",
+    "url": "https://findadeath.com/margot-kidder/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Marie McDonald",
+    "url": "https://findadeath.com/marie-mcdonald/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Marie Prevost",
+    "url": "https://findadeath.com/marie-prevost/",
+    "isPerson": true,
+    "score": 120,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Marilyn Monroe",
+    "url": "https://findadeath.com/marilyn-monroe/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Marlene Dietrich",
+    "url": "https://findadeath.com/marlene-dietrich/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Marlon Brando",
+    "url": "https://findadeath.com/marlon-brando/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Martha Raye",
+    "url": "https://findadeath.com/martha-raye/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Martin Luther King Jr.",
+    "url": "https://findadeath.com/martin-luther-king-jr/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Marvin Gaye",
+    "url": "https://findadeath.com/marvin-gaye/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Mary Jackson",
+    "url": "https://findadeath.com/mary-jackson/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Mary Kay Bergman",
+    "url": "https://findadeath.com/mary-kay-bergman/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Mary Wickes",
+    "url": "https://findadeath.com/mary-wickes/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Meredith MacRae",
+    "url": "https://findadeath.com/meredith-macrae/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Merritt Butrick",
+    "url": "https://findadeath.com/merritt-butrick/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Michael Hutchence",
+    "url": "https://findadeath.com/michael-hutchence/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Michael Jackson",
+    "url": "https://findadeath.com/michael-jackson/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Michael Landon",
+    "url": "https://findadeath.com/michael-landon/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Mickey Rooney",
+    "url": "https://findadeath.com/mickey-rooney/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Milton Berle",
+    "url": "https://findadeath.com/milton-berle/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Montgomery Clift",
+    "url": "https://findadeath.com/montgomery-clift/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Mother Teresa",
+    "url": "https://findadeath.com/mother-teresa/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Myrna Loy",
+    "url": "https://findadeath.com/myrna-loy/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Nancy Kulp",
+    "url": "https://findadeath.com/nancy-kulp/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Nancy Walker",
+    "url": "https://findadeath.com/nancy-walker/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Nat King Cole",
+    "url": "https://findadeath.com/nat-king-cole/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Natalie Schafer",
+    "url": "https://findadeath.com/natalie-schafer/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Nell Carter",
+    "url": "https://findadeath.com/nell-carter/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Nerine Shatner",
+    "url": "https://findadeath.com/nerine-shatner/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language"
+    ]
+  },
+  {
+    "name": "Nick Adams",
+    "url": "https://findadeath.com/nick-adams/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language"
+    ]
+  },
+  {
+    "name": "Nicole Brown Simpson & Ron Goldman",
+    "url": "https://findadeath.com/nicole-brown-simpson-ron-goldman/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Notorious B.I.G.",
+    "url": "https://findadeath.com/biggie-smalls-a-k-a-the-notorious-b-i-g/",
+    "isPerson": false,
+    "score": -35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Oliver Hardy",
+    "url": "https://findadeath.com/oliver-hardy/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Orson Welles",
+    "url": "https://findadeath.com/orson-welles/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Oscar Wilde",
+    "url": "https://findadeath.com/oscar-wilde/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Ossie Davis",
+    "url": "https://findadeath.com/ossie-davis/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Patsy Cline",
+    "url": "https://findadeath.com/patsy-cline/",
+    "isPerson": true,
+    "score": 80,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-10: looks like an archive/index page"
+    ]
+  },
+  {
+    "name": "Paul Lynde",
+    "url": "https://findadeath.com/paul-lynde/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Paul Reubens",
+    "url": "https://findadeath.com/paul-reubens/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Paul Walker",
+    "url": "https://findadeath.com/paul-walker/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Paula Yates",
+    "url": "https://findadeath.com/paula-yates-suicide-blonde/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Pee-Wee Herman",
+    "url": "https://findadeath.com/pee-wee-herman/",
+    "isPerson": false,
+    "score": -35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Peg Entwistle",
+    "url": "https://findadeath.com/peg-entwistle/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Perry Como",
+    "url": "https://findadeath.com/perry-como/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Peter Davies",
+    "url": "https://findadeath.com/peter-davies/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Peter Duel",
+    "url": "https://findadeath.com/pete-duel/",
+    "isPerson": false,
+    "score": -999,
+    "reasons": [
+      "-999: dead link (404)"
+    ]
+  },
+  {
+    "name": "Peter Lawford",
+    "url": "https://findadeath.com/peter-lawford/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-10: looks like an archive/index page"
+    ]
+  },
+  {
+    "name": "Peter Sellers",
+    "url": "https://findadeath.com/peter-sellers/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Phil Hartman",
+    "url": "https://findadeath.com/phil-hartman/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Phyllis Diller",
+    "url": "https://findadeath.com/phyllis-diller/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Princess Diana",
+    "url": "https://findadeath.com/princess-diana/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Princess Margaret",
+    "url": "https://findadeath.com/princess-margaret/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-10: looks like an archive/index page"
+    ]
+  },
+  {
+    "name": "Queen Elizabeth",
+    "url": "https://findadeath.com/queen-elizabeth/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Ramon Novarro",
+    "url": "https://findadeath.com/ramon-novarro/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Ray Bolger",
+    "url": "https://findadeath.com/ray-bolger/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Ray Charles",
+    "url": "https://findadeath.com/ray-charles/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Ray Combs Jr.",
+    "url": "https://findadeath.com/ray-combs-jr/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Rebecca Schaeffer",
+    "url": "https://findadeath.com/rebecca-schaeffer/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Redd Foxx",
+    "url": "https://findadeath.com/redd-foxx/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Reta Shaw",
+    "url": "https://findadeath.com/reta-shaw/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Reverend C. L. Franklin",
+    "url": "https://findadeath.com/reverend-c-l-franklin/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Ricardo Montalban",
+    "url": "https://findadeath.com/ricardo-montalban/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Richard Blackwell",
+    "url": "https://findadeath.com/richard-blackwell/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Richard Deacon",
+    "url": "https://findadeath.com/richard-deacon/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Richard Jeni",
+    "url": "https://findadeath.com/richard-jeni/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Richard Long",
+    "url": "https://findadeath.com/richard-long/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Richard Pryor",
+    "url": "https://findadeath.com/richard-pryor/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Rick James",
+    "url": "https://findadeath.com/rick-james/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Ricky Nelson",
+    "url": "https://findadeath.com/eric-ricky-hilliard-nelson/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Rita Bell",
+    "url": "https://findadeath.com/rita-bell/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "River Phoenix",
+    "url": "https://findadeath.com/river-phoenix/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Robert F. Kennedy",
+    "url": "https://findadeath.com/robert-f-kennedy/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Robert Lees",
+    "url": "https://findadeath.com/robert-lees/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Robert Pastorelli",
+    "url": "https://findadeath.com/robert-pastorelli/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Robert Reed",
+    "url": "https://findadeath.com/robert-reed/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Robert Stack",
+    "url": "https://findadeath.com/robert-stack/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Robert Young",
+    "url": "https://findadeath.com/robert-young/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Robin Williams",
+    "url": "https://findadeath.com/robin-williams/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Rock Hudson",
+    "url": "https://findadeath.com/rock-hudson/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Rod Taylor",
+    "url": "https://findadeath.com/rod-taylor/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Roddy McDowall",
+    "url": "https://findadeath.com/roddy-mcdowall/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Rodney Dangerfield",
+    "url": "https://findadeath.com/rodney-dangerfield/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Roger C. Carmel",
+    "url": "https://findadeath.com/roger-c-carmel/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Roger Sinclair",
+    "url": "https://findadeath.com/roger-sinclair/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Ronald Reagan",
+    "url": "https://findadeath.com/ronald-reagan/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Rondo Hatton",
+    "url": "https://findadeath.com/rondo-hatton/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Ronnie Chasen",
+    "url": "https://findadeath.com/ronni-chasen/",
+    "isPerson": false,
+    "score": -5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Ronnie Howard",
+    "url": "https://findadeath.com/ronnie-howard/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Roseann Quinn",
+    "url": "https://findadeath.com/roseann-quinn/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Rosemary Clooney",
+    "url": "https://findadeath.com/rosemary-clooney/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Roy Scheider",
+    "url": "https://findadeath.com/roy-scheider/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Rudolph Valentino",
+    "url": "https://findadeath.com/rudolph-valentino/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Sadie Corre’",
+    "url": "https://findadeath.com/sadie-corre/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Sal Mineo",
+    "url": "https://findadeath.com/sal-mineo/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Sam Cooke",
+    "url": "https://findadeath.com/sam-cooke/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Sam Kinison",
+    "url": "https://findadeath.com/sam-kinison/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Sammy Davis Jr.",
+    "url": "https://findadeath.com/sammy-davis-jr/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Samuel Goldwyn Jr.",
+    "url": "https://findadeath.com/samuel-goldwyn-jr/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Sandra Dee",
+    "url": "https://findadeath.com/sandra-dee/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Savannah",
+    "url": "https://findadeath.com/savannah/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Scott Amedure",
+    "url": "https://findadeath.com/scott-amedure/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Sebastian Cabot",
+    "url": "https://findadeath.com/sebastian-cabot/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Selena",
+    "url": "https://findadeath.com/selena/",
+    "isPerson": false,
+    "score": 20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Sharon Tate – The Tate Murders",
+    "url": "https://findadeath.com/sharon-tate/",
+    "isPerson": false,
+    "score": -50,
+    "reasons": [
+      "-25: name heuristic: name contains non-person token: murder",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Shelley Winters",
+    "url": "https://findadeath.com/shelley-winters/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: birth year pattern found"
+    ]
+  },
+  {
+    "name": "Shirley Ardell Mason",
+    "url": "https://findadeath.com/shirley-ardell-mason/",
+    "isPerson": true,
+    "score": 105,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Shirley Hemphill",
+    "url": "https://findadeath.com/shirley-hemphill/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Shirley Temple",
+    "url": "https://findadeath.com/shirley-temple/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Shlitzie The Pinhead",
+    "url": "https://findadeath.com/shlitzie-the-pinhead/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Sid Vicious & Nancy Spungen",
+    "url": "https://findadeath.com/sid-vicious-and-nancy-spungen/",
+    "isPerson": true,
+    "score": 95,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Stan Laurel",
+    "url": "https://findadeath.com/stan-laurel/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Stephen Stucker",
+    "url": "https://findadeath.com/stephen-stucker/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Steve Allen",
+    "url": "https://findadeath.com/steve-allen/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Steve McQueen",
+    "url": "https://findadeath.com/steve-mcqueen/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Steve Reeves",
+    "url": "https://findadeath.com/steve-reeves/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Susan Cabot",
+    "url": "https://findadeath.com/susan-cabot/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Sylvester James",
+    "url": "https://findadeath.com/sylvester-james/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Sylvia Plath",
+    "url": "https://findadeath.com/sylvia-plath/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Tammy Faye",
+    "url": "https://findadeath.com/tammy-faye",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Tammy Wynette",
+    "url": "https://findadeath.com/tammy-wynette/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Taylor Negron",
+    "url": "https://findadeath.com/taylor-negron/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Ted Cassidy",
+    "url": "https://findadeath.com/ted-cassidy/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Telly Savalas",
+    "url": "https://findadeath.com/telly-savalas/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Teresa Graves",
+    "url": "https://findadeath.com/teresa-graves/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Thelma Todd",
+    "url": "https://findadeath.com/thelma-todd/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Timothy Leary",
+    "url": "https://findadeath.com/timothy-leary/",
+    "isPerson": false,
+    "score": -5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-10: looks like an archive/index page",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Timothy McVeigh",
+    "url": "https://findadeath.com/timothy-mcveigh/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Tiny Tim",
+    "url": "https://findadeath.com/tiny-tim/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Tod Browning",
+    "url": "https://findadeath.com/tod-browning/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Tommy Boyce",
+    "url": "https://findadeath.com/tommy-boyce/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language"
+    ]
+  },
+  {
+    "name": "Tony Curtis",
+    "url": "https://findadeath.com/tony-curtis/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Tor Johnson",
+    "url": "https://findadeath.com/tor-johnson/",
+    "isPerson": false,
+    "score": -20,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-10: looks like an archive/index page",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Trent Lehman",
+    "url": "https://findadeath.com/trent-lehman/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Troy Donahue",
+    "url": "https://findadeath.com/troy-donahue/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Tupac Shakur",
+    "url": "https://findadeath.com/tupac-shakur/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Veronica Lake",
+    "url": "https://findadeath.com/veronica-lake/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Vic Morrow",
+    "url": "https://findadeath.com/vic-morrow/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Victor Kilian",
+    "url": "https://findadeath.com/victor-kilian/",
+    "isPerson": false,
+    "score": 35,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Vincent Price",
+    "url": "https://findadeath.com/vincent-price/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Violet and Daisy Hilton",
+    "url": "https://findadeath.com/violet-and-daisy-hilton/",
+    "isPerson": true,
+    "score": 50,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Virginia Rappe",
+    "url": "https://findadeath.com/virginia-rappe/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Vivian Vance & William Frawley",
+    "url": "https://findadeath.com/vivian-vance-william-frawley/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Vivien Leigh",
+    "url": "https://findadeath.com/vivien-leigh/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "W. C. Fields",
+    "url": "https://findadeath.com/w-c-fields/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "Walt Disney",
+    "url": "https://findadeath.com/walter-elias-uncle-walt-disney/",
+    "isPerson": true,
+    "score": 65,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Walter Matthau",
+    "url": "https://findadeath.com/walter-matthau/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Waltons, The",
+    "url": "https://findadeath.com/the-waltons/",
+    "isPerson": false,
+    "score": -25,
+    "reasons": [
+      "-25: name heuristic: name looks like a group/page title (The ...)",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Wayland Flowers & Madame",
+    "url": "https://findadeath.com/wayland-flowers-and-madame/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Wendie Jo Sperber",
+    "url": "https://findadeath.com/wendie-sperber/",
+    "isPerson": false,
+    "score": -10,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Whitney Houston",
+    "url": "https://findadeath.com/whitney-houston/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  },
+  {
+    "name": "William “Blacula” Marshall",
+    "url": "https://findadeath.com/william-blacula-marshall/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "William Holden",
+    "url": "https://findadeath.com/william-holden/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "William Lennon",
+    "url": "https://findadeath.com/william-lennon/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found",
+      "-40: looks like a tours page"
+    ]
+  },
+  {
+    "name": "Willie Best",
+    "url": "https://findadeath.com/willie-best-aka-sleep-n-eat/",
+    "isPerson": true,
+    "score": 45,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Wonderland Murders, The",
+    "url": "https://findadeath.com/the-wonderland-murders/",
+    "isPerson": false,
+    "score": -25,
+    "reasons": [
+      "-25: name heuristic: name looks like a group/page title (The ...)"
+    ]
+  },
+  {
+    "name": "Yolanda “Lundy” Schlessinger",
+    "url": "https://findadeath.com/yolanda-lundy-schlessinger/",
+    "isPerson": true,
+    "score": 75,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language"
+    ]
+  },
+  {
+    "name": "Yvette Vickers",
+    "url": "https://findadeath.com/yvette-vedder-vickers/",
+    "isPerson": false,
+    "score": 30,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains death language"
+    ]
+  },
+  {
+    "name": "Yvonne DeCarlo",
+    "url": "https://findadeath.com/yvonne-decarlo/",
+    "isPerson": true,
+    "score": 90,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: death year pattern found"
+    ]
+  },
+  {
+    "name": "Zelda Rubinstein",
+    "url": "https://findadeath.com/zelda-rubinstein/",
+    "isPerson": true,
+    "score": 135,
+    "reasons": [
+      "+5: name heuristic: looks like a person name",
+      "+25: page contains birth language",
+      "+25: page contains death language",
+      "+20: page contains both birth and death language",
+      "+15: birth year pattern found",
+      "+15: death year pattern found",
+      "+30: has a Wikipedia link"
+    ]
+  },
+  {
+    "name": "Zsa Zsa Gabor",
+    "url": "https://findadeath.com/zsa-zsa-gabor/",
+    "isPerson": false,
+    "score": 5,
+    "reasons": [
+      "+5: name heuristic: looks like a person name"
+    ]
+  }
+]

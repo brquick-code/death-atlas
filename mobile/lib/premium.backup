@@ -1,0 +1,229 @@
+// mobile/lib/premium.ts
+import { useEffect, useMemo, useState } from "react";
+import { Platform } from "react-native";
+import Purchases, { LOG_LEVEL, CustomerInfo, PurchasesError } from "react-native-purchases";
+
+/**
+ * RevenueCat entitlement id
+ * MUST match your RevenueCat entitlement identifier exactly.
+ */
+const ENTITLEMENT_ID = "premium";
+
+/**
+ * ✅ Put your RevenueCat PUBLIC SDK keys here (Project Settings → API Keys).
+ * These are safe to ship in the app (public keys).
+ */
+const IOS_API_KEY = "appl_QqVPkSaDIXfhPWckeXeXhGGFIWe";
+const ANDROID_API_KEY = "PASTE_YOUR_REVENUECAT_ANDROID_PUBLIC_SDK_KEY_HERE";
+
+let configured = false;
+let configuring: Promise<void> | null = null;
+
+function getApiKey() {
+  return Platform.OS === "ios" ? IOS_API_KEY : ANDROID_API_KEY;
+}
+
+function keysMissing(apiKey: string) {
+  return !apiKey || apiKey.trim().length < 10 || apiKey.startsWith("YOUR_") || apiKey.includes("PASTE_YOUR_");
+}
+
+export async function initRevenueCat() {
+  if (configured) return;
+  if (configuring) return configuring;
+
+  configuring = (async () => {
+    const apiKey = getApiKey();
+
+    if (keysMissing(apiKey)) {
+      configured = false;
+      return;
+    }
+
+    // WARN is a good default for release/TestFlight
+    Purchases.setLogLevel(LOG_LEVEL.WARN);
+
+    await Purchases.configure({ apiKey });
+
+    configured = true;
+  })().finally(() => {
+    configuring = null;
+  });
+
+  return configuring;
+}
+
+function hasPremiumEntitlement(info: CustomerInfo | null | undefined): boolean {
+  try {
+    return !!info?.entitlements?.active?.[ENTITLEMENT_ID];
+  } catch {
+    return false;
+  }
+}
+
+function humanizePurchaseError(e: any): string {
+  // RevenueCat uses PurchasesError with useful properties
+  const msg = typeof e?.message === "string" ? e.message : "";
+
+  // Common cancel patterns
+  if (e?.userCancelled || /cancel/i.test(msg)) {
+    return "Purchase canceled.";
+  }
+
+  if (/not configured/i.test(msg)) {
+    return msg;
+  }
+
+  if (/No offerings/i.test(msg) || /offerings/i.test(msg) || /packages/i.test(msg)) {
+    return (
+      "No subscription offerings are available.\n\n" +
+      "In RevenueCat, create an Offering (e.g. “default”), attach a Package (Annual/Monthly), " +
+      "and make sure it’s linked to an App Store subscription product."
+    );
+  }
+
+  if (msg) return msg;
+
+  return "Purchase failed. Please try again.";
+}
+
+export async function getPremiumStatus(): Promise<boolean> {
+  await initRevenueCat();
+  if (!configured) return false;
+
+  const info = await Purchases.getCustomerInfo();
+  return hasPremiumEntitlement(info);
+}
+
+export async function startPurchase(): Promise<boolean> {
+  await initRevenueCat();
+
+  const apiKey = getApiKey();
+  if (!configured) {
+    throw new Error(
+      "RevenueCat not configured.\n\nSet your RevenueCat Public SDK Key in mobile/lib/premium.ts (IOS_API_KEY / ANDROID_API_KEY)."
+    );
+  }
+
+  // Defensive: if configured somehow false but keys look present
+  if (keysMissing(apiKey)) {
+    throw new Error(
+      "RevenueCat keys are missing/invalid.\n\nPaste your Public SDK Key from RevenueCat → Project Settings → API Keys."
+    );
+  }
+
+  const offerings = await Purchases.getOfferings();
+  const current = offerings.current;
+
+  if (!current || !current.availablePackages?.length) {
+    throw new Error("No offerings/packages available in RevenueCat.");
+  }
+
+  // Pick the first available package (you can refine later to annual/monthly)
+  const pkg = current.availablePackages[0];
+
+  try {
+    const { customerInfo } = await Purchases.purchasePackage(pkg);
+    return hasPremiumEntitlement(customerInfo);
+  } catch (e: any) {
+    // Attach friendly message and rethrow
+    const friendly = humanizePurchaseError(e);
+    const err = new Error(friendly);
+    (err as any).original = e;
+    throw err;
+  }
+}
+
+export async function restore(): Promise<boolean> {
+  await initRevenueCat();
+  if (!configured) {
+    throw new Error(
+      "RevenueCat not configured.\n\nSet your RevenueCat Public SDK Key in mobile/lib/premium.ts (IOS_API_KEY / ANDROID_API_KEY)."
+    );
+  }
+
+  try {
+    const info = await Purchases.restorePurchases();
+    return hasPremiumEntitlement(info);
+  } catch (e: any) {
+    const friendly = humanizePurchaseError(e);
+    const err = new Error(friendly);
+    (err as any).original = e;
+    throw err;
+  }
+}
+
+/**
+ * ✅ Hook used by screens (map.tsx expects this shape)
+ */
+export function usePremium() {
+  const [isPremium, setIsPremium] = useState<boolean>(false);
+  const [ready, setReady] = useState<boolean>(false);
+
+  useEffect(() => {
+    let alive = true;
+    let removeListener: null | (() => void) = null;
+
+    (async () => {
+      try {
+        await initRevenueCat();
+
+        if (!configured) {
+          if (alive) {
+            setIsPremium(false);
+            setReady(true);
+          }
+          return;
+        }
+
+        const status = await getPremiumStatus();
+        if (alive) {
+          setIsPremium(status);
+          setReady(true);
+        }
+
+        const sub = Purchases.addCustomerInfoUpdateListener((info) => {
+          if (!alive) return;
+          setIsPremium(hasPremiumEntitlement(info));
+        });
+
+        removeListener = () => {
+          try {
+            sub?.remove?.();
+          } catch {}
+        };
+      } catch {
+        if (alive) {
+          setIsPremium(false);
+          setReady(true);
+        }
+      }
+    })();
+
+    return () => {
+      alive = false;
+      try {
+        removeListener?.();
+      } catch {}
+    };
+  }, []);
+
+  const api = useMemo(
+    () => ({
+      isPremium,
+      ready,
+      startPurchase: async () => {
+        const ok = await startPurchase();
+        setIsPremium(ok);
+        return ok;
+      },
+      restore: async () => {
+        const ok = await restore();
+        setIsPremium(ok);
+        return ok;
+      },
+    }),
+    [isPremium, ready]
+  );
+
+  return api;
+}

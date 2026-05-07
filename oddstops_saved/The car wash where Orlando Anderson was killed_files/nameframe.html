@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://27007c05e65cd6f80935805f8b3c3233.safeframe.googlesyndication.com/nameframe.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <script>
+    try {
+      var nameData = JSON.parse(window.name);
+      if (!nameData || !nameData.creative) {
+        throw new Error('Missing or incorrectly formatted JSON ' +
+            'input to nameframe');
+      }
+      document.open();
+      document.write(nameData.creative);
+      document.close();
+      delete nameData.creative;
+      window.name = JSON.stringify(nameData);
+    } catch (err) {
+      window.parent.postMessage({type: 'no-content', error: err.message}, '*');
+      window.name = '';
+    }
+  </script>
+</head>
+<body marginwidth="0" marginheight="0">
+
+
+</body></html>

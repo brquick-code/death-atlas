@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Death Atlas",
+    "slug": "death-atlas-mobile",
+    "scheme": "deathatlas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#0b0c0f"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.brquick.deathatlasmobile",
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationWhenInUseUsageDescription": "Death Atlas uses your location to show you on the map."
+      }
+    },
+    "android": {
+      "package": "com.brquick.deathatlasmobile",
+      "versionCode": 1
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8753f626-1112-45c3-9e71-75c1e524a092"
+      }
+    }
+  }
+}

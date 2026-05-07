@@ -1,0 +1,1615 @@
+{
+  "started_at": "2026-01-18T23:49:14.511Z",
+  "config": {
+    "BATCH_SIZE": 250,
+    "CONCURRENCY": 1,
+    "MIN_DELAY_MS": 900,
+    "MAX_RETRIES": 6,
+    "DRY_RUN": false,
+    "REQUIRE_ENWIKI": false,
+    "SEARCH_LIMIT": 10
+  },
+  "updated": [
+    {
+      "id": "097b80d2-331e-415a-9d56-e283c3ceb938",
+      "title": "River Phoenix",
+      "match": {
+        "qid": "Q106514",
+        "label": "River Phoenix",
+        "description": "American actor and musician (1970–1993)",
+        "isHuman": true,
+        "enwikiTitle": "River Phoenix",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/River_Phoenix",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q106514",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q106514",
+        "person_qid": "Q106514",
+        "enwiki_title": "River Phoenix",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/River_Phoenix",
+        "source_urls": [
+          "https://oddstops.com/river-phoenix-nightclub",
+          "https://en.wikipedia.org/wiki/River_Phoenix"
+        ],
+        "updated_at": "2026-01-18T23:49:23.194Z"
+      }
+    },
+    {
+      "id": "48219491-6fc2-41fd-b2ef-e26d89872595",
+      "title": "Teresa Graves",
+      "match": {
+        "qid": "Q2598159",
+        "label": "Teresa Graves",
+        "description": "American actress and singer (1948-2002)",
+        "isHuman": true,
+        "enwikiTitle": "Teresa Graves",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Teresa_Graves",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q2598159",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q2598159",
+        "person_qid": "Q2598159",
+        "enwiki_title": "Teresa Graves",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Teresa_Graves",
+        "source_urls": [
+          "https://oddstops.com/teresa-graves",
+          "https://en.wikipedia.org/wiki/Teresa_Graves"
+        ],
+        "updated_at": "2026-01-18T23:49:27.859Z"
+      }
+    },
+    {
+      "id": "095e59b1-320d-477b-91fb-a27771273691",
+      "title": "Proof",
+      "match": {
+        "qid": "Q314597",
+        "label": "Proof",
+        "description": "American rapper (1973–2006)",
+        "isHuman": true,
+        "enwikiTitle": "Proof (rapper)",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Proof_(rapper)",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q314597",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q314597",
+        "person_qid": "Q314597",
+        "enwiki_title": "Proof (rapper)",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Proof_(rapper)",
+        "source_urls": [
+          "https://oddstops.com/proof-d12",
+          "https://en.wikipedia.org/wiki/Proof_(rapper)"
+        ],
+        "updated_at": "2026-01-18T23:49:31.513Z"
+      }
+    },
+    {
+      "id": "e42c8b9f-295f-4f75-9213-ba68e65ae927",
+      "title": "Charles Newman",
+      "match": {
+        "qid": "Q111165555",
+        "label": "Charles Newman",
+        "description": "English cricketer",
+        "isHuman": true,
+        "enwikiTitle": "Charles Newman (cricketer)",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Charles_Newman_(cricketer)",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q111165555",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q111165555",
+        "person_qid": "Q111165555",
+        "enwiki_title": "Charles Newman (cricketer)",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Charles_Newman_(cricketer)",
+        "source_urls": [
+          "https://oddstops.com/charles-newman",
+          "https://en.wikipedia.org/wiki/Charles_Newman_(cricketer)"
+        ],
+        "updated_at": "2026-01-18T23:49:33.899Z"
+      }
+    },
+    {
+      "id": "7d25a8e3-edf1-4d30-b6ef-2627cb14ca35",
+      "title": "Coolio",
+      "match": {
+        "qid": "Q310357",
+        "label": "Coolio",
+        "description": "American rapper (1963–2022)",
+        "isHuman": true,
+        "enwikiTitle": "Coolio",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Coolio",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q310357",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q310357",
+        "person_qid": "Q310357",
+        "enwiki_title": "Coolio",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Coolio",
+        "source_urls": [
+          "https://oddstops.com/coolio-house",
+          "https://en.wikipedia.org/wiki/Coolio"
+        ],
+        "updated_at": "2026-01-18T23:49:38.349Z"
+      }
+    },
+    {
+      "id": "2d70045e-8cdf-4f87-8261-75f8b457fce4",
+      "title": "Ennis Cosby",
+      "match": {
+        "qid": "Q1563783",
+        "label": "Ennis Cosby",
+        "description": "son of Bill Cosby (1969–1997)",
+        "isHuman": true,
+        "enwikiTitle": "Murder of Ennis Cosby",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Murder_of_Ennis_Cosby",
+        "score": 12,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q1563783",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1563783",
+        "person_qid": "Q1563783",
+        "enwiki_title": "Murder of Ennis Cosby",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Murder_of_Ennis_Cosby",
+        "source_urls": [
+          "https://oddstops.com/ennis-cosby",
+          "https://en.wikipedia.org/wiki/Murder_of_Ennis_Cosby"
+        ],
+        "updated_at": "2026-01-18T23:49:41.718Z"
+      }
+    },
+    {
+      "id": "38692fea-2708-4bf6-a178-1243137a280b",
+      "title": "Lindsey Pearlman",
+      "match": {
+        "qid": "Q110965888",
+        "label": "Lindsey Pearlman",
+        "description": "American actress (1978-2022)",
+        "isHuman": true,
+        "enwikiTitle": "Lindsey Pearlman",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Lindsey_Pearlman",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q110965888",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q110965888",
+        "person_qid": "Q110965888",
+        "enwiki_title": "Lindsey Pearlman",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Lindsey_Pearlman",
+        "source_urls": [
+          "https://oddstops.com/lindsey-pearlman",
+          "https://en.wikipedia.org/wiki/Lindsey_Pearlman"
+        ],
+        "updated_at": "2026-01-18T23:49:44.918Z"
+      }
+    },
+    {
+      "id": "81c609f4-0d32-4bbb-8ac8-682888e4b998",
+      "title": "Jimmy Hoffa",
+      "match": {
+        "qid": "Q317638",
+        "label": "Jimmy Hoffa",
+        "description": "American labor union leader (1913 – disappeared 1975)",
+        "isHuman": true,
+        "enwikiTitle": "Jimmy Hoffa",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Jimmy_Hoffa",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q317638",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q317638",
+        "person_qid": "Q317638",
+        "enwiki_title": "Jimmy Hoffa",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Jimmy_Hoffa",
+        "source_urls": [
+          "https://oddstops.com/jimmy-hoffa",
+          "https://en.wikipedia.org/wiki/Jimmy_Hoffa"
+        ],
+        "updated_at": "2026-01-18T23:49:48.236Z"
+      }
+    },
+    {
+      "id": "40bcc659-0106-4279-bad4-7fefe692ba6b",
+      "title": "Jessica Taylor",
+      "match": {
+        "qid": "Q6187514",
+        "label": "Jessica Taylor",
+        "description": "British singer, member of Liberty X",
+        "isHuman": true,
+        "enwikiTitle": "Jessica Taylor",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Jessica_Taylor",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q6187514",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q6187514",
+        "person_qid": "Q6187514",
+        "enwiki_title": "Jessica Taylor",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Jessica_Taylor",
+        "source_urls": [
+          "https://oddstops.com/jessica-taylor",
+          "https://en.wikipedia.org/wiki/Jessica_Taylor"
+        ],
+        "updated_at": "2026-01-18T23:49:50.565Z"
+      }
+    },
+    {
+      "id": "70edf015-5c33-41fc-83d9-4103e133a724",
+      "title": "Young Dolph",
+      "match": {
+        "qid": "Q23541285",
+        "label": "Young Dolph",
+        "description": "American rapper (1985–2021)",
+        "isHuman": true,
+        "enwikiTitle": "Young Dolph",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Young_Dolph",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q23541285",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q23541285",
+        "person_qid": "Q23541285",
+        "enwiki_title": "Young Dolph",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Young_Dolph",
+        "source_urls": [
+          "https://oddstops.com/young-dolph",
+          "https://en.wikipedia.org/wiki/Young_Dolph"
+        ],
+        "updated_at": "2026-01-18T23:49:52.770Z"
+      }
+    },
+    {
+      "id": "3589b5c9-55cd-4449-8475-7593e52de242",
+      "title": "Chris Benoit",
+      "match": {
+        "qid": "Q44292",
+        "label": "Chris Benoit",
+        "description": "Canadian professional wrestler and murderer (1967–2007)",
+        "isHuman": true,
+        "enwikiTitle": "Chris Benoit",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Chris_Benoit",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q44292",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q44292",
+        "person_qid": "Q44292",
+        "enwiki_title": "Chris Benoit",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Benoit",
+        "source_urls": [
+          "https://oddstops.com/chris-benoit-house",
+          "https://en.wikipedia.org/wiki/Chris_Benoit"
+        ],
+        "updated_at": "2026-01-18T23:49:58.050Z"
+      }
+    },
+    {
+      "id": "df63deb4-dc8b-47a2-a2d7-ee50560029e4",
+      "title": "Caylee Anthony",
+      "match": {
+        "qid": "Q105440248",
+        "label": "Caylee Anthony",
+        "description": "daughter of Casey Anthony",
+        "isHuman": true,
+        "enwikiTitle": "Caylee Anthony",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Caylee_Anthony",
+        "score": 12,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q105440248",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q105440248",
+        "person_qid": "Q105440248",
+        "enwiki_title": "Caylee Anthony",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Caylee_Anthony",
+        "source_urls": [
+          "https://oddstops.com/caylee-anthony",
+          "https://en.wikipedia.org/wiki/Caylee_Anthony"
+        ],
+        "updated_at": "2026-01-18T23:50:02.436Z"
+      }
+    },
+    {
+      "id": "7c1924df-227b-4856-a11d-6a284748b92c",
+      "title": "Marvin Gaye",
+      "match": {
+        "qid": "Q189758",
+        "label": "Marvin Gaye",
+        "description": "American R&B and soul singer (1939–1984)",
+        "isHuman": true,
+        "enwikiTitle": "Marvin Gaye",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Marvin_Gaye",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q189758",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q189758",
+        "person_qid": "Q189758",
+        "enwiki_title": "Marvin Gaye",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Marvin_Gaye",
+        "source_urls": [
+          "https://oddstops.com/marvin-gaye-house",
+          "https://en.wikipedia.org/wiki/Marvin_Gaye"
+        ],
+        "updated_at": "2026-01-18T23:50:04.873Z"
+      }
+    },
+    {
+      "id": "930293db-0642-4d9e-9514-46b01bf2f265",
+      "title": "Carmine Galante",
+      "match": {
+        "qid": "Q1043820",
+        "label": "Carmine Galante",
+        "description": "American Mafia boss (1910-1979)",
+        "isHuman": true,
+        "enwikiTitle": "Carmine Galante",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Carmine_Galante",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q1043820",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1043820",
+        "person_qid": "Q1043820",
+        "enwiki_title": "Carmine Galante",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Carmine_Galante",
+        "source_urls": [
+          "https://oddstops.com/carmine-galante",
+          "https://en.wikipedia.org/wiki/Carmine_Galante"
+        ],
+        "updated_at": "2026-01-18T23:50:07.008Z"
+      }
+    },
+    {
+      "id": "1d7bc8ea-a3d9-4bff-8cf0-179e62a76582",
+      "title": "Sarah Everard",
+      "match": {
+        "qid": "Q105908485",
+        "label": "Sarah Everard",
+        "description": "woman who disappeared in London, England, on 3 March 2021 and whose body was found shortly afterwards",
+        "isHuman": true,
+        "enwikiTitle": "Sarah Everard",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Sarah_Everard",
+        "score": 12,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q105908485",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q105908485",
+        "person_qid": "Q105908485",
+        "enwiki_title": "Sarah Everard",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Sarah_Everard",
+        "source_urls": [
+          "https://oddstops.com/sarah-everard",
+          "https://en.wikipedia.org/wiki/Sarah_Everard"
+        ],
+        "updated_at": "2026-01-18T23:50:10.208Z"
+      }
+    },
+    {
+      "id": "578c14cb-127c-436c-8170-7be37fc9aa7b",
+      "title": "Eamon Dunne",
+      "match": {
+        "qid": "Q16018731",
+        "label": "Eamon Dunne",
+        "description": "Irish criminal",
+        "isHuman": true,
+        "enwikiTitle": "Eamon Dunne",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Eamon_Dunne",
+        "score": 12,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q16018731",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q16018731",
+        "person_qid": "Q16018731",
+        "enwiki_title": "Eamon Dunne",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Eamon_Dunne",
+        "source_urls": [
+          "https://oddstops.com/eamon-dunne",
+          "https://en.wikipedia.org/wiki/Eamon_Dunne"
+        ],
+        "updated_at": "2026-01-18T23:50:15.515Z"
+      }
+    },
+    {
+      "id": "925661a5-fca9-435f-b662-ba119d138d05",
+      "title": "Cassie Jo Stoddart",
+      "match": {
+        "qid": "Q135967623",
+        "label": "Cassie Jo Stoddart",
+        "description": "American murder victim",
+        "isHuman": true,
+        "enwikiTitle": "Cassie Jo Stoddart",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Cassie_Jo_Stoddart",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q135967623",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q135967623",
+        "person_qid": "Q135967623",
+        "enwiki_title": "Cassie Jo Stoddart",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Cassie_Jo_Stoddart",
+        "source_urls": [
+          "https://oddstops.com/cassie-jo-stoddart",
+          "https://en.wikipedia.org/wiki/Cassie_Jo_Stoddart"
+        ],
+        "updated_at": "2026-01-18T23:50:21.998Z"
+      }
+    },
+    {
+      "id": "4e4be7a9-96e7-45e9-ac80-5183176576bc",
+      "title": "Ernie Kovacs",
+      "match": {
+        "qid": "Q990890",
+        "label": "Ernie Kovacs",
+        "description": "American comedian, actor, and writer (1919-1962)",
+        "isHuman": true,
+        "enwikiTitle": "Ernie Kovacs",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Ernie_Kovacs",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q990890",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q990890",
+        "person_qid": "Q990890",
+        "enwiki_title": "Ernie Kovacs",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Ernie_Kovacs",
+        "source_urls": [
+          "https://oddstops.com/ernie-kovacs-car-crash",
+          "https://en.wikipedia.org/wiki/Ernie_Kovacs"
+        ],
+        "updated_at": "2026-01-18T23:50:29.648Z"
+      }
+    },
+    {
+      "id": "a2abebab-0fca-4f90-9c0c-8f3b839e60e1",
+      "title": "Ken McElroy",
+      "match": {
+        "qid": "Q6388114",
+        "label": "Ken McElroy",
+        "description": "American criminal and murder victim",
+        "isHuman": true,
+        "enwikiTitle": "Ken McElroy",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Ken_McElroy",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q6388114",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q6388114",
+        "person_qid": "Q6388114",
+        "enwiki_title": "Ken McElroy",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Ken_McElroy",
+        "source_urls": [
+          "https://oddstops.com/ken-mcelroy",
+          "https://en.wikipedia.org/wiki/Ken_McElroy"
+        ],
+        "updated_at": "2026-01-18T23:50:31.953Z"
+      }
+    },
+    {
+      "id": "d42ff2ef-27a1-45b7-a462-61eb8285fba9",
+      "title": "April Jace",
+      "match": {
+        "qid": "Q16919856",
+        "label": "April Jace",
+        "description": "American athlete, murder victim (1974–2014)",
+        "isHuman": true,
+        "enwikiTitle": "April Jace",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/April_Jace",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q16919856",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q16919856",
+        "person_qid": "Q16919856",
+        "enwiki_title": "April Jace",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/April_Jace",
+        "source_urls": [
+          "https://oddstops.com/michael-jace",
+          "https://en.wikipedia.org/wiki/April_Jace"
+        ],
+        "updated_at": "2026-01-18T23:50:35.223Z"
+      }
+    },
+    {
+      "id": "fd582145-1cfb-46e8-9c84-1605c1d93fdb",
+      "title": "Paul Walker",
+      "match": {
+        "qid": "Q213864",
+        "label": "Paul Walker",
+        "description": "American actor (1973–2013)",
+        "isHuman": true,
+        "enwikiTitle": "Paul Walker",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Paul_Walker",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q213864",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q213864",
+        "person_qid": "Q213864",
+        "enwiki_title": "Paul Walker",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Paul_Walker",
+        "source_urls": [
+          "https://oddstops.com/paul-walker",
+          "https://en.wikipedia.org/wiki/Paul_Walker"
+        ],
+        "updated_at": "2026-01-18T23:50:37.619Z"
+      }
+    },
+    {
+      "id": "4ad7cf48-145e-4b5a-9cbc-e1e41d0704ff",
+      "title": "Paul Castellano",
+      "match": {
+        "qid": "Q304489",
+        "label": "Paul Castellano",
+        "description": "American crime boss (1915–1985)",
+        "isHuman": true,
+        "enwikiTitle": "Paul Castellano",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Paul_Castellano",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q304489",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q304489",
+        "person_qid": "Q304489",
+        "enwiki_title": "Paul Castellano",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Paul_Castellano",
+        "source_urls": [
+          "https://oddstops.com/steak-house-castellano",
+          "https://en.wikipedia.org/wiki/Paul_Castellano"
+        ],
+        "updated_at": "2026-01-18T23:50:39.839Z"
+      }
+    },
+    {
+      "id": "9efa9eaa-40f7-4246-a57f-623955026bd3",
+      "title": "Hervé Villechaize",
+      "match": {
+        "qid": "Q954841",
+        "label": "Hervé Villechaize",
+        "description": "French actor (1943–1993)",
+        "isHuman": true,
+        "enwikiTitle": "Hervé Villechaize",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Herv%C3%A9_Villechaize",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q954841",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q954841",
+        "person_qid": "Q954841",
+        "enwiki_title": "Hervé Villechaize",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Herv%C3%A9_Villechaize",
+        "source_urls": [
+          "https://oddstops.com/villechaize-house",
+          "https://en.wikipedia.org/wiki/Herv%C3%A9_Villechaize"
+        ],
+        "updated_at": "2026-01-18T23:50:42.110Z"
+      }
+    },
+    {
+      "id": "5754d51d-9e33-4870-bb49-0280e1ba42c2",
+      "title": "Joe Gallo",
+      "match": {
+        "qid": "Q926554",
+        "label": "Joe Gallo",
+        "description": "American mobster of Italian descent (1929–1972)",
+        "isHuman": true,
+        "enwikiTitle": "Joe Gallo",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Joe_Gallo",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q926554",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q926554",
+        "person_qid": "Q926554",
+        "enwiki_title": "Joe Gallo",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Joe_Gallo",
+        "source_urls": [
+          "https://oddstops.com/joe-gallo",
+          "https://en.wikipedia.org/wiki/Joe_Gallo"
+        ],
+        "updated_at": "2026-01-18T23:50:44.443Z"
+      }
+    },
+    {
+      "id": "4b0f144f-e4e0-4a2e-9374-5c0c5393bfef",
+      "title": "Rebecca Schaeffer",
+      "match": {
+        "qid": "Q266789",
+        "label": "Rebecca Schaeffer",
+        "description": "actress (1967-1989)",
+        "isHuman": true,
+        "enwikiTitle": "Rebecca Schaeffer",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Rebecca_Schaeffer",
+        "score": 12,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q266789",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q266789",
+        "person_qid": "Q266789",
+        "enwiki_title": "Rebecca Schaeffer",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Rebecca_Schaeffer",
+        "source_urls": [
+          "https://oddstops.com/rebecca-schaeffer-apartment",
+          "https://en.wikipedia.org/wiki/Rebecca_Schaeffer"
+        ],
+        "updated_at": "2026-01-18T23:50:48.746Z"
+      }
+    },
+    {
+      "id": "11a51949-c83a-4cd9-bc28-fbd14386030b",
+      "title": "Rock Hudson",
+      "match": {
+        "qid": "Q184378",
+        "label": "Rock Hudson",
+        "description": "American actor (1925–1985)",
+        "isHuman": true,
+        "enwikiTitle": "Rock Hudson",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Rock_Hudson",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q184378",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q184378",
+        "person_qid": "Q184378",
+        "enwiki_title": "Rock Hudson",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Rock_Hudson",
+        "source_urls": [
+          "https://oddstops.com/rock-hudson-house",
+          "https://en.wikipedia.org/wiki/Rock_Hudson"
+        ],
+        "updated_at": "2026-01-18T23:50:51.205Z"
+      }
+    },
+    {
+      "id": "2d09f660-b034-4007-95e5-cf947d7d4948",
+      "title": "John Lennon",
+      "match": {
+        "qid": "Q1203",
+        "label": "John Lennon",
+        "description": "British musician (1940–1980)",
+        "isHuman": true,
+        "enwikiTitle": "John Lennon",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/John_Lennon",
+        "score": 12,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q1203",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1203",
+        "person_qid": "Q1203",
+        "enwiki_title": "John Lennon",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/John_Lennon",
+        "source_urls": [
+          "https://oddstops.com/john-lennon-apartment",
+          "https://en.wikipedia.org/wiki/John_Lennon"
+        ],
+        "updated_at": "2026-01-18T23:50:55.844Z"
+      }
+    },
+    {
+      "id": "84b1b70d-c44b-4881-bcdd-46eea2828c60",
+      "title": "Dimebag Darrell",
+      "match": {
+        "qid": "Q311050",
+        "label": "Dimebag Darrell",
+        "description": "American guitarist (1966–2004)",
+        "isHuman": true,
+        "enwikiTitle": "Dimebag Darrell",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Dimebag_Darrell",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q311050",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q311050",
+        "person_qid": "Q311050",
+        "enwiki_title": "Dimebag Darrell",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Dimebag_Darrell",
+        "source_urls": [
+          "https://oddstops.com/dimebag-darrell",
+          "https://en.wikipedia.org/wiki/Dimebag_Darrell"
+        ],
+        "updated_at": "2026-01-18T23:50:58.180Z"
+      }
+    },
+    {
+      "id": "a144bf2a-d460-4ec6-bb38-23329ebf7d4f",
+      "title": "Roy DeMeo",
+      "match": {
+        "qid": "Q1338001",
+        "label": "Roy DeMeo",
+        "description": "American Mafia hitman (1940-1983)",
+        "isHuman": true,
+        "enwikiTitle": "Roy DeMeo",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Roy_DeMeo",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q1338001",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1338001",
+        "person_qid": "Q1338001",
+        "enwiki_title": "Roy DeMeo",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Roy_DeMeo",
+        "source_urls": [
+          "https://oddstops.com/roy-demeo",
+          "https://en.wikipedia.org/wiki/Roy_DeMeo"
+        ],
+        "updated_at": "2026-01-18T23:51:03.424Z"
+      }
+    },
+    {
+      "id": "c2e33438-274b-4d1e-aad5-c8c307e6e116",
+      "title": "Pat Garrett",
+      "match": {
+        "qid": "Q450746",
+        "label": "Pat Garrett",
+        "description": "American sheriff (1850–1908)",
+        "isHuman": true,
+        "enwikiTitle": "Pat Garrett",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Pat_Garrett",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q450746",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q450746",
+        "person_qid": "Q450746",
+        "enwiki_title": "Pat Garrett",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Pat_Garrett",
+        "source_urls": [
+          "https://oddstops.com/pat-garrett-site",
+          "https://en.wikipedia.org/wiki/Pat_Garrett"
+        ],
+        "updated_at": "2026-01-18T23:51:09.753Z"
+      }
+    },
+    {
+      "id": "fc9e77c5-8d94-4c23-a3af-43fdb3c14d08",
+      "title": "Joseph Augustus Zarelli",
+      "match": {
+        "qid": "Q331015",
+        "label": "Joseph Augustus Zarelli",
+        "description": "American formerly unidentified murder victim (1953 - 1957)",
+        "isHuman": true,
+        "enwikiTitle": "Murder of Joseph Augustus Zarelli",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q331015",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q331015",
+        "person_qid": "Q331015",
+        "enwiki_title": "Murder of Joseph Augustus Zarelli",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli",
+        "source_urls": [
+          "https://oddstops.com/joseph-augustus-zarelli",
+          "https://en.wikipedia.org/wiki/Murder_of_Joseph_Augustus_Zarelli"
+        ],
+        "updated_at": "2026-01-18T23:51:12.094Z"
+      }
+    },
+    {
+      "id": "22ecc86b-d0ff-4653-91a9-127134b00b13",
+      "title": "Veronica Guerin",
+      "match": {
+        "qid": "Q237541",
+        "label": "Veronica Guerin",
+        "description": "Irish crime reporter (1958-1996)",
+        "isHuman": true,
+        "enwikiTitle": "Veronica Guerin",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Veronica_Guerin",
+        "score": 12,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q237541",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q237541",
+        "person_qid": "Q237541",
+        "enwiki_title": "Veronica Guerin",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Veronica_Guerin",
+        "source_urls": [
+          "https://oddstops.com/veronica-guerin",
+          "https://en.wikipedia.org/wiki/Veronica_Guerin"
+        ],
+        "updated_at": "2026-01-18T23:51:14.304Z"
+      }
+    },
+    {
+      "id": "d28324f9-f5e6-4d65-a925-927faaeddb09",
+      "title": "Frank Cali",
+      "match": {
+        "qid": "Q3751778",
+        "label": "Frank Cali",
+        "description": "American mobster",
+        "isHuman": true,
+        "enwikiTitle": "Frank Cali",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Frank_Cali",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q3751778",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q3751778",
+        "person_qid": "Q3751778",
+        "enwiki_title": "Frank Cali",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Frank_Cali",
+        "source_urls": [
+          "https://oddstops.com/frank-cali-house",
+          "https://en.wikipedia.org/wiki/Frank_Cali"
+        ],
+        "updated_at": "2026-01-18T23:51:20.701Z"
+      }
+    },
+    {
+      "id": "ddc3adca-314a-4109-b9be-7d1a56c6672a",
+      "title": "Sam Cooke",
+      "match": {
+        "qid": "Q295919",
+        "label": "Sam Cooke",
+        "description": "American singer and songwriter (1931–1964)",
+        "isHuman": true,
+        "enwikiTitle": "Sam Cooke",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Sam_Cooke",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q295919",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q295919",
+        "person_qid": "Q295919",
+        "enwiki_title": "Sam Cooke",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Sam_Cooke",
+        "source_urls": [
+          "https://oddstops.com/sam-cooke-motel",
+          "https://en.wikipedia.org/wiki/Sam_Cooke"
+        ],
+        "updated_at": "2026-01-18T23:51:25.267Z"
+      }
+    },
+    {
+      "id": "ecc58b75-6ae5-4a3a-b8cd-16a829293ff9",
+      "title": "Pop Smoke",
+      "match": {
+        "qid": "Q81698554",
+        "label": "Pop Smoke",
+        "description": "American rapper (1999–2020)",
+        "isHuman": true,
+        "enwikiTitle": "Pop Smoke",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Pop_Smoke",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q81698554",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q81698554",
+        "person_qid": "Q81698554",
+        "enwiki_title": "Pop Smoke",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Pop_Smoke",
+        "source_urls": [
+          "https://oddstops.com/pop-smoke-house",
+          "https://en.wikipedia.org/wiki/Pop_Smoke"
+        ],
+        "updated_at": "2026-01-18T23:51:27.706Z"
+      }
+    },
+    {
+      "id": "2a0294a5-7490-4dbe-9704-e4b1f2a23538",
+      "title": "Matthew Perry",
+      "match": {
+        "qid": "Q171758",
+        "label": "Matthew Perry",
+        "description": "American-Canadian actor (1969–2023)",
+        "isHuman": true,
+        "enwikiTitle": "Matthew Perry",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Matthew_Perry",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q171758",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q171758",
+        "person_qid": "Q171758",
+        "enwiki_title": "Matthew Perry",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Matthew_Perry",
+        "source_urls": [
+          "https://oddstops.com/matthew-perry-house",
+          "https://en.wikipedia.org/wiki/Matthew_Perry"
+        ],
+        "updated_at": "2026-01-18T23:51:30.131Z"
+      }
+    },
+    {
+      "id": "86039803-3fd9-415b-b07f-6566730718d7",
+      "title": "Christina Grimmie",
+      "match": {
+        "qid": "Q231713",
+        "label": "Christina Grimmie",
+        "description": "singer (1994 - 2016)",
+        "isHuman": true,
+        "enwikiTitle": "Christina Grimmie",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Christina_Grimmie",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q231713",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q231713",
+        "person_qid": "Q231713",
+        "enwiki_title": "Christina Grimmie",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Christina_Grimmie",
+        "source_urls": [
+          "https://oddstops.com/christina-grimmie",
+          "https://en.wikipedia.org/wiki/Christina_Grimmie"
+        ],
+        "updated_at": "2026-01-18T23:51:34.468Z"
+      }
+    },
+    {
+      "id": "50a90695-684d-48eb-9476-f9e0399c3280",
+      "title": "Albert Anastasia",
+      "match": {
+        "qid": "Q706235",
+        "label": "Albert Anastasia",
+        "description": "Italian-American Costa Nostra mobster",
+        "isHuman": true,
+        "enwikiTitle": "Albert Anastasia",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Albert_Anastasia",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q706235",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q706235",
+        "person_qid": "Q706235",
+        "enwiki_title": "Albert Anastasia",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Albert_Anastasia",
+        "source_urls": [
+          "https://oddstops.com/albert-anastasia",
+          "https://en.wikipedia.org/wiki/Albert_Anastasia"
+        ],
+        "updated_at": "2026-01-18T23:51:36.768Z"
+      }
+    },
+    {
+      "id": "bc847ee4-9a49-4820-a9f9-a13f2ec43093",
+      "title": "Sean Taylor",
+      "match": {
+        "qid": "Q720488",
+        "label": "Sean Taylor",
+        "description": "American football player, defensive back, safety (1983-2007)",
+        "isHuman": true,
+        "enwikiTitle": "Sean Taylor",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Sean_Taylor",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q720488",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q720488",
+        "person_qid": "Q720488",
+        "enwiki_title": "Sean Taylor",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Sean_Taylor",
+        "source_urls": [
+          "https://oddstops.com/sean-taylor-house",
+          "https://en.wikipedia.org/wiki/Sean_Taylor"
+        ],
+        "updated_at": "2026-01-18T23:51:40.141Z"
+      }
+    },
+    {
+      "id": "d07697a0-6874-45a1-95b7-3fc5b382c07e",
+      "title": "Big L",
+      "match": {
+        "qid": "Q316588",
+        "label": "Big L",
+        "description": "American rapper (1974–1999)",
+        "isHuman": true,
+        "enwikiTitle": "Big L",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Big_L",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q316588",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q316588",
+        "person_qid": "Q316588",
+        "enwiki_title": "Big L",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Big_L",
+        "source_urls": [
+          "https://oddstops.com/big-l",
+          "https://en.wikipedia.org/wiki/Big_L"
+        ],
+        "updated_at": "2026-01-18T23:51:43.633Z"
+      }
+    },
+    {
+      "id": "760d1dd2-6bd8-4e2e-839b-eedbd9cd877f",
+      "title": "Orlando Anderson",
+      "match": {
+        "qid": "Q2356664",
+        "label": "Orlando Anderson",
+        "description": "American person of interest in the investigation into the murder of American rapper Tupac Shakur",
+        "isHuman": true,
+        "enwikiTitle": "Orlando Anderson",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Orlando_Anderson",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q2356664",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q2356664",
+        "person_qid": "Q2356664",
+        "enwiki_title": "Orlando Anderson",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Orlando_Anderson",
+        "source_urls": [
+          "https://oddstops.com/orlando-anderson",
+          "https://en.wikipedia.org/wiki/Orlando_Anderson"
+        ],
+        "updated_at": "2026-01-18T23:51:45.795Z"
+      }
+    },
+    {
+      "id": "27d57233-b866-4ed7-ba19-93b3b684e46c",
+      "title": "Dee Dee Blanchard",
+      "match": {
+        "qid": "Q51724133",
+        "label": "Dee Dee Blanchard",
+        "description": "American fraudster and murder victim (1967-2015)",
+        "isHuman": true,
+        "enwikiTitle": "Dee Dee Blancharde",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/Dee_Dee_Blancharde",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q51724133",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q51724133",
+        "person_qid": "Q51724133",
+        "enwiki_title": "Dee Dee Blancharde",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Dee_Dee_Blancharde",
+        "source_urls": [
+          "https://oddstops.com/gypsy-rose-house",
+          "https://en.wikipedia.org/wiki/Dee_Dee_Blancharde"
+        ],
+        "updated_at": "2026-01-18T23:51:53.392Z"
+      }
+    },
+    {
+      "id": "2a40e05c-d657-4a11-8314-47b4797b9b3e",
+      "title": "XXXTentacion",
+      "match": {
+        "qid": "Q28561969",
+        "label": "XXXTentacion",
+        "description": "American rapper (1998–2018)",
+        "isHuman": true,
+        "enwikiTitle": "XXXTentacion",
+        "enwikiUrl": "https://en.wikipedia.org/wiki/XXXTentacion",
+        "score": 13,
+        "scoreReasons": [
+          "exact normalized label match (+10)",
+          "description hints person context (+1)",
+          "has enwiki sitelink (+2)"
+        ]
+      },
+      "patch": {
+        "wikidata_qid": "Q28561969",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q28561969",
+        "person_qid": "Q28561969",
+        "enwiki_title": "XXXTentacion",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/XXXTentacion",
+        "source_urls": [
+          "https://oddstops.com/xxxtentacion",
+          "https://en.wikipedia.org/wiki/XXXTentacion"
+        ],
+        "updated_at": "2026-01-18T23:51:55.801Z"
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "id": "a64e4068-9088-4165-bbea-858bdfb0521f",
+      "title": "Faith Hedgepeth",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "cf91bf1f-ed40-462f-abc4-59dfd410239d",
+      "title": "Nicholas Browning",
+      "reason": "ambiguous or low-confidence match",
+      "alternatives": [
+        {
+          "qid": "Q96063274",
+          "label": "Nicholas J Browning",
+          "description": "researcher",
+          "isHuman": true,
+          "enwikiTitle": null,
+          "enwikiUrl": null,
+          "score": 0,
+          "scoreReasons": []
+        }
+      ]
+    },
+    {
+      "id": "158a259a-d483-4574-bd84-f8c057b180f2",
+      "title": "Zodiac Killer - The Lake Herman Road murder site",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "f92b595d-1635-4dcb-a561-fa08360e65ef",
+      "title": "Superbike Motorsports",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "606a8903-2292-452b-bf15-d6ca7497a419",
+      "title": "The Blue Rock Springs murder site",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "cd815c46-6f06-4091-b1b7-55d5a648ead6",
+      "title": "Shirley Vian",
+      "reason": "ambiguous or low-confidence match",
+      "alternatives": [
+        {
+          "qid": "Q97558963",
+          "label": "Shirley Viana-Peçanha",
+          "description": "researcher",
+          "isHuman": true,
+          "enwikiTitle": null,
+          "enwikiUrl": null,
+          "score": 4,
+          "scoreReasons": [
+            "strong partial label similarity (+4)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4365a404-d4fa-4b31-a84f-66a2140385fc",
+      "title": "Zodiac Killer - The Lake Berryessa murder site",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "48c63345-16d0-45d5-8129-fc7adaa6e9dc",
+      "title": "Darryl Baum",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "790e3d1a-aea4-4254-8693-0d92523d330f",
+      "title": "The Otero family home",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "4fd3d3bf-8662-4b22-af9e-ffdbbcf553e6",
+      "title": "Sandra Costilla",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "3675e81f-4779-43d2-9d0e-7a26fd236192",
+      "title": "Vicki Lynn Wegerle's house",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "6b89e06f-3f45-4342-896b-f53acac3175e",
+      "title": "Anthony Templet",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "d574c443-4efd-463f-90f8-990aee998a2d",
+      "title": "Brooke Wilberger",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "f8a0bb66-9dd1-48bc-8a95-44d02d6d86a6",
+      "title": "Maribel Ramos",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "1ec090ce-ab6f-4327-b725-a99284fe1ead",
+      "title": "Kathryn Bright",
+      "reason": "ambiguous or low-confidence match",
+      "alternatives": [
+        {
+          "qid": "Q114432122",
+          "label": "Kathryn J Bright",
+          "description": "researcher",
+          "isHuman": true,
+          "enwikiTitle": null,
+          "enwikiUrl": null,
+          "score": 0,
+          "scoreReasons": []
+        }
+      ]
+    },
+    {
+      "id": "565c59e2-528e-4fae-a258-cdcf934ed5b5",
+      "title": "Shannan Watts",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "8c24fcac-652a-415b-b38b-be36d312e850",
+      "title": "Raonaid Murray",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "5eb8ecd5-2fa1-4040-94c3-ee8d85b9f086",
+      "title": "Virginia Voskerichian",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "6f9d62b9-6b35-4dcc-9b1f-66b7e3e71bb3",
+      "title": "Donna Lauria",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "95d69971-205f-41bf-b281-4c71b3788685",
+      "title": "Skylar Neese",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "a5779e52-8efc-4a20-a2f5-16c35e582b2a",
+      "title": "Mary Pewitt",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "e85f61f1-67bb-4f08-a439-802fc72ba0e0",
+      "title": "Missy Bevers",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "b1332d8f-243f-4155-8573-435ea3688ced",
+      "title": "Karen Vergata",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "b5064fcc-d315-4a3b-8441-f1373796712d",
+      "title": "Candice Welch",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "15bb6f9e-9c98-44c9-bdd9-9aa80e785be6",
+      "title": "Lynette Culver",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "717305ab-5eb1-46c0-b44a-6cd1f028eb11",
+      "title": "Marlo Hyland",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "74965d2d-6206-430d-83b1-17ae24aab269",
+      "title": "Ashley Ellerin",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "62ded784-e81f-447a-89b5-336865f21309",
+      "title": "Brittanee Drexel",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "ddfd8e56-a32a-4080-954e-e761c4e5ffe5",
+      "title": "Denise Christie Brothers",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "10863a0f-e6a0-4d22-8f4c-3715ba546510",
+      "title": "Rita Tangredi",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "e7875fb5-2d16-4337-b3b1-289ee1c36f60",
+      "title": "The Spilotro brothers",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "f2be02ff-1273-4600-a742-39d4fc83ba0a",
+      "title": "Paul Stine",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "b91b1102-d537-4eaa-be02-44804410f227",
+      "title": "Ana Kriégel",
+      "reason": "ambiguous or low-confidence match",
+      "alternatives": [
+        {
+          "qid": "Q64705684",
+          "label": "Anastasia \"Ana\" Kriégel",
+          "description": "Russian-Irish murder victim",
+          "isHuman": true,
+          "enwikiTitle": "Anastasia \"Ana\" Kriégel",
+          "enwikiUrl": "https://en.wikipedia.org/wiki/Anastasia_%22Ana%22_Kri%C3%A9gel",
+          "score": 7,
+          "scoreReasons": [
+            "strong partial label similarity (+4)",
+            "description hints person context (+1)",
+            "has enwiki sitelink (+2)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3414cd6-4511-43cf-93b2-b9345d0dad65",
+      "title": "Valerie Mack",
+      "reason": "ambiguous or low-confidence match",
+      "alternatives": [
+        {
+          "qid": "Q75635076",
+          "label": "Valerie MacKenzie",
+          "description": "(born 1958)",
+          "isHuman": true,
+          "enwikiTitle": null,
+          "enwikiUrl": null,
+          "score": 4,
+          "scoreReasons": [
+            "strong partial label similarity (+4)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f6d263f1-1dc9-4066-9022-574ebb63972e",
+      "title": "June Cicero",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "c438f1b9-bc33-4cb9-b9c6-08a8920d5ecd",
+      "title": "Bernard \"Verb\" Sugg",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "9ffca2e1-59ef-484c-a625-e7182a8f1bcf",
+      "title": "Selena Quintanilla-Pérez",
+      "reason": "ambiguous or low-confidence match",
+      "alternatives": [
+        {
+          "qid": "Q23543",
+          "label": "Selena يارا",
+          "description": "American singer",
+          "isHuman": true,
+          "enwikiTitle": "Selena",
+          "enwikiUrl": "https://en.wikipedia.org/wiki/Selena",
+          "score": 7,
+          "scoreReasons": [
+            "strong partial label similarity (+4)",
+            "description hints person context (+1)",
+            "has enwiki sitelink (+2)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f92e0288-b353-489f-a235-5cedc98f2e6f",
+      "title": "Nancy Jo Fox",
+      "reason": "no valid human candidates after validation"
+    },
+    {
+      "id": "1b515b76-9f3e-4d2b-ad3a-4ea4a64ba25c",
+      "title": "Janis Joplin",
+      "reason": "ambiguous or low-confidence match",
+      "alternatives": [
+        {
+          "qid": "Q1514",
+          "label": null,
+          "description": "American singer (1943–1970)",
+          "isHuman": true,
+          "enwikiTitle": "Janis Joplin",
+          "enwikiUrl": "https://en.wikipedia.org/wiki/Janis_Joplin",
+          "score": 3,
+          "scoreReasons": [
+            "description hints person context (+1)",
+            "has enwiki sitelink (+2)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "60db6db1-8949-4aaf-806f-4bdfbdb82c08",
+      "title": "Sheila Ingold",
+      "reason": "no valid human candidates after validation"
+    }
+  ],
+  "errors": [
+    {
+      "id": "0e0c8fad-833c-4e25-933e-1ebae2618f28",
+      "title": "Anton Yelchin",
+      "error": "duplicate key value violates unique constraint \"death_locations_wikidata_qid_uq\""
+    }
+  ],
+  "finished_at": "2026-01-18T23:52:00.516Z",
+  "summary": {
+    "scanned": 84,
+    "updated": 43,
+    "skippedNoHits": 0,
+    "skippedAmbiguous": 7,
+    "skippedNoValidHuman": 33,
+    "errors": 1,
+    "dryRun": false
+  }
+}

@@ -1,0 +1,866 @@
+{
+  "verified": [
+    {
+      "name": "Anne Heche",
+      "qid": "Q234610",
+      "label": "Anne Heche",
+      "description": "American actress (1969–2022)",
+      "deathDate": "2022-08-12T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "2020s",
+        "name": "Anne Heche",
+        "rawContext": "Anne Heche",
+        "url": "https://www.seeing-stars.com/Died/2020s.shtml"
+      }
+    },
+    {
+      "name": "David Cassidy",
+      "qid": "Q457306",
+      "label": "David Cassidy",
+      "description": "American actor and singer (1950–2017)",
+      "deathDate": "2017-11-21T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1970s",
+        "name": "David Cassidy",
+        "rawContext": "1221 N. King's Road,\nWest Hollywood: the penthouse apartment\nwhere actor Jack Cassidy\ndied in a fire in 1976. Cassidy was the former husband of actress Shirley Jones,\nand the father of both David Cassidy\n(star of TV's \"Partridge Family\") and of pop singer Shaun Cassidy.\nHe went to sleep while smoking a cigarette, igniting the couch on which\nhe was sleeping.",
+        "url": "https://www.seeing-stars.com/Died/70s.shtml"
+      }
+    },
+    {
+      "name": "Charles Manson",
+      "qid": "Q485508",
+      "label": "Charles Manson",
+      "description": "American criminal and cult leader (1934–2017)",
+      "deathDate": "2017-11-19T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1960s",
+        "name": "Charles Manson",
+        "rawContext": "Charles Manson",
+        "url": "https://www.seeing-stars.com/Died/60s.shtml"
+      }
+    },
+    {
+      "name": "Alan Thicke",
+      "qid": "Q277895",
+      "label": "Alan Thicke",
+      "description": "Canadian actor, songwriter, and television host (1947–2016)",
+      "deathDate": "2016-12-13T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "2010s",
+        "name": "Alan Thicke",
+        "rawContext": "Alan Thicke",
+        "url": "https://www.seeing-stars.com/Died/2010s.shtml"
+      }
+    },
+    {
+      "name": "Anton Yelchin",
+      "qid": "Q314133",
+      "label": "Anton Yelchin",
+      "description": "American actor (1989–2016)",
+      "deathDate": "2016-06-19T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "2010s",
+        "name": "Anton Yelchin",
+        "rawContext": "The home of Anton Yelchin, the actor who played 'Ensign Chekov' in the trio of new \"Star Trek\" movies, was killed in a freak accident on the night of June 18, 2016.",
+        "url": "https://www.seeing-stars.com/Died/2010s.shtml"
+      }
+    },
+    {
+      "name": "Art Linkletter",
+      "qid": "Q705630",
+      "label": "Art Linkletter",
+      "description": "Canadian-American radio and television personality (1912-2010)",
+      "deathDate": "2010-05-26T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1960s",
+        "name": "Art Linkletter",
+        "rawContext": "8787 Shoreham Drive,\nWest Hollywood (near the Sunset Strip,\nat Horn, just above Spago), :\nthe sixth floor apartment from which Art\nLinkletter's daughter, Dianne,\njumped to her death in 1969. Her family has insisted that she had been\non drugs (LSD) at the time, but an autopsy showed no evidence of drugs\nin her system.",
+        "url": "https://www.seeing-stars.com/Died/60s.shtml"
+      }
+    },
+    {
+      "name": "Corey Haim",
+      "qid": "Q342370",
+      "label": "Corey Haim",
+      "description": "Canadian actor (1971–2010)",
+      "deathDate": "2010-03-10T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "2010s",
+        "name": "Corey Haim",
+        "rawContext": "Corey Haim",
+        "url": "https://www.seeing-stars.com/Died/2010s.shtml"
+      }
+    },
+    {
+      "name": "Brittany Murphy",
+      "qid": "Q168847",
+      "label": "Brittany Murphy",
+      "description": "American actress and singer (1977–2009)",
+      "deathDate": "2009-12-20T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "2000s",
+        "name": "Brittany Murphy",
+        "rawContext": "1893 Rising Glen\nRoad, in the Hollywood Hills: It was here, on the morning of December 20, 2009,\nthat actress Brittany Murphy\ndied of cardiac arrest at age 32. She had her breakthrough role in\n1995's \"Clueless\" (opposite Alicia Silverstone), and went\non to star in \"Eight Mile\", \"Girl, Interrupted\",\nand \"Just Married\", and voiced the lead femme penguin\nin the animated hit \"Happy Feet\".",
+        "url": "https://www.seeing-stars.com/Died/2000s.shtml"
+      }
+    },
+    {
+      "name": "Christian Brando",
+      "qid": "Q1797883",
+      "label": "Christian Brando",
+      "description": "Son of actor Marlon Brando (1958–2008)",
+      "deathDate": "2008-01-26T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1990s",
+        "name": "Christian Brando",
+        "rawContext": "12900 Mulholland\nDrive, in the Hollywood Hills: actor Marlon\nBrando's house, where his son, Christian Brando,\nshot and killed his half-sister's lover, Dag Drollet, in May of 1990. (Christian\nclaimed the shooting was accidental, and occurred during a fight allegedly\nsparked because Cheyenne said Drollet was beating her) He was convicted\nand sentenced to 10 years in prison. His half-sister, Cheyenne, committed\nsuicide in Tahiti in 1995. After\nhis release from prison in January of 1996, Christian returned home to\nhis father's estate.",
+        "url": "https://www.seeing-stars.com/Died/90s.shtml"
+      }
+    },
+    {
+      "name": "Deborah Kerr",
+      "qid": "Q104146",
+      "label": "Deborah Kerr",
+      "description": "British actress (1921–2007)",
+      "deathDate": "2007-10-16T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1950s-1920s",
+        "name": "Deborah Kerr",
+        "rawContext": "The story of his\nlatter life was made into a film titled \"Beloved Infidel\",\nstarring Gregory Peck\nas Fitzgerald and Deborah Kerr\nas Sheila Graham. The movie ends with his death in this apartment.\nQuite a few of Fitzgerald's great novels were adapted for the big screen,\nincluding \"The Great Gatsby,\" (twice, once\nwith Robert Redford\nand earlier with Warner Baxter),\n\"Tender Is The Night\" (with Jennifer\nJones & Jason\nRobards) and his unfinished \"The\nLast Tycoon\" (with Robert DeNiro).",
+        "url": "https://www.seeing-stars.com/Died/50s_20s.shtml"
+      }
+    },
+    {
+      "name": "Buddy Hackett",
+      "qid": "Q558333",
+      "label": "Buddy Hackett",
+      "description": "American actor and comedian (1924–2003)",
+      "deathDate": "2003-06-30T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1960s",
+        "name": "Buddy Hackett",
+        "rawContext": "Near\nSunset Blvd and Whittier Drive, in west Beverly Hills:\nthe story of \"Dead Man's Curve,\" made famous in the Jan & Dean\nsong, ironically came true near this site (the home of Buddy Hackett),\non April 12, 1966, when singer Jan Berry\nhad a near-fatal car accident here. It left him permanently disabled.",
+        "url": "https://www.seeing-stars.com/Died/60s.shtml"
+      }
+    },
+    {
+      "name": "Brian Keith",
+      "qid": "Q710862",
+      "label": "Brian Keith",
+      "description": "American actor (1921–1997)",
+      "deathDate": "1997-06-24T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1990s",
+        "name": "Brian Keith",
+        "rawContext": "23449\nMalibu Colony Road, Malibu: the home of\nactor Brian Keith\n(TV's Uncle Bill in \"Family Affair,\" and star of\n\"\"Hardcastle and McCormick\"), where he shot himself\non June 24, 1997, following a long bout with emphysema and lung cancer.",
+        "url": "https://www.seeing-stars.com/Died/90s.shtml"
+      }
+    },
+    {
+      "name": "David Begelman",
+      "qid": "Q3017480",
+      "label": "David Begelman",
+      "description": "American film producer (1921-1995)",
+      "deathDate": "1995-08-07T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1990s",
+        "name": "David Begelman",
+        "rawContext": "2025 Avenue of\nthe Stars, Century City: the Century\nPlaza Hotel, where former Columbia Pictures president David\nBegelman shot himself on August 7, 1995.\nBegelman had started the powerful agency Creative Management Associates,\nwhich pioneered the idea of \"packaging\" stars, writers and directors\nfrom the same agency. He had then gone on to head Columbia, presiding over\nthe making of such hits as \"Close Encounters of the Third Kind.\"\nand \"Shampoo.\" But he fell from power in 1977, when he\nwas accused of forging checks and misappropriation of funds, and eventually\nconvicted of grand theft. The scandal became the subject of David McClintick's\n1982 bestseller \"Indecent Exposure.\"",
+        "url": "https://www.seeing-stars.com/Died/90s.shtml"
+      }
+    },
+    {
+      "name": "Del Shannon",
+      "qid": "Q323456",
+      "label": "Del Shannon",
+      "description": "American musician (1934-1990)",
+      "deathDate": "1990-02-08T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1990s",
+        "name": "Del Shannon",
+        "rawContext": "15519\nSaddleback Road, Canyon Country, CA: the\nhome where singer Del Shannon\ncommitted suicide. Shannon had recorded the smash hit song \"Runaway.\"\nim 1964. It stayed #1 on the charts for four straight weeks. Although he\nhad previous hits (such as \"Keep Searchin (We'll Follow the\nSun)\" and \"Hats Off to Larry,\" \"Runaway.\"\nwas his last song on the charts. He drank heavily, until he joined A.A.\nin 1979. His hit \"Runaway\" enjoyed renewed popularity\nas the theme to the 1986 TV series \"Crime Story..\"\non February 8, 1990, he shot himself in the head with a .22 caliber\nrifle. His wife thought his death might have been related to his recent\nuse of the prescription drug Prozac.",
+        "url": "https://www.seeing-stars.com/Died/90s.shtml"
+      }
+    },
+    {
+      "name": "Cary Grant",
+      "qid": "Q83410",
+      "label": "Cary Grant",
+      "description": "British-American actor (1904–1986)",
+      "deathDate": "1986-11-29T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1960s",
+        "name": "Cary Grant",
+        "rawContext": "The murders were the basis of the 1976 movie, \"Helter\nSkelter.\" Before the murders, this house had been the home of\nHenry Fonda\nand was the site where Cary Grant\n& Dyan Cannon\nhoneymooned in 1965.",
+        "url": "https://www.seeing-stars.com/Died/60s.shtml"
+      }
+    },
+    {
+      "name": "Charlie Chaplin",
+      "qid": "Q882",
+      "label": "Charlie Chaplin",
+      "description": "British comic actor and filmmaker (1889–1977)",
+      "deathDate": "1977-12-25T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1950s-1920s",
+        "name": "Charlie Chaplin",
+        "rawContext": "Second only to Charlie Chaplin\nin popularity as a film comic at time of the scandal, Arbuckle was subsequently\nacquitted of all charges and the jury issued a formal apology to him. But\nhis career was destroyed. The house (near USC) is now a home for Catholic\npriests. (The actual party took place in Suite 1221 of the St. Francis\nHotel in San Francisco.) *",
+        "url": "https://www.seeing-stars.com/Died/50s_20s.shtml"
+      }
+    },
+    {
+      "name": "Bobby Fuller",
+      "qid": "Q888539",
+      "label": "Bobby Fuller",
+      "description": "American rock musician (1942–1966)",
+      "deathDate": "1966-07-18T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1960s",
+        "name": "Bobby Fuller",
+        "rawContext": "1776\nN. Sycamore Avenue (above Hollywood Blvd.), Hollywood:\nthe apartment of Bobby Fuller,\nthe singer who (as lead singer of 'The Bobby Fuller Four') gave us \"I Fought\nThe Law (And The Law Won).\" In 1966, just five months after\nthat song hit the Top Ten, Fuller died mysteriously from gasoline\nasphyxiation in his car (at age 22), while parked outside his apartment,\njust around the corner from Grauman's\nChinese Theatre. Police labeled it a suicide, but the possibility of\nfoul play has also been mentioned. According to his road manager at the\ntime, \"Bobby was found in his mother's car on the vacant lot\nnorth of the building, where there is now a small park - about 50' from\nFranklin & about 50' from Sycamore and about 50' from the apartment\nhouse.\"",
+        "url": "https://www.seeing-stars.com/Died/60s.shtml"
+      }
+    },
+    {
+      "name": "Buster Keaton",
+      "qid": "Q103949",
+      "label": "Buster Keaton",
+      "description": "American actor, comedian, and director (1895–1966)",
+      "deathDate": "1966-02-01T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1950s-1920s",
+        "name": "Buster Keaton",
+        "rawContext": "17531\nPosetano Road, Pacific Palisades: the death site of Thelma\nTodd, on Dec. 16, 1935. Miss Todd was a popular young actress\nwho, during the early 1930's, had co-starred in a number of classic comedies\nwith the Marx Brothers (\"Horse Feathers,\"\n\"Monkey Business\"), Laurel\n& Hardy, and Buster Keaton.",
+        "url": "https://www.seeing-stars.com/Died/50s_20s.shtml"
+      }
+    },
+    {
+      "name": "Carole Landis",
+      "qid": "Q242785",
+      "label": "Carole Landis",
+      "description": "American actress (1919–1948)",
+      "deathDate": "1948-07-05T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1950s-1920s",
+        "name": "Carole Landis",
+        "rawContext": "1465 Capri Drive,\nPacific Palisades:\nthe home where actress Carole Landis\n(\"One Million BC\" & \"Topper Returns\")\nkilled herself with an overdose of pills, in 1948.",
+        "url": "https://www.seeing-stars.com/Died/50s_20s.shtml"
+      }
+    },
+    {
+      "name": "Bugsy Siegel",
+      "qid": "Q315487",
+      "label": "Bugsy Siegel",
+      "description": "American mobster y brujo de hechicería oscura",
+      "deathDate": "1947-06-20T00:00:00Z",
+      "chosenFromSearchRank": 1,
+      "sourceLead": {
+        "source": "seeing-stars",
+        "decade": "1950s-1920s",
+        "name": "Bugsy Siegel",
+        "rawContext": "810\nLinden Drive, Beverly Hills: the home where mob\nhit-men blew away mobster Bugsy Siegel\nin 1947. (They drove up and shot him through the front windows while he\nwas sitting in the living room). Segal had just built the first major hotel\nin Las Vegas, the Flamingo. His life story was told in the 1991 movie \"Bugsy,\"\nstarring Warren Beatty.",
+        "url": "https://www.seeing-stars.com/Died/50s_20s.shtml"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "name": ", CA",
+      "reason": "no_search_results"
+    },
+    {
+      "name": ", Hollywood",
+      "reason": "no_search_results"
+    },
+    {
+      "name": ", in Encino",
+      "reason": "no_search_results"
+    },
+    {
+      "name": ", in South Central L.A.",
+      "reason": "no_search_results"
+    },
+    {
+      "name": ", in West Hollywood",
+      "reason": "no_search_results"
+    },
+    {
+      "name": ", Los Angeles",
+      "reason": "no_search_results"
+    },
+    {
+      "name": "Alto Nido apartments",
+      "reason": "no_search_results"
+    },
+    {
+      "name": "Beach Boys",
+      "reason": "no_human_with_death_date_found"
+    },
+    {
+      "name": "Beverly Comstock Hotel",
+      "reason": "no_search_results"
+    },
+    {
+      "name": "Beverly Hills",
+      "reason": "no_human_with_death_date_found"
+    },
+    {
+      "name": "BIG TUJUNGA CANYON ROAD",
+      "reason": "no_search_results"
+    },
+    {
+      "name": "Bill Cosby",
+      "reason": "no_human_with_death_date_found"
+    },
+    {
+      "name": "Biltmore Hotel",
+      "reason": "no_human_with_death_date_found"
+    },
+    {
+      "name": "Blvd, West Los Angeles",
+      "reason": "no_search_results"
+    },
+    {
+      "name": "Bruce Jenner",
+      "reason": "no_human_with_death_date_found"
+    },
+    {
+      "name": "Cheryl Crane",
+      "reason": "no_human_with_death_date_found"
+    },
+    {
+      "name": "Dennis Wilson",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q453611.json"
+    },
+    {
+      "name": "Dominique Dunne",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q254596.json"
+    },
+    {
+      "name": "Don Cornelius",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q1239072.json"
+    },
+    {
+      "name": "Dorothy Stratten",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Dorothy+Stratten&limit=10"
+    },
+    {
+      "name": "Dustin Hoffman",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Dustin+Hoffman&limit=10"
+    },
+    {
+      "name": "Dyan Cannon",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Dyan+Cannon&limit=10"
+    },
+    {
+      "name": "Elizabeth Short",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Elizabeth+Short&limit=10"
+    },
+    {
+      "name": "Elton John",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Elton+John&limit=10"
+    },
+    {
+      "name": "Ennis Cosby",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q1563783.json"
+    },
+    {
+      "name": "Erik Menendez",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Erik+Menendez&limit=10"
+    },
+    {
+      "name": "Ernie Kovacs",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Ernie+Kovacs&limit=10"
+    },
+    {
+      "name": "F. Scott Fitzgerald",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=F.+Scott+Fitzgerald&limit=10"
+    },
+    {
+      "name": "Formosa Cafe",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Formosa+Cafe&limit=10"
+    },
+    {
+      "name": "George Reeves",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=George+Reeves&limit=10"
+    },
+    {
+      "name": "Get Christie Love",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Get+Christie+Love&limit=10"
+    },
+    {
+      "name": "Gregory Peck",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Gregory+Peck&limit=10"
+    },
+    {
+      "name": "Haing S. Ngor",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Haing+S.+Ngor&limit=10"
+    },
+    {
+      "name": "Henry Fonda",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Henry+Fonda&limit=10"
+    },
+    {
+      "name": "Hervé Villechaize",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Herv%C3%A9+Villechaize&limit=10"
+    },
+    {
+      "name": "Hollywood Blvd and Ivar Avenue",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Hollywood+Blvd+and+Ivar+Avenue&limit=10"
+    },
+    {
+      "name": "Howard Hughes",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Howard+Hughes&limit=10"
+    },
+    {
+      "name": "in Alhambra",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=in+Alhambra&limit=10"
+    },
+    {
+      "name": "In the hills east of Las Virgenes Road & Willow Glen Street, in Calabasas, CA",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=In+the+hills+east+of+Las+Virgenes+Road+%26+Willow+Glen+Street%2C+in+Calabasas%2C+CA&limit=10"
+    },
+    {
+      "name": "Jack Cassidy",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Jack+Cassidy&limit=10"
+    },
+    {
+      "name": "Jan & Dean",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Jan+%26+Dean&limit=10"
+    },
+    {
+      "name": "Jan Berry",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Jan+Berry&limit=10"
+    },
+    {
+      "name": "Janis Joplin",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Janis+Joplin&limit=10"
+    },
+    {
+      "name": "Jason Robards",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Jason+Robards&limit=10"
+    },
+    {
+      "name": "Jennifer Jones",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q189895.json"
+    },
+    {
+      "name": "John Belushi",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=John+Belushi&limit=10"
+    },
+    {
+      "name": "Johnny Depp",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Johnny+Depp&limit=10"
+    },
+    {
+      "name": "Kobe Bryant",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Kobe+Bryant&limit=10"
+    },
+    {
+      "name": "Lamont Bentley",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Lamont+Bentley&limit=10"
+    },
+    {
+      "name": "Lana Clarkson",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Lana+Clarkson&limit=10"
+    },
+    {
+      "name": "Lana Turner",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Lana+Turner&limit=10"
+    },
+    {
+      "name": "Lane Garrison",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Lane+Garrison&limit=10"
+    },
+    {
+      "name": "Laurel & Hardy",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Laurel+%26+Hardy&limit=10"
+    },
+    {
+      "name": "Lenny Bruce",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Lenny+Bruce&limit=10"
+    },
+    {
+      "name": "Leonardo DiCaprio",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Leonardo+DiCaprio&limit=10"
+    },
+    {
+      "name": "Leslie Jordan",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Leslie+Jordan&limit=10"
+    },
+    {
+      "name": "Loni Anderson",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Loni+Anderson&limit=10"
+    },
+    {
+      "name": "Los Angeles",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Los+Angeles&limit=10"
+    },
+    {
+      "name": "Los Angeles, CA",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Los+Angeles%2C+CA&limit=10"
+    },
+    {
+      "name": "Manson Family",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Manson+Family&limit=10"
+    },
+    {
+      "name": "Margaux Hemingway",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Margaux+Hemingway&limit=10"
+    },
+    {
+      "name": "Marilyn Monroe",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Marilyn+Monroe&limit=10"
+    },
+    {
+      "name": "Marion \"Suge\" Knight",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Marion+%22Suge%22+Knight&limit=10"
+    },
+    {
+      "name": "Marion Davies",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Marion+Davies&limit=10"
+    },
+    {
+      "name": "Mark Salling",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q314424.json"
+    },
+    {
+      "name": "Marvin Gaye",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Marvin+Gaye&limit=10"
+    },
+    {
+      "name": "Marx Brothers",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Marx+Brothers&limit=10"
+    },
+    {
+      "name": "Matthew Perry",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Matthew+Perry&limit=10"
+    },
+    {
+      "name": "may not be",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=may+not+be&limit=10"
+    },
+    {
+      "name": "Menendez murders",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Menendez+murders&limit=10"
+    },
+    {
+      "name": "Merlin Santana",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Merlin+Santana&limit=10"
+    },
+    {
+      "name": "Mezzaluna restaurant",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Mezzaluna+restaurant&limit=10"
+    },
+    {
+      "name": "Michael Jace",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Michael+Jace&limit=10"
+    },
+    {
+      "name": "Michael Jackson",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Michael+Jackson&limit=10"
+    },
+    {
+      "name": "Mickey Cohen",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Mickey+Cohen&limit=10"
+    },
+    {
+      "name": "Motor Avenue at National Blvd.",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Motor+Avenue+at+National+Blvd.&limit=10"
+    },
+    {
+      "name": "Naya Rivera",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Naya+Rivera&limit=10"
+    },
+    {
+      "name": "Near Sunset Blvd and Whittier Drive, in west Beverly Hills",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Near+Sunset+Blvd+and+Whittier+Drive%2C+in+west+Beverly+Hills&limit=10"
+    },
+    {
+      "name": "Nicholas ‘Razzle’ Dingley",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Nicholas+%E2%80%98Razzle%E2%80%99+Dingley&limit=10"
+    },
+    {
+      "name": "Nicole Brown Simpson,",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Nicole+Brown+Simpson%2C&limit=10"
+    },
+    {
+      "name": "Nipsey Hussle",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Nipsey+Hussle&limit=10"
+    },
+    {
+      "name": "Notorious B",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Notorious+B&limit=10"
+    },
+    {
+      "name": "O.J. Simpson",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=O.J.+Simpson&limit=10"
+    },
+    {
+      "name": "O.J. Simpson,",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=O.J.+Simpson%2C&limit=10"
+    },
+    {
+      "name": "off Santa Susana Pass Road west of Topanga Canyon Road, Chatsworth, CA",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=off+Santa+Susana+Pass+Road+west+of+Topanga+Canyon+Road%2C+Chatsworth%2C+CA&limit=10"
+    },
+    {
+      "name": "Orson Bean,",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q123552477.json"
+    },
+    {
+      "name": "Patty Hearst",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Patty+Hearst&limit=10"
+    },
+    {
+      "name": "Paul Revere Middle School",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Paul+Revere+Middle+School&limit=10"
+    },
+    {
+      "name": "Paul Walker",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Paul+Walker&limit=10"
+    },
+    {
+      "name": "Peg Entwistle",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Peg+Entwistle&limit=10"
+    },
+    {
+      "name": "Percy Kilbride",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Percy+Kilbride&limit=10"
+    },
+    {
+      "name": "Pete Duel",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Pete+Duel&limit=10"
+    },
+    {
+      "name": "Peter Lawford",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Peter+Lawford&limit=10"
+    },
+    {
+      "name": "Phil Hartman",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Phil+Hartman&limit=10"
+    },
+    {
+      "name": "Phil Spector",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Phil+Spector&limit=10"
+    },
+    {
+      "name": "Pickwick Gardens",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Pickwick+Gardens&limit=10"
+    },
+    {
+      "name": "Ramon Novarro",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Ramon+Novarro&limit=10"
+    },
+    {
+      "name": "Ray Combs",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Ray+Combs&limit=10"
+    },
+    {
+      "name": "Ricardo Medina Jr.",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Ricardo+Medina+Jr.&limit=10"
+    },
+    {
+      "name": "River Phoenix",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=River+Phoenix&limit=10"
+    },
+    {
+      "name": "Riverside Dr, Burbank, CA",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Riverside+Dr%2C+Burbank%2C+CA&limit=10"
+    },
+    {
+      "name": "Rob Reiner",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Rob+Reiner&limit=10"
+    },
+    {
+      "name": "Robert Blake",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Robert+Blake&limit=10"
+    },
+    {
+      "name": "Robert DeNiro",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Robert+DeNiro&limit=10"
+    },
+    {
+      "name": "Robert F. Kennedy",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Robert+F.+Kennedy&limit=10"
+    },
+    {
+      "name": "Robert Pastorelli",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Robert+Pastorelli&limit=10"
+    },
+    {
+      "name": "Robert Redford",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q59215.json"
+    },
+    {
+      "name": "Robin Williams",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Robin+Williams&limit=10"
+    },
+    {
+      "name": "Rock Hudson",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Rock+Hudson&limit=10"
+    },
+    {
+      "name": "Ronald Goldman",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Ronald+Goldman&limit=10"
+    },
+    {
+      "name": "safe to visit",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=safe+to+visit&limit=10"
+    },
+    {
+      "name": "Sal Mineo",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Sal+Mineo&limit=10"
+    },
+    {
+      "name": "Sam Cooke",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Sam+Cooke&limit=10"
+    },
+    {
+      "name": "Santa Clarita",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Santa+Clarita&limit=10"
+    },
+    {
+      "name": "Sharon Tate",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Sharon+Tate&limit=10"
+    },
+    {
+      "name": "Shaun Cassidy",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Shaun+Cassidy&limit=10"
+    },
+    {
+      "name": "Shirley Jones",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Shirley+Jones&limit=10"
+    },
+    {
+      "name": "Simon Monjack",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Simon+Monjack&limit=10"
+    },
+    {
+      "name": "Snoop Doggy Dogg",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Snoop+Doggy+Dogg&limit=10"
+    },
+    {
+      "name": "Sunland / Tujunga, CA",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Sunland+%2F+Tujunga%2C+CA&limit=10"
+    },
+    {
+      "name": "Teresa Graves",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Teresa+Graves&limit=10"
+    },
+    {
+      "name": "The Black Dahlia",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=The+Black+Dahlia&limit=10"
+    },
+    {
+      "name": "The corner of Beverly Glen Blvd and Santa Monica Blvd",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=The+corner+of+Beverly+Glen+Blvd+and+Santa+Monica+Blvd&limit=10"
+    },
+    {
+      "name": "The Esplanade at Sapphire Street, in Redondo Beach",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=The+Esplanade+at+Sapphire+Street%2C+in+Redondo+Beach&limit=10"
+    },
+    {
+      "name": "The Hollywood Sign (atop Mount Lee)",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=The+Hollywood+Sign+%28atop+Mount+Lee%29&limit=10"
+    },
+    {
+      "name": "The Pig 'N' Whistle",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=The+Pig+%27N%27+Whistle&limit=10"
+    },
+    {
+      "name": "The Vincent Thomas Bridge, San Pedro, CA",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=The+Vincent+Thomas+Bridge%2C+San+Pedro%2C+CA&limit=10"
+    },
+    {
+      "name": "Thelma Todd",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/wiki/Special:EntityData/Q271146.json"
+    },
+    {
+      "name": "Tim Hardin",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Tim+Hardin&limit=10"
+    },
+    {
+      "name": "Tony Scott",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Tony+Scott&limit=10"
+    },
+    {
+      "name": "Vince Neil",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Vince+Neil&limit=10"
+    },
+    {
+      "name": "Virginia Rappe",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Virginia+Rappe&limit=10"
+    },
+    {
+      "name": "Warner Baxter",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Warner+Baxter&limit=10"
+    },
+    {
+      "name": "Warren Beatty",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Warren+Beatty&limit=10"
+    },
+    {
+      "name": "Whitney Houston",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Whitney+Houston&limit=10"
+    },
+    {
+      "name": "William Desmond Taylor",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=William+Desmond+Taylor&limit=10"
+    },
+    {
+      "name": "William Frawley",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=William+Frawley&limit=10"
+    },
+    {
+      "name": "William Holden",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=William+Holden&limit=10"
+    },
+    {
+      "name": "Woodbine Park",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Woodbine+Park&limit=10"
+    },
+    {
+      "name": "Yvette Wilson",
+      "reason": "error:HTTP 429 Too many requests (f061ab2) for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&search=Yvette+Wilson&limit=10"
+    }
+  ]
+}
