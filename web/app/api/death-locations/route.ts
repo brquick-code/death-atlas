@@ -23,14 +23,6 @@ function clamp(v: number, min: number, max: number) {
 
 type Mode = "death" | "burial" | "missing";
 
-function parseBool(v: string | null | undefined): boolean | undefined {
-  if (v == null) return undefined;
-  const s = String(v).trim().toLowerCase();
-  if (["1", "true", "t", "yes", "y", "on"].includes(s)) return true;
-  if (["0", "false", "f", "no", "n", "off"].includes(s)) return false;
-  return undefined;
-}
-
 function safeStr(v: any): string | null {
   if (v == null) return null;
   const s = String(v).trim();
@@ -57,9 +49,6 @@ export async function GET(req: Request) {
     const east = n(searchParams, "east", n(searchParams, "maxLng", 180));
     const south = n(searchParams, "south", n(searchParams, "minLat", -90));
     const north = n(searchParams, "north", n(searchParams, "maxLat", 90));
-
-    const published = parseBool(searchParams.get("published"));
-    const includeHidden = parseBool(searchParams.get("include_hidden"));
 
     const supabase = getSupabase();
 
@@ -103,11 +92,8 @@ export async function GET(req: Request) {
       `
       );
 
-    // default: published only
-    if (published === false) query = query.eq("is_published", false);
-    else query = query.eq("is_published", true);
-
-    if (!includeHidden) query = query.neq("is_hidden", true);
+    // Public map data must be both published and visible.
+    query = query.eq("is_published", true).eq("is_hidden", false);
 
     // bbox filter depends on mode
     if (mode === "burial") {
